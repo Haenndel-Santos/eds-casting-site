@@ -1,0 +1,432 @@
+/* ======================================================
+   EDS Industries & Partners Page
+   Aligned with the final page structure
+====================================================== */
+
+/* === HERO === */
+.ind-part-hero.hero-fullimage {
+	margin-top: -4px;
+  position: relative;
+  width: 100%;
+  min-height: 480px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+.ind-part-hero .hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.34));
+  z-index: 1;
+}
+
+.ind-part-hero .hero-text {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  padding: 120px 24px;
+  max-width: 920px;
+}
+
+.ind-part-hero h1 {
+  margin-bottom: 16px;
+  font-size: 3.2rem;
+  font-weight: 700;
+  color: #eaeaea;
+  text-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+}
+
+.ind-part-hero p {
+  font-size: 1.18rem;
+  line-height: 1.7;
+  color: #eaeaea;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+/* === PAGE SECTIONS === */
+.ind-part-section {
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 34px 30px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.ind-part-section:nth-of-type(odd) {
+  border-right: 4px solid var(--eds-primary);
+}
+
+.ind-part-section:nth-of-type(even) {
+  border-left: 4px solid var(--eds-primary);
+  background-color: #f9fbf9;
+}
+
+.mainpage-related-card {
+  text-decoration: none;
+  color: inherit;
+}
+
+.mainpage-related-card * {
+  text-decoration: none;
+}
+
+.mainpage-related-card {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.mainpage-related-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%; /* importante para alinhar entre cards */
+}
+
+.mainpage-related-card .related-link {
+  margin-top: auto; /* 🔥 empurra o link para o fundo */
+}
+
+/* === TITLES === */
+.ind-part-section h2 {
+  text-align: left;
+  font-size: 1.9rem;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.ind-part-section h2::after {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background: var(--eds-primary);
+  border-radius: 3px;
+}
+
+/* === TEXTS === */
+.ind-part-section p {
+  color: #333;
+  line-height: 1.75;
+  text-align: justify;
+  margin-bottom: 20px;
+  
+}
+
+.ind-part-list {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0 0;
+}
+
+.ind-part-list li {
+  margin-bottom: 10px;
+  padding-left: 28px;
+  position: relative;
+  color: #333;
+  font-size: 1rem;
+}
+
+.ind-part-list li::before {
+  content: "▸";
+  position: absolute;
+  left: 0;
+  color: var(--eds-primary);
+  font-size: 1.2rem;
+}
+
+/* === INDUSTRY APPLICATIONS / PROJECT CONNECTION === */
+.ind-part-industry-applications .related-grid,
+.ind-part-projects-link {
+  margin-top: 28px;
+}
+
+.ind-part-projects-link {
+  text-align: center;
+}
+
+.ind-part-projects-link p {
+  max-width: 1200px;
+  margin: 0 0 24px;
+  
+  
+}
+
+/* ======================================================
+   INDUSTRIES ICON CAROUSEL
+====================================================== */
+.industries-carousel {
+  max-width: 1280px;
+  margin: 60px auto;
+  padding: 50px 20px;
+  text-align: center;
+  background: #f8faf8;
+  border-radius: 10px;
+}
+
+.industries-carousel h2 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 35px;
+  color: #222;
+  position: relative;
+}
+
+.industries-carousel h2::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 220px;
+  height: 3px;
+  background: var(--eds-primary);
+  border-radius: 3px;
+}
+
+.carousel-wrapper {
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: none;
+  scroll-behavior: auto;
+}
+
+.carousel-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.carousel-track {
+  display: flex;
+  align-items: center;
+  gap: 26px;
+  padding: 20px 10px;
+  width: max-content;
+}
+
+.carousel-item {
+  flex: 0 0 auto;
+  text-align: center;
+}
+
+.carousel-item img {
+  width: 126px;
+  height: 126px;
+  border-radius: 50%;
+  object-fit: cover;
+  background: #fff;
+  padding: 15px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  display: block;
+  margin: 0 auto;
+  aspect-ratio: 1 / 1;
+}
+
+.carousel-item p {
+  margin-top: 10px;
+  font-weight: 500;
+  color: #333;
+  text-align: center;
+}
+
+.carousel-item img:hover {
+  transform: scale(1.08);
+  box-shadow: 0 4px 12px rgba(55, 180, 55, 0.25);
+}
+
+/* ======================================================
+   PARTNERS LOGO CAROUSEL
+   Currently disabled in PHP, styles kept for future use
+====================================================== */
+.partners-carousel {
+  max-width: 1280px;
+  margin: 60px auto;
+  text-align: center;
+  padding: 50px 20px 70px;
+  background: #ffffff;
+  border-radius: 10px;
+}
+
+.partners-carousel h2 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 35px;
+  color: #222;
+  position: relative;
+}
+
+.partners-carousel h2::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 160px;
+  height: 3px;
+  background: var(--eds-primary);
+  border-radius: 3px;
+}
+
+.partners-carousel .carousel-track {
+  display: flex;
+  gap: 25px;
+  width: max-content;
+}
+
+.partners-carousel .carousel-item.square {
+  flex: 0 0 auto;
+  background: #fff;
+  border-radius: 10px;
+  width: 150px;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.partners-carousel .carousel-item.square a {
+  text-decoration: none;
+  color: inherit;
+  text-align: center;
+}
+
+.partners-carousel .carousel-item.square img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  margin-bottom: 10px;
+  transition: all 0.3s ease;
+}
+
+.partners-carousel .carousel-item.square p {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #333;
+}
+
+.partners-carousel .carousel-item.square:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(55, 180, 55, 0.25);
+}
+
+.partners-carousel .carousel-item.square:hover img {
+  transform: scale(1.05);
+}
+
+/* ======================================================
+   RELATED LINKS / CTA ALIGNMENT
+====================================================== */
+.ind-part-section.mainpage-related {
+  margin-top: 60px;
+}
+
+.ind-part-section.mainpage-related .related-grid {
+  margin-top: 28px;
+}
+
+.mainpage-cta {
+  margin-top: 60px;
+}
+
+/* ======================================================
+   RESPONSIVE DESIGN
+====================================================== */
+@media (max-width: 992px) {
+  .ind-part-hero h1 {
+    font-size: 2.6rem;
+  }
+
+  .ind-part-hero p {
+    font-size: 1.08rem;
+  }
+
+  .carousel-item img {
+    width: 98px;
+    height: 98px;
+  }
+
+  .partners-carousel .carousel-item.square {
+    width: 130px;
+    height: 130px;
+  }
+}
+
+@media (max-width: 768px) {
+  .ind-part-section {
+    padding: 25px 20px;
+    margin: 40px auto;
+  }
+
+  .ind-part-section:nth-of-type(odd),
+  .ind-part-section:nth-of-type(even) {
+    border-left: none;
+    border-right: none;
+    border-top: 3px solid var(--eds-primary);
+  }
+
+  .ind-part-hero.hero-fullimage {
+    min-height: 420px;
+  }
+
+  .ind-part-hero .hero-text {
+    padding: 110px 18px 90px;
+  }
+
+  .industries-carousel,
+  .partners-carousel {
+    margin: 40px auto;
+    padding: 40px 16px;
+  }
+
+  .industries-carousel h2::after {
+    width: 160px;
+  }
+
+  .carousel-item img {
+    width: 92px;
+    height: 92px;
+  }
+
+  .ind-part-projects-link p {
+    text-align: left;
+  }
+}
+
+@media (max-width: 560px) {
+  .ind-part-hero h1 {
+    font-size: 2.1rem;
+  }
+
+  .ind-part-hero p {
+    font-size: 1rem;
+  }
+
+  .carousel-track {
+    gap: 18px;
+    padding: 14px 6px;
+  }
+
+  .carousel-item img {
+    width: 82px;
+    height: 82px;
+    padding: 12px;
+  }
+
+  .carousel-item p {
+    font-size: 0.92rem;
+  }
+}

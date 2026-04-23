@@ -1,0 +1,38 @@
+/* ===============================
+   EDS Main Stylesheet (style.css)
+   FOUNDATION ONLY — global layers only
+
+   RULES:
+   - Do NOT import any page CSS here.
+   - Page CSS must be loaded by includes/head.php (1 per page).
+   - Keep this file stable to improve caching/performance.
+   =============================== */
+
+/* 1) Variables + palette */
+@import url('./colors.css');
+
+/* 2) Reset + typography */
+@import url('./_base.css');
+
+/* 3) Global layout / visibility / small responsive tweaks */
+@import url('./global-overrides.css');
+
+/* 4) Shared UI components */
+@import url('./components.css');
+
+/* 5) Dark mode overrides */
+@import url('./darkmode.css');
+
+/* 6) Generic internal-page sections */
+@import url('./sections.css');
+
+/* 7) Global responsive system */
+@import url('./responsive.css');
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--eds-gray-soft);
+}

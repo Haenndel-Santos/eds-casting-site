@@ -1,0 +1,460 @@
+/* =========================
+   RESPONSIVE.CSS
+   Safe global responsive layer
+   ========================= */
+
+@media (max-width: 768px) {
+  .footer-hide-mobile {
+    display: none;
+  }
+}
+/* =========================
+   HEADER MOBILE — LOGO CENTRAL
+========================= */
+/* =========================
+   HERO DOUBLE — MOBILE FIX
+========================= */
+@media (min-width: 769px) {
+  .menu-column--highlight {
+    display: none;
+  }
+}
+
+@media (max-width: 680px) {
+
+  .eds-header-inner {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* centraliza base */
+  }
+
+  /* LOGO CENTRALIZADA */
+  .eds-logo-container {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+  }
+
+  /* BOTÃO MENU À DIREITA */
+  .menu-toggle-btn {
+    position: absolute;
+    right: 10px;
+  }
+
+}
+:root {
+  --eds-header-offset: 96px;
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+body {
+  padding-top: var(--eds-header-offset);
+}
+
+img,
+picture,
+video,
+canvas,
+svg,
+iframe {
+  max-width: 100%;
+  height: auto;
+}
+
+input,
+select,
+textarea,
+button {
+  max-width: 100%;
+}
+
+textarea {
+  resize: vertical;
+}
+
+table {
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+  border-collapse: collapse;
+}
+
+/* =========================
+   HEADER — tablet adjustments
+   ========================= */
+@media (max-width: 768px) {
+
+  .hero-logo-overlay {
+    display: none !important;
+  }
+
+}
+@media (max-width: 900px) {
+  .eds-header-inner {
+    gap: 14px;
+    min-height: 78px;
+    padding: 0 16px;
+  }
+
+  .eds-quicknav {
+    gap: 10px;
+  }
+
+  .quicknav-item,
+  .quicknav-cta,
+  .menu-toggle-btn {
+    font-size: 0.9rem;
+  }
+
+  .eds-logo {
+    max-width: 155px;
+    max-height: 54px;
+  }
+}
+
+@media (max-width: 820px) {
+  .quicknav-item--secondary {
+    display: none;
+  }
+
+  .eds-quicknav {
+    display: flex;
+    gap: 10px;
+  }
+
+  .quicknav-item--primary,
+  .quicknav-cta,
+  .menu-toggle-btn {
+    font-size: 0.88rem;
+  }
+}
+
+@media (max-width: 680px) {
+  :root {
+    --eds-header-offset: 72px;
+  }
+
+  .eds-header-inner {
+    min-height: 70px;
+    gap: 10px;
+    padding: 0 12px;
+  }
+
+  .eds-logo {
+    max-width: 132px;
+    max-height: 46px;
+  }
+
+  .eds-quicknav {
+    display: flex;
+    gap: 8px;
+  }
+
+  .quicknav-item--secondary {
+    display: none;
+  }
+
+  .quicknav-item--primary,
+  .quicknav-cta,
+  .menu-toggle-btn {
+    font-size: 0.82rem;
+  }
+
+  .quicknav-cta {
+    padding: 8px 12px;
+  }
+
+  .menu-toggle-btn {
+    display: inline-flex;
+    margin-left: 0;
+    padding: 6px 8px;
+  }
+}
+
+@media (max-width: 560px) {
+  :root {
+    --eds-header-offset: 68px;
+  }
+
+  .eds-quicknav {
+    display: none;
+  }
+
+  .menu-toggle-btn {
+    display: inline-flex;
+    margin-left: auto;
+  }
+
+  .bottom-bar-text {
+    font-size: 11px;
+    line-height: 1.4;
+  }
+}
+
+/* =========================
+   HERO OFFSET COMPENSATION
+   ========================= */
+@media (max-width: 768px) {
+  .hero-carousel,
+  .mainpage-hero.hero-fullimage,
+  .page-hero,
+  .contact-hero {
+    margin-top: -72px;
+  }
+}
+
+@media (max-width: 560px) {
+  .hero-carousel,
+  .mainpage-hero.hero-fullimage,
+  .page-hero,
+  .contact-hero {
+    margin-top: -68px;
+  }
+}
+
+/* =========================
+   MENU OVERLAY MOBILE ONLY
+   ========================= */
+@media (max-width: 768px) {
+  .menu-overlay {
+    align-items: flex-start;
+    padding: 72px 0 0;
+  }
+
+  .menu-popup {
+    width: 100%;
+    height: calc(100vh - 72px);
+    max-height: calc(100vh - 72px);
+    border-radius: 0;
+  }
+
+  .menu-popup-header {
+    padding: 16px 18px;
+  }
+
+  .menu-columns {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    padding: 20px;
+  }
+
+  .menu-footer {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 560px) {
+  .menu-overlay {
+    padding-top: 68px;
+  }
+
+  .menu-popup {
+    height: calc(100vh - 68px);
+    max-height: calc(100vh - 68px);
+  }
+}
+
+/* =========================
+   MOBILE ACCORDION ONLY
+   ========================= */
+@media (max-width: 768px) {
+  .menu-column--accordion {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    padding-bottom: 10px;
+  }
+
+  .menu-section-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+  }
+
+  .menu-section-title {
+    margin: 0;
+    padding: 0 0 6px;
+    border-bottom: none;
+    color: var(--eds-primary);
+    font-size: 1.05rem;
+    font-weight: 700;
+    line-height: 1.3;
+    text-align: left;
+  }
+
+  .menu-section-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--eds-primary);
+    background: rgba(55, 180, 55, 0.08);
+    transition: transform 0.2s ease, background-color 0.2s ease;
+  }
+
+  .menu-column--accordion.is-open .menu-section-icon {
+    transform: rotate(45deg);
+  }
+
+  .menu-section-list {
+    display: none;
+    padding-top: 6px;
+  }
+
+  .menu-column--accordion.is-open .menu-section-list {
+    display: block;
+  }
+}
+
+@media (min-width: 769px) {
+  .menu-section-toggle {
+    display: block;
+    width: 100%;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    cursor: default;
+    text-align: left;
+  }
+
+  .menu-section-icon {
+    display: none;
+  }
+
+  .menu-section-list {
+    display: block;
+  }
+}
+
+/* =========================
+   LANDSCAPE MOBILE
+   ========================= */
+@media (max-width: 768px) and (orientation: landscape) {
+  :root {
+    --eds-header-offset: 68px;
+  }
+}
+
+/* =========================
+   TOUCH TARGETS
+   ========================= */
+@media (hover: none) and (pointer: coarse) {
+  a,
+  button,
+  .quicknav-item,
+  .quicknav-cta,
+  .menu-toggle-btn,
+  .hero-btn,
+  .cta-button {
+    min-height: 44px;
+  }
+}
+
+/* =========================
+   HERO DOTS — PREMIUM STYLE
+========================= */
+
+/* =========================
+   HERO DOTS — MOBILE CORREÇÃO REAL
+========================= */
+
+@media (max-width: 768px) {
+  .hero-dots,
+  .hero-nav {
+    display: none !important;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .hero-dots {
+    position: static;          /* REMOVE absolute */
+    transform: none;
+    margin: 16px auto 0;       /* espaço abaixo do hero */
+    gap: 6px;
+  }
+
+  .hero-dot {
+    width: 6px;
+    height: 6px;
+    background: rgba(0, 0, 0, 0.25);
+  }
+
+  .hero-dot.active,
+  .hero-dot[aria-selected="true"] {
+    width: 14px;
+    background: var(--eds-primary);
+  }
+
+}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 768px) {
+  main.page-under-construction.page-under-construction--standalone {
+    min-height: calc(100vh - 160px);
+    padding: 48px 16px !important;
+  }
+
+  main.page-under-construction.page-under-construction--standalone .uc-layout {
+    min-height: calc(100vh - 260px);
+  }
+
+  main.page-under-construction.page-under-construction--standalone .uc-card {
+    padding: 36px 22px;
+    border-radius: 16px;
+  }
+
+  main.page-under-construction.page-under-construction--standalone .uc-text {
+    font-size: 1rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  main.page-under-construction.page-under-construction--standalone {
+    padding: 40px 12px !important;
+  }
+
+  main.page-under-construction.page-under-construction--standalone .uc-card {
+    padding: 30px 18px;
+  }
+
+  main.page-under-construction.page-under-construction--standalone .uc-title {
+    font-size: 1.9rem !important;
+  }
+
+  main.page-under-construction.page-under-construction--standalone .uc-text {
+    font-size: 0.96rem !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-double-container {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .hero-image-box {
+    min-height: 240px;
+  }
+
+  .hero-logo-overlay {
+    width: 80px;
+    height: 80px;
+  }
+}

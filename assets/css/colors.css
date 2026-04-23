@@ -1,0 +1,47 @@
+:root {
+  /* ==================================================
+     EDS Brand Colors + Base Variables
+     Notes:
+     - Keep ONE primary green.
+     - Provide missing base vars used by _base.css.
+     - Provide a single header offset variable.
+     ================================================== */
+
+  /* Brand */
+  --eds-primary: #37b437;          /* official primary (matches your palette PDF) */
+  --eds-green: #37b437;
+  --eds-green-accent: #37f437;     /* icons/vectors */
+
+  /* Greens (soft backgrounds) */
+  --eds-green-light: #b3f3b3;
+  --eds-green-soft: #d3f3d3;
+  --eds-green-pale: #f0fff0;
+
+  /* Neutrals */
+  --eds-white: #ffffff;
+  --eds-gray-soft: #f5f5f5;
+  --eds-gray-very-soft: #e6f4ea;
+  --eds-gray-mid: #afb9c8;
+  --eds-gray-border: #cccccc;
+
+  /* Accent */
+  --eds-accent: #4d91f1;
+  --eds-accent-light: #e6f0ff;
+
+  /* Utility */
+  --eds-warn: #f2c94c;
+  --eds-info: #2d9cdb;
+  --eds-success: #6fcf97;
+  --eds-highlight: #ffe29a;
+
+  /* Typography / text */
+  --eds-text: #1f1f1f;
+  --eds-heading: #1f1f1f;
+  --eds-link: #0077cc;
+
+  /* Surfaces */
+  --eds-bg: #ffffff;
+
+  /* Layout */
+  --eds-header-offset: 125px; /* single source of truth for fixed header spacing */
+}

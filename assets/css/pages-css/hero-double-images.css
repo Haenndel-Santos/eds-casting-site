@@ -1,0 +1,94 @@
+/* =========================================================
+   HERO DOUBLE IMAGES
+   Visual support section below hero
+   Improved proportions, spacing and image handling
+   ========================================================= */
+
+.hero-double-images {
+  padding: 22px 20px 56px;
+  background: transparent;
+}
+
+.hero-double-container {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 28px;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: stretch;
+}
+
+.hero-image-box {
+  position: relative;
+  overflow: hidden;
+  border-radius: 24px;
+  background: var(--eds-white);
+  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.08);
+  min-height: clamp(320px, 34vw, 460px);
+  isolation: isolate;
+}
+
+.hero-image-box::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.12) 0%,
+    rgba(0, 0, 0, 0.04) 25%,
+    rgba(0, 0, 0, 0) 55%
+  );
+  pointer-events: none;
+  z-index: 1;
+}
+
+.hero-image-box picture,
+.hero-image-box img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.hero-image-box img {
+  object-fit: cover;
+  object-position: center center;
+  transition: transform 0.5s ease;
+}
+
+.hero-image-box:hover img {
+  transform: scale(1.035);
+}
+
+.hero-image-box--left img {
+  object-position: center center;
+}
+
+.hero-image-box--right img {
+  object-position: center center;
+}
+
+.hero-logo-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: clamp(92px, 9vw, 122px);
+  height: clamp(92px, 9vw, 122px);
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.96);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  z-index: 3;
+  backdrop-filter: blur(4px);
+}
+
+.hero-logo-overlay img {
+  width: 62%;
+  height: auto;
+  display: block;
+}
+

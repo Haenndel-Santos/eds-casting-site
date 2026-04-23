@@ -1,0 +1,11 @@
+# Bloqueia acesso direto a todos os arquivos dentro de /includes/
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteRule ^.*$ - [F,L]
+</IfModule>
+
+# Como fallback, bloqueia via diretiva clássica também
+<FilesMatch "\.(php|inc|txt|json)$">
+  Order allow,deny
+  Deny from all
+</FilesMatch>

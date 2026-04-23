@@ -1,0 +1,131 @@
+/* --- SECTIONS.CSS ---
+   Standard internal pages (Projects, Workflow, Quality, Contact, etc.)
+   IMPORTANT:
+   - Do NOT use margin-top offsets here.
+   - Header spacing is handled globally via body padding-top in global-overrides.css
+*/
+
+/* Box sizing universal */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* === PAGE HERO (All internal pages) === */
+.page-hero {
+  /* margin-top removed: header offset handled by body padding-top */
+.page-hero {
+  max-width: 1200px;
+  width: 100%;
+  margin: -95px auto;
+  position: relative;
+  padding: 40px 30px;
+  text-align: center;
+  background: linear-gradient(
+    to top,
+    var(--eds-gray-soft) 0%,
+    var(--eds-gray-very-soft) 100%
+  );
+  border-top: 3px solid var(--eds-primary);
+  border-bottom: 3px solid var(--eds-primary);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 220px;
+  border-radius: 8px;
+}
+
+  border-top: 3px solid var(--eds-primary);
+  border-bottom: 3px solid var(--eds-primary);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  min-height: 220px;
+  border-radius: 8px;
+}
+
+.page-hero h1 {
+  font-size: 2.5rem;
+  color: var(--eds-text);
+  margin-bottom: 10px;
+}
+
+.page-hero p {
+  font-size: 1.1rem;
+  color: #555;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* === PAGE CONTENT === */
+.page-content {
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.page-section {
+  margin-bottom: 50px;
+}
+
+.page-section h2 {
+  font-size: 1.8rem;
+  color: var(--eds-text);
+  margin-bottom: 15px;
+}
+
+.page-section p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--eds-text);
+}
+
+/* Alternate sections */
+.page-section.alt {
+  background-color: #fafafa;
+  padding: 30px 20px;
+  border-radius: 6px;
+}
+
+/* CTA */
+.page-cta {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #eef3f7;
+  margin-top: 40px;
+  border-radius: 6px;
+}
+
+/* Divider */
+.section-divider {
+  border-top: 1px solid #ccc;
+  margin: 40px 0;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+  .page-hero {
+    /* keep 0: mobile header is different and global-overrides removes padding-top */
+    margin-top: 0;
+    padding: 30px 15px;
+  }
+
+  .page-hero h1 {
+    font-size: 2rem;
+  }
+
+  .page-section h2 {
+    font-size: 1.5rem;
+  }
+
+  .page-content {
+    padding: 20px 15px;
+  }
+
+  .page-section {
+    margin-bottom: 35px;
+  }
+}

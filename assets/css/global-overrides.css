@@ -1,0 +1,80 @@
+/* =========================
+   GLOBAL OVERRIDES
+   Lightweight global polish only
+========================= */
+
+a {
+  transition: color 0.3s, background-color 0.3s, border-color 0.3s, opacity 0.3s;
+  text-decoration: none;
+}
+
+button,
+.project-box a,
+.highlight-box a,
+.hero-btn,
+.quicknav-cta,
+.cta-button,
+.careers-btn {
+  cursor: pointer;
+  user-select: none;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--eds-primary);
+  outline-offset: 2px;
+}
+
+img,
+picture,
+video,
+canvas,
+svg,
+iframe {
+  max-width: 100%;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+li,
+a {
+  overflow-wrap: break-word;
+}
+
+button,
+input,
+select,
+textarea {
+  border-radius: 6px;
+}
+
+textarea {
+  resize: vertical;
+}
+
+@media (max-width: 768px) {
+  button,
+  .project-box a,
+  .highlight-box a,
+  .hero-btn,
+  .quicknav-cta,
+  .cta-button,
+  .careers-btn {
+    white-space: normal;
+  }
+}
+
+@media (max-width: 480px) {
+  .bottom-bar-text {
+    font-size: 11px;
+    line-height: 1.4;
+  }
+}

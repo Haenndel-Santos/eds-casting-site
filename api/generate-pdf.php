@@ -1,0 +1,1 @@
+<?php // endpoint para gerar PDF ?>

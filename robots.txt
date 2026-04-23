@@ -1,0 +1,15 @@
+User-agent: *
+
+# Block internal / technical paths
+Disallow: /includes/
+Disallow: /config/
+Disallow: /data/
+Disallow: /api/
+Disallow: /router.php
+Disallow: /pages-php/
+
+# Allow assets (CSS, JS, images)
+Allow: /assets/
+
+# Sitemap
+Sitemap: https://www.edscasting.com/sitemap.xml

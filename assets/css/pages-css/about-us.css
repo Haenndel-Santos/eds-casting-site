@@ -1,0 +1,155 @@
+/* ==========================================
+   ABOUT-US PAGE — EDS Casting & Forging
+   ========================================== */
+/* === Ajuste para rolagem de âncoras === */
+:target {
+  scroll-margin-top: 1300px; /* altura aproximada do header fixo */
+}
+
+/* === HERO SECTION === */
+.about-us-page .page-hero-us {
+  border-top: #37b437;
+  border-top-style: groove;
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: -5px auto 30px;
+  min-height: 500px;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #fff;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
+}
+
+.about-us-page .page-hero-us .overlay {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.45);
+}
+
+.about-us-page .page-hero-us h1 {
+  position: relative;
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #fff;
+  z-index: 2;
+}
+
+.about-us-page .page-hero-us p {
+  position: relative;
+  font-size: 1.1rem;
+  max-width: 700px;
+  color: #f0f0f0;
+  z-index: 2;
+}
+
+/* === PAGE STRUCTURE === */
+.about-us-page .page-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0px;
+}
+
+/* === SECTIONS === */
+.about-us-page .page-section {
+  border-radius: 8px;
+  padding: 25px 35px;
+  margin-bottom: 30px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.about-us-page .page-section:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+/* Alternância de cores */
+.about-us-page .page-section:nth-of-type(odd) {
+  background-color: var(--eds-white);
+}
+
+.about-us-page .page-section:nth-of-type(even) {
+  background-color: var(--eds-green-pale);
+}
+
+/* === TITLES & TEXT === */
+.about-us-page .page-section h2 {
+  text-align: center;
+  font-size: 1.8rem;
+  color: var(--eds-primary);
+  margin-bottom: 12px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  transition: color 0.3s;
+}
+
+.about-us-page .page-section h2:hover {
+  color: #2ea43f;
+}
+
+.about-us-page .page-section p {
+  text-align: justify;
+  color: #333;
+  line-height: 1.65;
+  font-size: 1rem;
+  margin-bottom: 0;
+}
+
+/* === SECTION DIVIDER (discreto) === */
+.about-us-page .section-divider {
+  border-top: 1px solid #ddd;
+  margin: 25px auto;
+  width: 80%;
+}
+
+/* === FINAL CTA BUTTON (View Full Team) === */
+.about-us-page .team-button-container {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.about-us-page .team-button-container .button.cta {
+  background-color: var(--eds-primary);
+  color: var(--eds-white);
+  padding: 10px 26px;
+  border-radius: 6px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.about-us-page .team-button-container .button.cta:hover {
+  background-color: #2ea43f;
+  transform: translateY(-3px);
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+  .about-us-page .page-hero {
+    width: 95%;
+    min-height: 220px;
+    margin: 20px auto;
+  }
+
+  .about-us-page .page-section {
+    padding: 20px 20px;
+    margin-bottom: 25px;
+  }
+
+  .about-us-page .page-section h2 {
+    font-size: 1.6rem;
+  }
+
+  .about-us-page .page-section p {
+    font-size: 0.95rem;
+  }
+}

@@ -1,0 +1,274 @@
+/* ======================================================
+   EDS VACANCIES PAGE STYLES
+   ====================================================== */
+
+/* ==== HERO ==== */
+.vacancies-hero.hero-fullimage {
+	margin-top: -4px;
+  position: relative;
+  width: 100%;
+  height: 480px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+.vacancies-hero .hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.35));
+  z-index: 1;
+}
+
+.vacancies-hero .hero-text {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  padding: 100px 20px;
+  max-width: 900px;
+}
+
+.vacancies-hero h1 {
+  font-size: 3.2rem;
+  font-weight: 700;
+  color: #eaeaea;
+  margin-bottom: 15px;
+  text-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+}
+
+.vacancies-hero p {
+  font-size: 1.2rem;
+  color: #eaeaea;
+  line-height: 1.6;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+
+/* ==== PAGE SECTIONS ==== */
+.vacancies-section {
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 30px 30px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.vacancies-section:nth-of-type(odd) {
+  border-right: 4px solid #37b437;
+}
+
+.vacancies-section:nth-of-type(even) {
+  border-left: 4px solid #37b437;
+  background-color: #f9fbf9;
+}
+
+/* Section Titles */
+.vacancies-section h2 {
+  text-align: left;
+  font-size: 1.9rem;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.vacancies-section h2::after {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background: #37b437;
+  border-radius: 3px;
+}
+
+/* Texts */
+.vacancies-section p {
+  color: #333;
+  line-height: 1.75;
+  text-align: justify;
+  margin-bottom: 20px;
+}
+
+.vacancies-section .link-highlight {
+  color: #37b437;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.vacancies-section .link-highlight:hover {
+  text-decoration: underline;
+}
+
+/* Vacancy list */
+.vacancies-list {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0 0 0;
+}
+
+.vacancies-list li {
+  margin-bottom: 10px;
+  padding-left: 28px;
+  position: relative;
+  color: #333;
+  font-size: 1rem;
+}
+
+.vacancies-list li::before {
+  content: "▸";
+  position: absolute;
+  left: 0;
+  color: #37b437;
+  font-size: 1.2rem;
+}
+
+/* ==== CTA BUTTON ==== */
+.cta-button {
+  background: #37b437;
+  color: #fff;
+  padding: 12px 30px;
+  border-radius: 6px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: none;
+}
+
+.cta-button:hover {
+  background: #2ea42f;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 15px rgba(55, 180, 55, 0.25);
+}
+
+/* ======================================================
+   POPUP APPLICATION FORM
+   ====================================================== */
+.popup-overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.popup-box {
+  background: #fff;
+  border-radius: 8px;
+  padding: 30px 40px;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+  text-align: center;
+  position: relative;
+  animation: popupIn 0.3s ease-out;
+}
+
+@keyframes popupIn {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.popup-box h2 {
+  color: #222;
+  margin-bottom: 15px;
+}
+
+.popup-box label {
+  display: block;
+  text-align: left;
+  font-weight: 500;
+  margin-top: 12px;
+  color: #333;
+}
+
+.popup-box input[type="text"],
+.popup-box input[type="email"],
+.popup-box input[type="file"] {
+  width: 100%;
+  padding: 10px 12px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.popup-box .cta-button {
+  margin-top: 20px;
+  background: #37b437;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.popup-box .cta-button:hover {
+  background: #2ea42f;
+}
+
+.close-popup {
+  position: absolute;
+  top: 12px;
+  right: 18px;
+  font-size: 1.6rem;
+  color: #666;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.close-popup:hover {
+  color: #000;
+}
+
+/* Thank you popup */
+#thankyouPopup .popup-box {
+  max-width: 400px;
+}
+
+#thankyouPopup p {
+  text-align: center;
+  font-size: 1.05rem;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* ======================================================
+   RESPONSIVE DESIGN
+   ====================================================== */
+@media (max-width: 992px) {
+  .vacancies-hero h1 { font-size: 2.6rem; }
+  .vacancies-hero p { font-size: 1.1rem; }
+}
+
+@media (max-width: 768px) {
+  .vacancies-section {
+    padding: 25px 20px;
+    margin: 40px auto;
+  }
+
+  .vacancies-section:nth-of-type(odd),
+  .vacancies-section:nth-of-type(even) {
+    border-left: none;
+    border-right: none;
+    border-top: 3px solid #37b437;
+  }
+
+  .popup-box {
+    padding: 20px;
+  }
+}

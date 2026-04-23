@@ -1,0 +1,18 @@
+php -S localhost:8000 router.php
+
+
+robots.txt (controle de indexação)
+
+sitemap.xml (descoberta e priorização de URLs)
+
+Canonical + meta + OG/Twitter por página (evitar conteúdo duplicado)
+
+Schema.org (JSON-LD) básico (Organization + Website) e depois (Service)
+
+Google Search Console (verificar + enviar sitemap + corrigir cobertura)
+
+GA4 + Google Ads tag (conversões + remarketing)
+
+Core Web Vitals (LCP/CLS/INP) e performance fina
+
+SEO on-page (titles/H1/H2, links internos, conteúdo, imagens)

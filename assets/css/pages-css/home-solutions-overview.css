@@ -1,0 +1,100 @@
+/* =========================================================
+   HOME SOLUTIONS OVERVIEW
+   Section below hero-double-images
+   Focus:
+   - strong commercial cards
+   - fixed CTA alignment at bottom
+   - clean spacing and hierarchy
+   ========================================================= */
+
+.home-solutions-overview {
+  padding: 40px 20px 32px;
+}
+
+.home-solutions-overview .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.solutions-overview-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.solution-overview-card {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  padding: 30px 28px;
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-radius: 20px;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.05);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.solution-overview-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 34px rgba(0, 0, 0, 0.08);
+  border-color: rgba(55, 180, 55, 0.22);
+}
+
+.solution-overview-card h3 {
+  margin: 0 0 14px;
+  color: var(--eds-text);
+  font-size: 1.35rem;
+  line-height: 1.25;
+}
+
+.solution-overview-card h3 a {
+  color: var(--eds-text);
+  text-decoration: none;
+  transition: color 0.25s ease;
+}
+
+.solution-overview-card h3 a:hover {
+  color: var(--eds-primary);
+}
+
+.solution-overview-card p {
+  margin: 0 0 18px;
+  color: #555;
+  line-height: 1.75;
+  text-align: left;
+}
+
+.solution-overview-card .text-link {
+  margin-top: auto;
+  align-self: flex-start;
+}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+@media (max-width: 992px) {
+  .home-solutions-overview {
+    padding: 36px 18px 28px;
+  }
+
+  .solutions-overview-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .solutions-overview-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .solution-overview-card {
+    padding: 24px 22px;
+  }
+}
+
+@media (max-width: 480px) {
+  .home-solutions-overview {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+}

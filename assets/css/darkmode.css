@@ -1,0 +1,86 @@
+/* =============================== 
+   EDS Dark Mode Overrides
+   =============================== */
+
+body.dark-mode {
+  background-color: #1e1e1e;
+  color: #f0f0f0;
+}
+
+body.dark-mode a {
+  color: #91cbff;
+}
+
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode h5,
+body.dark-mode h6 {
+  color: #ffffff;
+}
+
+body.dark-mode .main-menu > li > a {
+  color: #ffffff;
+}
+
+body.dark-mode .main-menu li ul {
+  background-color: #333;
+}
+
+body.dark-mode .main-menu li ul li a {
+  color: #f0f0f0;
+}
+
+body.dark-mode .main-menu li ul li a:hover {
+  background-color: #37b437;
+  color: #ffffff;
+}
+
+body.dark-mode .header-bar,
+body.dark-mode .top-bar {
+  background-color: #1e1e1e;
+  border-color: #1e1e1e;
+}
+
+body.dark-mode .header-top-stripe,
+body.dark-mode .bottom-bar {
+  background-color: #34b347;
+}
+
+body.dark-mode .lang-select,
+body.dark-mode .footer-container {
+  background-color: #1e1e1e;
+  color: #ffffff;
+}
+
+body.dark-mode .main-footer {
+  background-color: #1e1e1e;
+  color: #ffffff;
+}
+
+body.dark-mode .main-footer h4,
+body.dark-mode .main-footer p,
+body.dark-mode .main-footer a {
+  color: #ffffff;
+}
+
+body.dark-mode .main-footer a:hover {
+  color: #37b437;
+}
+
+body.dark-mode .btn,
+body.dark-mode button,
+body.dark-mode a.btn,
+body.dark-mode .hero-btn,
+body.dark-mode .highlight-btn,
+body.dark-mode .cta-button {
+  background-color: #34b347;
+  color: #ffffff;
+  border: none;
+}
+
+body.dark-mode .cta-button:hover {
+  background-color: #2ea43f;
+  color: #ffffff;
+}

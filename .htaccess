@@ -1,0 +1,47 @@
+# ==========================
+# EDS — Canonical + Clean URLs -> pages-php/*.php
+# ==========================
+
+RewriteEngine On
+
+# --------------------------------------------------
+# A) Force HTTPS
+# --------------------------------------------------
+RewriteCond %{HTTPS} !=on
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+
+# --------------------------------------------------
+# B) Remove /index.php from URLs
+# --------------------------------------------------
+RewriteRule ^index\.php$ / [R=301,L]
+
+RewriteCond %{THE_REQUEST} \s/+index\.php(?:[?\s/]|$) [NC]
+RewriteRule ^index\.php/?(.*)$ /$1 [R=301,L]
+
+# C) Redirect old direct access: /pages-php/x.php -> /x
+RewriteCond %{REQUEST_METHOD} !POST
+RewriteCond %{THE_REQUEST} \s/+pages-php/([^\s?]+)\.php(?:\?|\s) [NC]
+RewriteRule ^pages-php/(.+)\.php$ /$1 [R=301,L]
+
+# --------------------------------------------------
+# D) Do not rewrite real files or directories
+# --------------------------------------------------
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# --------------------------------------------------
+# E) Route clean URLs -> pages-php/*.php
+# --------------------------------------------------
+
+# /slug -> /pages-php/slug.php
+RewriteCond %{DOCUMENT_ROOT}/pages-php/$1.php -f
+RewriteRule ^([a-zA-Z0-9-]+)/?$ /pages-php/$1.php [L]
+
+# /folder/slug -> /pages-php/folder/slug.php
+RewriteCond %{DOCUMENT_ROOT}/pages-php/$1/$2.php -f
+RewriteRule ^([a-zA-Z0-9-]+)/([a-zA-Z0-9-]+)/?$ /pages-php/$1/$2.php [L]
+
+# /folder/sub/slug -> /pages-php/folder/sub/slug.php
+RewriteCond %{DOCUMENT_ROOT}/pages-php/$1/$2/$3.php -f
+RewriteRule ^([a-zA-Z0-9-]+)/([a-zA-Z0-9-]+)/([a-zA-Z0-9-]+)/?$ /pages-php/$1/$2/$3.php [L]

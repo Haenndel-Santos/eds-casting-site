@@ -1,0 +1,16 @@
+/vendor/
+private_vendor/
+node_modules/
+.env
+.DS_Store
+Thumbs.db
+
+# arquivos temporários
+*.log
+*.tmp
+
+# uploads
+/assets/uploads/
+
+# arquivos locais do sistema
+.vscode/settings.json

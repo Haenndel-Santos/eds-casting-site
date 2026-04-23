@@ -1,0 +1,243 @@
+/* === CASTING MATRIX (ENHANCED) === */
+.matrix-content {
+	
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  font-family: 'Inter', sans-serif;
+}
+
+.matrix-hero {
+	margin-top: -43px;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  text-align: center;
+  min-height: 340px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+	
+}
+
+.matrix-hero .hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+}
+
+.matrix-hero .hero-text {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+}
+
+.matrix-intro {
+  text-align: center;
+  font-size: 1.05rem;
+  color: #333;
+  margin: 40px 0;
+  line-height: 1.6;
+}
+
+.matrix-graph {
+  margin: 40px 0;
+  text-align: center;
+}
+
+.matrix-graph h2 {
+	
+  color: #333;
+}
+
+.matrix-table-section h2 {
+  color: #333;
+	text-align: center;
+}
+
+
+#castingChart {
+  max-width: 100%;
+  height: 400px;
+  margin: 20px auto;
+}
+
+.graph-note {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.casting-matrix-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.casting-matrix-table th {
+  background-color: #37b437;
+  color: #fff;
+  padding: 12px;
+  font-weight: 600;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+.casting-matrix-table td {
+  padding: 10px 12px;
+  border-bottom: 1px solid #e5e5e5;
+  text-align: center;
+  font-size: 0.92rem;
+}
+
+.casting-matrix-table tr:nth-child(even) {
+  background-color: #fafafa;
+}
+
+.casting-matrix-table tr:hover {
+  background-color: #f2fff2;
+}
+
+.matrix-cta {
+  text-align: center;
+  margin: 20px 0;
+  background-color: #eef6ef;
+  padding: 40px 20px;
+  border-radius: 8px;
+}
+
+.matrix-cta p {
+  font-size: 1.1rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.cta-button {
+  display: inline-block;
+  background-color: #333; /* novo background */
+  color: #fff;
+  padding: 12px 30px;
+  border-radius: 50px;
+  font-weight: 600;
+  text-decoration: none;
+  border: 2px solid #333; /* importante para o efeito hover */
+  transition: all 0.3s ease;
+}
+
+/* Hover invertido */
+.cta-button:hover {
+  background-color: #fff;
+  color: #37b437; /* verde EDS */
+  border-color: #37b437;
+  transform: translateY(-2px);
+}
+
+
+
+.matrix-related-links {
+  padding: 10px 20px 30px;
+}
+
+.matrix-related-links__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.matrix-related-links__intro {
+  max-width: 820px;
+  margin: 0 auto 36px;
+  text-align: center;
+}
+
+.matrix-related-links__eyebrow {
+  display: inline-block;
+  margin-bottom: 10px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--eds-primary);
+}
+
+.matrix-related-links__intro h2 {
+  margin-bottom: 14px;
+	color: #333;
+}
+
+.matrix-related-links__intro p {
+  margin: 0;
+  color: #555;
+}
+
+.matrix-related-links__grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.matrix-related-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 220px;
+  padding: 24px;
+  background: #ffffff;
+  border: 1px solid #e3e8ee;
+  border-top: 4px solid var(--eds-primary);
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  text-decoration: none;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.matrix-related-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 34px rgba(0, 0, 0, 0.08);
+  border-color: #cfe7d1;
+  text-decoration: none;
+}
+
+.matrix-related-card h3 {
+	text-align: center;
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+  color: #222;
+}
+
+.matrix-related-card p {
+  margin-bottom: 18px;
+  color: #333;
+  line-height: 1.6;
+}
+
+.matrix-related-card span {
+	text-align: center;
+  margin-top: auto;
+  font-weight: 600;
+  color: var(--eds-primary);
+}
+
+@media (max-width: 1100px) {
+  .matrix-related-links__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .matrix-related-links {
+    padding: 50px 16px 20px;
+  }
+
+  .matrix-related-links__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .matrix-related-card {
+    min-height: auto;
+  }
+}

@@ -1,0 +1,21 @@
+# Do not execute scripts inside assets
+<FilesMatch "\.(php|phtml|php3|php4|php5|phps)$">
+Require all denied
+</FilesMatch>
+
+
+# No directory listings
+Options -Indexes
+
+
+# Cache static files (optional)
+<IfModule mod_expires.c>
+ExpiresActive On
+ExpiresByType text/css "access plus 7 days"
+ExpiresByType application/javascript "access plus 7 days"
+ExpiresByType image/avif "access plus 30 days"
+ExpiresByType image/webp "access plus 30 days"
+ExpiresByType image/png "access plus 30 days"
+ExpiresByType image/jpeg "access plus 30 days"
+ExpiresByType image/svg+xml "access plus 30 days"
+</IfModule>

@@ -1,0 +1,454 @@
+/* ===========================
+   CASTING PAGE STYLES
+   =========================== */
+
+/* Container geral da página */
+
+
+
+.casting-hero {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    padding: 40px 30px;
+    text-align: center;
+    background: linear-gradient(to bottom, #f5f5f5 0%, #e9e9e9 100%);
+    border-top: 3px solid #37b437;
+    border-bottom: 3px solid #37b437;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 220px;
+    border-radius: 8px;
+    margin-top: 93px; /* compensação do header fixo */
+    margin-bottom: 20px;
+}
+
+.casting-hero h1 {
+  font-size: 2.8rem;
+  color: var(--eds-dark);
+  margin-bottom: 10px;
+}
+
+.casting-hero p {
+  font-size: 1.2rem;
+  color: var(--eds-gray-dark);
+}
+
+/* Grid box principal */
+.casting-grid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 60px 5% 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Caixa de texto */
+.casting-left {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* Caixa da imagem */
+.casting-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Tamanho da caixa controlável */
+.casting-img-container {
+  width: 90%; /* ajuste como quiser */
+  max-width: 400px; /* ou 100%, ou 300px, etc. */
+  height: auto;
+}
+
+/* Imagem preenche a caixa */
+.casting-img-container img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+
+.casting-left h1 {
+  font-size: 2.2rem;
+  color: var(--eds-dark);
+  margin-bottom: 20px;
+  font-weight: 600;
+  text-align: left; /* ou center se preferir */
+}
+
+.casting-left p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  text-align: justify;
+  color: var(--eds-text);
+}
+
+
+
+/* Containers dos subtipos de casting */
+
+.casting-subtypes {
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+/* Seções Alternadas */
+
+
+/* Específico para sand-casting */
+.sand-casting {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  margin: 20px 0;
+  padding: 30px;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+  background-color: var (--eds-success);
+  box-sizing: border-box;
+  align-self: flex-start;
+  text-align: right;
+  align-items: flex-start;
+}
+
+.sand-casting {
+  align-self: flex-start;
+  background-color: var(--eds-green-50);
+  text-align: center;
+  align-items: flex-start;
+}
+
+.sand-casting p {
+ max-width: 50%; /* Ajustado para ocupar 100% da largura do container interno */
+  text-align: justify; /* Texto justificado */
+  margin-left: 25%; /* Alinha o bloco de texto à direita */
+  line-height: 1.6;
+  color: var(--eds-dark);
+  font-size: 1.1rem;
+}
+
+.btn-sand-casting {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: var(--eds-primary);
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+  white-space: nowrap;
+}
+
+
+
+/* Específico para investment-casting */
+.investment-casting {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  margin: 20px 0;
+  padding: 30px;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+  background-color: var(--eds-gray-very-soft);
+  box-sizing: border-box;
+  align-self: flex-end;
+  text-align: right;
+  align-items: flex-end;
+}
+
+
+.investment-casting {
+  align-self: flex-end;
+  background-color: var( --eds-green-100);
+  text-align: center;
+  align-items: flex-end;
+}
+
+.investment-casting p {
+  max-width: 50%; /* Ajustado para ocupar 100% da largura do container interno */
+  text-align: justify; /* Texto justificado */
+  margin-left: 25%; /* Alinha o bloco de texto à direita */
+  line-height: 1.6;
+  color: var(--eds-dark);
+  font-size: 1.1rem;
+  }
+
+.btn-investment-casting {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: var(--eds-primary);
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+  white-space: nowrap;
+}
+
+/* Específico para shell-moulding */
+.shell-moulding {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  margin: 20px 0;
+  padding: 30px;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+  background-color: var (--eds-success);
+  box-sizing: border-box;
+  align-self: flex-start;
+  text-align: right;
+  align-items: flex-start;
+}
+
+.shell-moulding {
+  align-self: flex-start;
+  background-color: var(--eds-green-50);
+  text-align: center;
+  align-items: flex-start;
+}
+
+.shell-moulding p {
+ max-width: 50%; /* Ajustado para ocupar 100% da largura do container interno */
+  text-align: justify; /* Texto justificado */
+  margin-left: 25%; /* Alinha o bloco de texto à direita */
+  line-height: 1.6;
+  color: var(--eds-dark);
+  font-size: 1.1rem;
+}
+
+.btn-shell-moulding {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: var(--eds-primary);
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+  white-space: nowrap;
+}
+
+
+
+/* Específico para gravity-die */
+.gravity-die {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  margin: 20px 0;
+  padding: 30px;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+  background-color: var(--eds-gray-very-soft);
+  box-sizing: border-box;
+  align-self: flex-end;
+  text-align: right;
+  align-items: flex-end;
+}
+
+
+.gravity-die{
+  align-self: flex-end;
+  background-color: var( --eds-green-100);
+  text-align: center;
+  align-items: flex-end;
+}
+
+.gravity-die p {
+  max-width: 50%; /* Ajustado para ocupar 100% da largura do container interno */
+  text-align: justify; /* Texto justificado */
+  margin-left: 25%; /* Alinha o bloco de texto à direita */
+  line-height: 1.6;
+  color: var(--eds-dark);
+  font-size: 1.1rem;
+  
+}
+
+.btn-gravity {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: var(--eds-primary);
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+  white-space: nowrap;
+}
+
+
+
+/* Específico para lost-foam */
+
+.lost-foam {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  margin: 20px 0;
+  padding: 30px;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+  background-color: var (--eds-success);
+  box-sizing: border-box;
+  align-self: flex-start;
+  text-align: right;
+  align-items: flex-start;
+}
+
+.lost-foam {
+  align-self: flex-start;
+  background-color: var(--eds-green-50);
+  text-align: center;
+  align-items: flex-start;
+}
+
+.lost-foam p {
+  max-width: 50%; /* Ajustado para ocupar 100% da largura do container interno */
+  text-align: justify; /* Texto justificado */
+  margin-left: 25%; /* Alinha o bloco de texto à direita */
+  line-height: 1.6;
+  color: var(--eds-dark);
+  font-size: 1.1rem;
+  }
+
+  .btn-lost.foam {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: var(--eds-primary);
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+  white-space: nowrap;
+}
+
+
+
+/* Específico para investment-casting */
+.high-pressure-die {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  margin: 20px 0;
+  padding: 30px;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+  background-color: var(--eds-gray-very-soft);
+  box-sizing: border-box;
+  align-self: flex-end;
+  text-align: right;
+  align-items: flex-end;
+}
+
+
+.high-pressure-die {
+  align-self: flex-end;
+  background-color: var( --eds-green-100);
+  text-align: center;
+  align-items: flex-end;
+}
+
+.high-pressure-die p {
+  max-width: 50%; /* Ajustado para ocupar 100% da largura do container interno */
+  text-align: justify; /* Texto justificado */
+  margin-left: 25%; /* Alinha o bloco de texto à direita */
+  line-height: 1.6;
+  color: var(--eds-dark);
+  font-size: 1.1rem;
+ }
+
+ .btn-high-pressure-die {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: var(--eds-primary);
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+  white-space: nowrap;
+}
+
+
+
+/* Específico para sintering */
+
+.sintering {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  margin: 20px 0;
+  padding: 30px;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+  background-color: var (--eds-success);
+  box-sizing: border-box;
+  align-self: flex-start;
+  text-align: right;
+  align-items: flex-start;
+}
+
+.sintering {
+  align-self: flex-start;
+  background-color: var(--eds-green-50);
+  text-align: center;
+  align-items: flex-start;
+}
+
+.sintering p {
+  max-width: 50%; /* Ajustado para ocupar 100% da largura do container interno */
+  text-align: justify; /* Texto justificado */
+  margin-left: 25%; /* Alinha o bloco de texto à direita */
+  line-height: 1.6;
+  color: var(--eds-dark);
+  font-size: 1.1rem;
+  }
+
+  .btn-sintering {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: var(--eds-primary);
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+  white-space: nowrap;
+}
+
+
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .casting-main-grid {
+    grid-template-columns: 1fr;
+  }
+  .casting-subtype {
+    flex-direction: column !important;
+    width: 100%;
+  }
+  .casting-subtype img {
+    width: 100%;
+  }
+}

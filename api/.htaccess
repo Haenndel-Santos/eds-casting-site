@@ -1,0 +1,14 @@
+# If your API is only PHP endpoints, allow only PHP files to be hit directly
+<FilesMatch "\.(php)$">
+Require all granted
+</FilesMatch>
+
+
+# Deny everything else from being directly accessed
+<FilesMatch "\.(?:js|css|txt|md|yml|yaml|json|xml|log)$">
+Require all denied
+</FilesMatch>
+
+
+# No directory listings
+Options -Indexes

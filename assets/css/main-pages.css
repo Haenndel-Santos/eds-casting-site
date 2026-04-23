@@ -1,0 +1,254 @@
+/* ======================================================
+   EDS MAIN PAGES — Casting, Forging, Add Value, Logistics
+   ====================================================== */
+
+/* ==== HERO FULL IMAGE ==== */
+.mainpage-hero.hero-fullimage {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    /* altura total da tela */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: -4px;
+    /* compensar header fixo */
+    overflow: hidden;
+}
+
+.hero-fullimage .hero-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+}
+
+.hero-fullimage .hero-text {
+    position: relative;
+    z-index: 2;
+    color: #fff;
+    padding: 140px;
+    max-width: 900px;
+}
+
+.hero-fullimage h1 {
+    color: #eaeaea;
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    text-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+}
+
+.hero-fullimage p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #eaeaea;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+/* ==== PAGE SECTIONS ==== */
+.mainpage-section {
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 30px 30px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+/* Bordas alternadas */
+.mainpage-section:nth-of-type(odd) {
+    border-right: 4px solid #37b437;
+}
+
+.mainpage-section:nth-of-type(even) {
+    border-left: 4px solid #37b437;
+    background-color: #f9fbf9;
+}
+
+/* Títulos das seções */
+.mainpage-section h2 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #222;
+    margin-bottom: 18px;
+    position: relative;
+}
+
+.mainpage-section h2::after {
+    content: "";
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background: #37b437;
+    border-radius: 3px;
+}
+
+/* Texto das seções */
+.mainpage-section p {
+    color: #333;
+    line-height: 1.75;
+    text-align: justify;
+    margin-bottom: 20px;
+}
+
+/* ==== LISTAS TÉCNICAS ==== */
+.mainpage-list {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0 0;
+}
+
+.mainpage-list li {
+    margin-bottom: 10px;
+    padding-left: 28px;
+    position: relative;
+    color: #333;
+    font-size: 1rem;
+}
+
+.mainpage-list li::before {
+    content: "▸";
+    position: absolute;
+    left: 0;
+    color: #37b437;
+    font-size: 1.2rem;
+}
+
+/* ==== CTA SECTION ==== */
+.mainpage-cta {
+    text-align: center;
+    background: #f0f5f0;
+    border-top: 2px solid #37b437;
+    padding: 50px 25px;
+    border-radius: 8px;
+    margin: 60px auto;
+    max-width: 800px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+}
+
+.mainpage-cta p {
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.mainpage-cta .cta-button {
+    background: #37b437;
+    color: #fff;
+    padding: 12px 30px;
+    border-radius: 6px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.mainpage-cta .cta-button:hover {
+    background: #2ea42f;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 15px rgba(55, 180, 55, 0.25);
+}
+
+/* ==== RESPONSIVIDADE ==== */
+@media (max-width: 992px) {
+    .hero-fullimage {
+        height: 80vh;
+    }
+
+    .hero-fullimage h1 {
+        font-size: 2.4rem;
+    }
+
+    .hero-fullimage p {
+        font-size: 1.05rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .mainpage-section {
+        padding: 25px 20px;
+        margin: 40px auto;
+    }
+
+    .mainpage-section:nth-of-type(odd),
+    .mainpage-section:nth-of-type(even) {
+        border-left: none;
+        border-right: none;
+        border-top: 3px solid #37b437;
+    }
+
+    .mainpage-cta {
+        max-width: 90%;
+        padding: 40px 20px;
+    }
+
+    .hero-fullimage {
+        height: 70vh;
+    }
+
+    .hero-fullimage h1 {
+        font-size: 2rem;
+    }
+
+    .hero-fullimage p {
+        font-size: 1rem;
+    }
+}
+
+/* ==========================
+   Related Processes Section
+========================== */
+
+.mainpage-related {
+  background-color: #f8f9fb; /* leve contraste */
+  border-top: 1px solid #e5e7eb;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.mainpage-related h2 {
+  margin-bottom: 16px;
+}
+
+.mainpage-related p {
+  max-width: 800px;
+  line-height: 1.7;
+  color: #4b5563; /* cinza suave */
+}
+
+/* Links dentro do texto */
+.mainpage-related a {
+  color: #0b5ed7; /* azul consistente */
+  text-decoration: none;
+  font-weight: 500;
+  border-bottom: 1px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.mainpage-related a:hover {
+  color: #084298;
+  border-bottom: 1px solid #084298;
+}
+
+/* Espaçamento geral (caso queira padronizar) */
+.mainpage-related {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .mainpage-related {
+    padding: 40px 16px;
+  }
+
+  .mainpage-related p {
+    font-size: 15px;
+  }
+}

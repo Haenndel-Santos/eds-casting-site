@@ -1,0 +1,622 @@
+/* ==========================================
+   WORKFLOW PAGE — EDS Casting & Forging
+   ========================================== */
+
+
+
+/* HERO */
+
+.page-hero-workflow {
+	margin-top: -5px;
+    text-align: center;
+    padding: 40px 20px 30px;
+    border-bottom: 3px solid var(--eds-primary)
+}
+
+
+.page-hero-workflow h1 {
+    font-size: 3.2rem;
+    color: var(--eds-primary);
+    margin-bottom: 8px
+}
+
+.page-hero-workflow p {
+    font-size: 1.1rem;
+    color: #333;
+    margin: 0 auto;
+    line-height: 1.6;
+    font-weight: 500;
+    }
+
+   .workflow-overview {
+    margin-bottom: -75px;
+    background-color: #fff;
+    text-align:center; 
+    padding:25px 20px 30px; 
+  
+  }
+
+  .workflow-overview h2{
+   font-size:1.5rem; 
+   color:#333; 
+   margin-bottom:8px;
+   margin-top: 8px
+  }
+
+
+/* LAYOUT */
+.workflow-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0px;
+    padding: 0px 80px;
+    flex-wrap: wrap;
+    background: #fff
+}
+
+
+/* CORE (square, centered) */
+.workflow-core {
+    position: relative;
+    width: 100%;
+    max-width: 520px;
+    aspect-ratio: 1/1;
+}
+
+.workflow-core img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    user-select: none;
+    pointer-events: none
+}
+
+
+/* DOTS (initial red, hover green) */
+.wf-dot {
+    position: absolute;
+    width: 12%;
+    height: 12%;
+    border-radius: 50%;
+    background: transparent;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, .25);
+    transform: translate(-50%, -50%);
+    transition: transform .2s ease, background-color .2s ease, box-shadow .2s ease;
+}
+
+
+.wf-dot:hover {
+    background: transparent;
+    transform: transform scale(1.05)
+}
+
+.wf-dot:focus {
+    outline: 2px dashed #00ff00;
+    outline-offset: 2px
+}
+
+.wf-dot.active {
+    background: transparent
+}
+
+
+/* 1. Machining / Welding */
+.wf-dot.welding {
+    left: 246.862px;
+    top: 116.138px;
+    width: 25%;
+    height: 25%;
+}
+
+/* 2. Material Selection (deve ficar à esquerda) */
+.wf-dot.material {
+    left: 391.862px;
+    /* era assembly */
+    top: 181.844px;
+    width: 25%;
+    height: 25%;
+
+}
+
+/* 3. Weight Optimization (esquerda) */
+.wf-dot.weight {
+    left: 407.299px;
+    top: 344.862px;
+    width: 25%;
+    height: 25%;
+}
+
+/* 4. Load Case / FEM */
+.wf-dot.testing {
+    left: 272.138px;
+    top: 435.862px;
+    width: 25%;
+    height: 25%;
+}
+
+/* 5. Assembly Line (mover para a direita → posição de tools) */
+.wf-dot.assembly {
+    left: 125.2px;
+    top: 369px;
+    width: 25%;
+    height: 25%;
+}
+
+
+/* 6. Supply Chain (mover para a direita → posição de assembly anterior) */
+.wf-dot.tools {
+    left: 110.38px;
+    /* esquerda correta */
+    top: 203.138px;
+    width: 25%;
+    height: 25%;
+
+}
+
+/* Extra: se estiver usando */
+.wf-dot.towere {
+    left: 257.862px;
+    top: 275.862px;
+    width: 25%;
+    height: 25%;
+}
+
+
+
+/* GUIDES */
+.workflow-core .guide {
+    position: absolute;
+    display: none;
+    pointer-events: none
+}
+
+.workflow-core.show-guides .guide {
+    display: block
+}
+
+.guide-vertical {
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    transform: translateX(-1px);
+    background: linear-gradient(180deg, transparent, rgba(55, 55, 55, .25), transparent)
+}
+
+.guide-horizontal {
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 2px;
+    transform: translateY(-1px);
+    background: linear-gradient(90deg, transparent, rgba(55, 55, 55, .25), transparent)
+}
+
+.guide-diagonal-45,
+.guide-diagonal-135 {
+    left: 50%;
+    top: 50%;
+    width: 2px;
+    height: 150%;
+    transform-origin: center;
+    background: linear-gradient(180deg, transparent, rgba(55, 55, 55, .25), transparent)
+}
+
+.guide-diagonal-45 {
+    transform: translate(-1px, -50%) rotate(45deg)
+}
+
+.guide-diagonal-135 {
+    transform: translate(-1px, -50%) rotate(135deg)
+}
+
+.guide-center {
+    left: 50%;
+    top: 50%;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #37b437;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 0 4px rgba(55, 180, 55, .15)
+}
+
+
+/* INFO PANEL */
+.workflow-info {
+    flex: 1;
+    min-width: 320px;
+    max-width: 520px;
+    background: #fff;
+    border-radius: 12px;
+    padding: 28px 32px;
+    box-shadow: 0 6px 24px rgba(0, 0, 0, .08);
+    transition: opacity .3s ease
+}
+
+.workflow-info h5 {
+    color: var(--eds-primary);
+    margin: 0 0 8px;
+    font-size: 1.6rem;
+    text-align: left
+}
+
+.workflow-info p {
+    color: #333;
+    line-height: 1.65;
+    text-align: justify;
+    margin: 0
+}
+
+.workflow-controls {
+    margin-top: 16px;
+    font-size: .95rem
+}
+
+.toggle-guides input {
+    margin-right: 8px
+}
+
+/* ======================================================
+   POPUPS — ENHANCED VISUAL FOR EDS WORKFLOW
+   ====================================================== */
+
+/* ==========================================
+   WORKFLOW PAGE — POPUPS STYLE (FINAL)
+   ========================================== */
+
+/* --- OVERLAY --- */
+.popup-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    backdrop-filter: blur(3px);
+    transition: opacity 0.3s ease;
+}
+
+.popup-overlay.active {
+    display: flex;
+    animation: fadeIn 0.3s ease forwards;
+}
+
+/* --- POPUP CONTAINER --- */
+.popup-box1 {
+    background: #fff;
+    padding: 60px 70px;
+    border-radius: 12px;
+    max-width: 950px;
+    width: 90%;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+    text-align: justify;
+    position: relative;
+    animation: popupFade 0.3s ease-out;
+}
+
+/* --- TITLES (h7) --- */
+.popup-box1 h7 {
+    color: #37b437;
+    /* EDS GREEN */
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 25px;
+    letter-spacing: 0.5px;
+}
+
+/* --- PARAGRAPHS --- */
+.popup-box1 p {
+    color: #333;
+    line-height: 1.75;
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+}
+
+/* --- KEY BENEFITS --- */
+.popup-box1 p strong {
+    color: #37b437;
+    /* EDS GREEN */
+    font-weight: 600;
+}
+
+/* --- IMAGE STYLING (Towere) --- */
+.popup-box1 img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+    border-radius: 6px;
+}
+
+/* --- CLOSE BUTTON --- */
+.close-popup {
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    font-size: 2rem;
+    color: #666;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    line-height: 1;
+}
+
+.close-popup:hover {
+    color: #000;
+}
+
+/* --- ANIMATIONS --- */
+@keyframes popupFade {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* --- RESPONSIVENESS --- */
+@media (max-width: 992px) {
+    .popup-box1 {
+        max-width: 90%;
+        padding: 40px 30px;
+    }
+
+    .popup-box1 h7 {
+        font-size: 1.7rem;
+        margin-bottom: 18px;
+    }
+
+    .popup-box1 p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .popup-box1 {
+        padding: 35px 25px;
+    }
+
+    .popup-box1 h7 {
+        font-size: 1.5rem;
+    }
+
+    .close-popup {
+        top: 10px;
+        right: 15px;
+        font-size: 1.6rem;
+    }
+}
+
+
+/* Oculta o checkbox e o texto "Show guides" completamente */
+.toggle-guides {
+    display: none;
+}
+
+/* =============================
+   POPUPS — REPLACING SIDE PANEL
+   ============================= */
+
+.workflow-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    padding: 40px 0;
+}
+
+.workflow-core {
+    margin: 0 auto;
+    position: relative;
+    max-width: 520px;
+    width: 100%;
+}
+
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.popup-overlay.active {
+    display: flex;
+}
+
+/* ==========================================
+   WORKFLOW — Towere Popup (ONLY for workflow)
+   Matches HTML:
+   <div class="popup-overlay" id="popup-towere">
+     <div class="popup-box"> ... <span class="close-popup">...
+   ========================================== */
+
+/* --- OVERLAY --- */
+#popup-towere.popup-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  padding: 20px;
+  backdrop-filter: blur(3px);
+}
+
+#popup-towere.popup-overlay.active {
+  display: flex;
+  animation: wfPopupFadeIn 0.25s ease forwards;
+}
+
+/* --- BOX --- */
+#popup-towere .popup-box {
+  background: #fff;
+  border-radius: 12px;
+  padding: 28px;
+  max-width: 980px;
+  width: min(980px, 96vw);
+  max-height: 90vh;
+  overflow: auto;
+  position: relative;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+  animation: wfPopupRise 0.25s ease;
+}
+
+/* Close */
+#popup-towere .close-popup {
+  position: absolute;
+  top: 14px;
+  right: 18px;
+  font-size: 2rem;
+  line-height: 1;
+  cursor: pointer;
+  color: #444;
+  padding: 4px 8px;
+  border-radius: 8px;
+  transition: color 0.2s ease, background 0.2s ease, transform 0.2s ease;
+}
+
+#popup-towere .close-popup:hover {
+  color: #111;
+  background: rgba(0, 0, 0, 0.06);
+  transform: scale(1.05);
+}
+
+/* Image (remove inline style later if you want) */
+#popup-towere .popup-box img {
+  display: block;
+  margin: 0 auto;
+  max-width: 65%;
+  height: auto;
+}
+
+@keyframes wfPopupRise {
+  from { opacity: 0; transform: translateY(10px) scale(0.98); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@keyframes wfPopupFadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@media (max-width: 600px) {
+  #popup-towere .popup-box {
+    padding: 18px;
+    border-radius: 10px;
+  }
+  #popup-towere .close-popup {
+    top: 10px;
+    right: 12px;
+    font-size: 1.6rem;
+  }
+}
+
+
+
+
+
+/* RESPONSIVE */
+@media (max-width: 960px) {
+    .workflow-container {
+        flex-direction: column;
+        gap: 32px
+    }
+
+    .workflow-info {
+        max-width: 680px
+    }
+}
+
+@media (max-width: 520px) {
+    .wf-dot {
+        width: 14%;
+        height: 14%
+    }
+
+    .workflow-info {
+        padding: 22px 18px
+    }
+
+    .workflow-info h5 {
+        font-size: 1.4rem
+    }
+}
+
+
+/* Fade helper when swapping info */
+.fade-in {
+    animation: fadeIn .4s ease both
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(6px)
+    }
+
+    to {
+        opacity: 1;
+        transform: none
+    }
+}
+
+
+/* ==== CTA SECTION ==== */
+.mainpage-cta1 {
+  text-align: center;
+  background: #fff;
+  border-top: 2px solid #37b437;
+  padding: 50px 25px;
+  border-radius: 8px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+}
+
+.mainpage-cta1 p {
+  font-size: 1.1rem;
+  color: #333;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+.mainpage-cta1 .cta-button {
+  background: #37b437;
+  color: #fff;
+  padding: 12px 30px;
+  border-radius: 6px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.mainpage-cta1 .cta-button:hover {
+  background: #2ea42f;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 15px rgba(55,180,55,0.25);
+}
