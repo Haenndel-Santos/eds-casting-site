@@ -26,6 +26,27 @@ function eds_build_canonical(string $path): string {
   return SITE_URL . $path;
 }
 
+function eds_resolve_og_image(string $ogImage): string {
+  $fallback = BASE_URL_NORM . '/assets/img/logo/logo-main.png';
+
+  if ($ogImage === '') {
+    return $fallback;
+  }
+
+  if (preg_match('/^https?:\/\//i', $ogImage)) {
+    return $ogImage;
+  }
+
+  $relative = $ogImage[0] === '/' ? $ogImage : '/' . $ogImage;
+  $filePath = EDS_ROOT . $relative;
+
+  if (!is_file($filePath)) {
+    return $fallback;
+  }
+
+  return $relative;
+}
+
 function eds_abs_url(string $maybeRelative): string {
   if ($maybeRelative === '') return '';
   if (preg_match('/^https?:\/\//i', $maybeRelative)) return $maybeRelative;
@@ -102,6 +123,7 @@ $robots = $robots ?? 'index,follow';
 $twitterSite = $twitterSite ?? '';
 
 $ogImage = $ogImage ?? (BASE_URL_NORM . '/assets/img/og/eds-og-default.jpg');
+$ogImage = eds_resolve_og_image($ogImage);
 $ogImageAbs = eds_abs_url($ogImage);
 
 $canonical = $canonical ?? eds_build_canonical($path);

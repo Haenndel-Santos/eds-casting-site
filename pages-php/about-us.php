@@ -5,15 +5,6 @@
 <?php include(__DIR__ . '/../includes/header.php'); ?>
 
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-Q1KDBYP4CG"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-Q1KDBYP4CG');
-</script>
 
 <main class="about-us-page">
 
