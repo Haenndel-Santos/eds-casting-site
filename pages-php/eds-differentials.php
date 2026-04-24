@@ -134,7 +134,7 @@
         smarter, stronger, and more sustainable solutions.
       </p>
       <div class="team-button-container">
-        <a href="/pages-php/contact.php" class="button cta">Contact Us</a>
+        <a href="/contact" class="button cta">Contact Us</a>
       </div>
     </section>
 

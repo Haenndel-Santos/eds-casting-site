@@ -189,7 +189,7 @@
 <!-- CTA SECTION -->
   <section class="mainpage-cta1">
     <p>Want to learn more about how EDS optimizes workflow efficiency and project delivery?</p>
-    <a href="/pages-php/contact.php" class="cta-button">Get in Touch</a>
+    <a href="/contact" class="cta-button">Get in Touch</a>
   </section>
 </main>
 

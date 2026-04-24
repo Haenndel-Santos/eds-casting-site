@@ -5,9 +5,9 @@
   </p>
 
   <div class="bottom-links">
-    <a href="/pages-php/disclaimer.php"> Disclaimer</a>
-    <a href="/pages-php/privacy.php"> Privacy</a>
-    <a href="../terms">Terms & Conditions</a>
+    <a href="/disclaimer"> Disclaimer</a>
+    <a href="/privacy"> Privacy</a>
+    <a href="/terms">Terms & Conditions</a>
   </div>
 </div>
 

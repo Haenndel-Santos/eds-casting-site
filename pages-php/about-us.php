@@ -89,7 +89,7 @@
       <p>Behind every project is a team of professionals committed to excellence. Our engineers, supply chain specialists, and quality experts ensure that every part meets your expectations — from material selection to final inspection.</p>
 
        <div class="team-button-container">
-    <a href="/pages-php/our-team.php" class="button cta">Our Team</a>
+    <a href="/our-team" class="button cta">Our Team</a>
   </div>
     </section>
 

@@ -77,9 +77,9 @@
 
   <div class="related-grid">
 
-    <a href="/investment" class="related-card">
-      <h3>Investment Casting</h3>
-      <p>High precision process ideal for complex geometries and tight tolerances.</p>
+    <a href="/casting-matrix" class="related-card">
+      <h3>Casting Matrix</h3>
+      <p>Compare tolerances, surface finish, tooling cost, and process fit across major casting technologies.</p>
       <span class="related-link">Learn more →</span>
     </a>
 
@@ -89,9 +89,9 @@
       <span class="related-link">Learn more →</span>
     </a>
 
-    <a href="/machining" class="related-card">
-      <h3>Machining</h3>
-      <p>Secondary operations to achieve high precision, finishing, and final tolerances.</p>
+    <a href="/investment" class="related-card">
+      <h3>Investment Casting</h3>
+      <p>High precision process ideal for complex geometries and tight tolerances.</p>
       <span class="related-link">Learn more →</span>
     </a>
 

@@ -104,7 +104,7 @@
   <p>
     Do you have specific technical or quality requirements for your project? Let’s define the best production route together.
   </p>
-  <a href="/pages-php/contact.php" class="cta-button">Contact Our Team</a>
+  <a href="/contact" class="cta-button">Contact Our Team</a>
 </section>
 
 <?php include(__DIR__ . '/../includes/footer.php'); ?>

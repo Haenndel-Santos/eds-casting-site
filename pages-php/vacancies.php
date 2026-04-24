@@ -28,7 +28,7 @@
     </p>
     <p>
       You can send your resume through our 
-      <a href="/pages-php/careers.php" class="link-highlight">Work at EDS</a> page — 
+      <a href="/careers" class="link-highlight">Work at EDS</a> page — 
       it will be safely stored in our candidate database for future opportunities.
     </p>
   </section>-->
