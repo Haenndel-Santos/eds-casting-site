@@ -132,10 +132,10 @@
         <span>Explore page</span>
       </a>
 
-      <a class="matrix-related-card" href="/casting-matrix">
-        <h3>Casting Matrix Overview</h3>
-        <p>Use this technical comparison as a starting point to assess tolerances, wall thickness, tooling cost, and process fit.</p>
-        <span>Current page</span>
+      <a class="matrix-related-card" href="/quality">
+        <h3>Quality Assurance</h3>
+        <p>Understand EDS quality controls, inspection flows, and documentation standards used across casting projects.</p>
+        <span>Explore page</span>
       </a>
     </div>
   </div>
