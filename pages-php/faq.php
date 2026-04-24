@@ -38,7 +38,7 @@
 
   <section class="mainpage-section">
     <h2>5. What casting and forging methods are supported?</h2>
-    <p>We offer sand casting, investment casting (water glass and silica sol), shell moulding, high-pressure and gravity die casting, lost foam, and sintering. In forging, we support closed die, open die, rolled rings, cold forging and multi-directional forging. Visit our <a href="/what-we-do/casting/casting-matrix.php">Casting Matrix</a> for full comparison.</p>
+    <p>We offer sand casting, investment casting (water glass and silica sol), shell moulding, high-pressure and gravity die casting, lost foam, and sintering. In forging, we support closed die, open die, rolled rings, cold forging and multi-directional forging. Visit our <a href="/casting-matrix">Casting Matrix</a> for full comparison.</p>
   </section>
 
   <section class="mainpage-section">
@@ -88,12 +88,12 @@
 
   <section class="mainpage-section">
     <h2>15. How do I get started with a quote?</h2>
-    <p>Just send us your drawings and quantity estimate via the <a href="/contact.php">contact form</a>. Our team will follow up with clarifying questions and propose the best production and delivery plan.</p>
+    <p>Just send us your drawings and quantity estimate via the <a href="/contact">contact form</a>. Our team will follow up with clarifying questions and propose the best production and delivery plan.</p>
   </section>
 
   <section class="mainpage-cta">
     <p>Still have questions? Let’s talk about your project directly.</p>
-    <a href="/pages-php/contact.php" class="cta-button">Contact Our Team</a>
+    <a href="/contact" class="cta-button">Contact Our Team</a>
   </section>
 
 </main>

@@ -43,7 +43,7 @@
       <h3>3D Metal Printing</h3>
     <p>Sand casting is one of the oldest and most versatile casting techniques. It uses sand as the mold material and is ideal for large components with complex geometries and moderate production volumes.</p>
     <div class="action-button">
-      <a href="../pages-php/metal-printing-3d.php" class="btn-metal-printing-3d">3D Metal Printing</a>
+      <a href="/sand-print3d" class="btn-metal-printing-3d">3D Metal Printing</a>
     </div>
     <div>
   </section>
@@ -53,7 +53,7 @@
     <h3>3D Printes Cores</h3>
     <p>Also known as lost-wax casting, this process produces high-precision components with excellent surface finish. It is suitable for intricate parts used in aerospace, automotive, and medical industries.</p>
     <div class="action-button">
-      <a href="../pages-php/printed-cores-3d.php" class="btn-printed-cores-3d">3D Printes Cores</a>
+      <a href="/printed-cores-3d" class="btn-printed-cores-3d">3D Printes Cores</a>
     </div>
   <div>
   </section>
@@ -63,7 +63,7 @@
     <h3>Assemblies</h3>
     <p>This method improves surface finish and dimensional accuracy by using a resin-coated sand shell. It is commonly used for medium-to-high volume production of small to medium parts.</p>
      <div class="action-button">
-      <a href="../pages-php/assemblies.php" class="btn-assemblies">Assemblies</a>
+      <a href="/assemblies" class="btn-assemblies">Assemblies</a>
     </div>
     <div>
     </section>
@@ -74,7 +74,7 @@
     <h3>Machining</h3>
     <p>Machining employs reusable metal molds and relies on gravity to fill the cavity. It offers better strength and surface quality than sand casting, with shorter cycle times.</p>
     <div class="action-button">
-      <a href="../pages-php/machining.php" class="btn-machining">Machining</a>
+      <a href="/machining" class="btn-machining">Machining</a>
     </div>
     <div>
     </section>
@@ -85,7 +85,7 @@
     <h3>Surface Finishing</h3>
     <p>This innovative method uses foam patterns that vaporize during casting. It enables precise replication of complex geometries with minimal finishing operations.</p>
      <div class="action-button">
-      <a href="../pages-php/suface-finishing.php" class="btn-suface-finishing">Surface Finishing</a>
+      <a href="/surface-finishing" class="btn-suface-finishing">Surface Finishing</a>
     </div>
     <div>
   </section>
