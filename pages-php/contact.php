@@ -5,32 +5,22 @@ include(__DIR__ . '/../includes/head.php');
 include(__DIR__ . '/../includes/header.php');
 ?>
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-Q1KDBYP4CG"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-Q1KDBYP4CG');
-</script>
 
 <div class="page-contact">
 
   <section class="contact-hero" role="banner">
     <div class="contact-hero-inner">
       <h1>Contact Us & Request a Quotation</h1>
-	<p>Tell us about your project, technical requirements, or inquiry — our engineering team is ready to support you.</p>
-	<p>We review all requests promptly and provide clear feedback, feasibility insights, and next steps.</p>
-	<p>To speed up the process, you can upload drawings or technical documents directly in the form.</p>
+      <p>Tell us about your project, technical requirements, or inquiry — our engineering team is ready to support you.</p>
+      <p>We review all requests promptly and provide clear feedback, feasibility insights, and next steps.</p>
+      <p>To speed up the process, you can upload drawings or technical documents directly in the form.</p>
+    </div>
   </section>
 
-      </section>
-
-         <div class="form-section-title">
-        <h2>Contact Information</h2>
-        <p>Please share your details so we can get back to you.</p>
-      </div>
-</section>
+  <div class="form-section-title">
+    <h2>Contact Information</h2>
+    <p>Please share your details so we can get back to you.</p>
+  </div>
 
   <main class="contact-section" role="main">
 
