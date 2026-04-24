@@ -62,10 +62,8 @@ error_log('CONTACT: fields captured');
 require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/honeypot-check.php';
 error_log('CONTACT: honeypot ok');
 
-/*
 require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/validate-captcha.php';
 error_log('CONTACT: captcha ok');
-*/
 
 if ($name === '' || $email === '' || $message === '') {
     error_log('CONTACT: missing required fields');

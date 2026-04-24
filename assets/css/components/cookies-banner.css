@@ -1,0 +1,69 @@
+   6) COOKIES BANNER
+===================================================== */
+
+.cookie-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--eds-white);
+  border-top: 3px solid var(--eds-primary);
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
+  padding: 16px 20px;
+  display: none;
+  z-index: 9999;
+  text-align: center;
+}
+
+.cookie-banner.open {
+  display: block;
+}
+
+.cookie-message {
+  font-size: 0.95rem;
+  color: var(--eds-text);
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+
+.cookie-message a {
+  color: var(--eds-primary);
+  text-decoration: underline;
+}
+
+.cookie-actions {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.cookie-btn {
+  padding: 10px 20px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.cookie-btn.accept {
+  background-color: var(--eds-primary);
+  color: #fff;
+}
+
+.cookie-btn.accept:hover {
+  background-color: #2ea42f;
+}
+
+.cookie-btn.decline {
+  background-color: #ddd;
+  color: #333;
+}
+
+.cookie-btn.decline:hover {
+  background-color: #ccc;
+}
+
+/* =====================================================
