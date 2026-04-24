@@ -1,0 +1,151 @@
+   5) MAIN PAGES TEMPLATE
+===================================================== */
+
+.mainpage-hero.hero-fullimage {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-top: -4px;
+  overflow: hidden;
+}
+
+.hero-fullimage .hero-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.hero-fullimage .hero-text {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  padding: 140px 24px;
+  max-width: 900px;
+}
+
+.hero-fullimage h1 {
+  color: #eaeaea;
+  font-size: 4rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  text-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+}
+
+.hero-fullimage p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #eaeaea;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+.mainpage-section {
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.mainpage-section:nth-of-type(odd) {
+  border-right: 4px solid var(--eds-primary);
+}
+
+.mainpage-section:nth-of-type(even) {
+  border-left: 4px solid var(--eds-primary);
+  background-color: #f9fbf9;
+}
+
+.mainpage-section h2 {
+  text-align: left;
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 18px;
+  position: relative;
+}
+
+.mainpage-section h2::after {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background: var(--eds-primary);
+  border-radius: 3px;
+}
+
+.mainpage-section p {
+  color: #333;
+  line-height: 1.75;
+  text-align: justify;
+  margin-bottom: 20px;
+}
+
+.mainpage-list {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0 0;
+}
+
+.mainpage-list li {
+  margin-bottom: 10px;
+  padding-left: 28px;
+  position: relative;
+  color: #333;
+  font-size: 1rem;
+}
+
+.mainpage-list li::before {
+  content: "▸";
+  position: absolute;
+  left: 0;
+  color: var(--eds-primary);
+  font-size: 1.2rem;
+}
+
+.mainpage-cta {
+  text-align: center;
+  background: #f0f5f0;
+  border-top: 2px solid var(--eds-primary);
+  padding: 50px 25px;
+  border-radius: 8px;
+  margin: 60px auto;
+  max-width: 800px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+}
+
+.mainpage-cta p {
+  font-size: 1.1rem;
+  color: #333;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+.mainpage-cta .cta-button {
+  background: var(--eds-primary);
+  color: #fff;
+  padding: 12px 30px;
+  border-radius: 6px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.mainpage-cta .cta-button:hover {
+  background: #2ea42f;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 15px rgba(55, 180, 55, 0.25);
+}
+
+/* =====================================================

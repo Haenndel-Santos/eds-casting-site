@@ -1,0 +1,125 @@
+   7) FOOTER + BOTTOM BAR
+===================================================== */
+
+.main-footer {
+  background-color: var(--eds-white);
+  color: var(--eds-text);
+  font-size: 0.95rem;
+  font-weight: 400;
+  padding: 28px 20px 10px;
+  border-top: 4px solid var(--eds-primary);
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr 1fr 1fr 1fr;
+
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-column {
+  min-width: 0;
+}
+
+.footer-column h4 {
+  color: var(--eds-text);
+  margin-bottom: 15px;
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 8px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  transition: border-color 0.25s ease;
+}
+
+.footer-column ul li:last-child {
+  border-bottom: none;
+}
+
+.footer-column ul li:hover {
+  border-bottom-color: var(--eds-primary);
+}
+
+.footer-column ul li a {
+  color: var(--eds-text);
+  text-decoration: none;
+  font-weight: 500;
+  display: inline-block;
+  width: 100%;
+  padding: 4px 0;
+  transition: color 0.25s ease, transform 0.25s ease;
+}
+
+.footer-column ul li a:hover {
+  color: var(--eds-primary);
+  transform: translateY(-1px);
+  text-decoration: underline;
+}
+
+.footer-logo {
+  max-height: 60px;
+  margin-bottom: 12px;
+  display: block;
+}
+
+.footer-column p {
+  font-weight: 500;
+  color: var(--eds-text);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.bottom-bar {
+  position: relative; /* necessário para o absolute funcionar */
+  display: flex;
+  align-items: center;
+  justify-content: flex-end; /* mantém links à direita */
+  width: 100%;
+  min-height: 46px;
+  padding: 10px 20px;
+  background-color: var(--eds-primary);
+  color: #fff;
+}
+
+/* TEXTO CENTRAL REAL */
+.bottom-bar-text {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0;
+  font-size: 0.85rem;
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: center;
+  white-space: nowrap;
+}
+
+/* LINKS À DIREITA */
+.bottom-links {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+/* LINKS ESTILO */
+.bottom-links a {
+  font-weight: 500;
+  color: #0617ff;
+  text-decoration: none;
+}
+
+.bottom-links a:hover {
+  text-decoration: underline;
+}
+
+/* =====================================================

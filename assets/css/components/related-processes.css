@@ -1,0 +1,87 @@
+   9) RELATED PROCESSES / RELATED CARDS
+===================================================== */
+
+.mainpage-related {
+  background-color: #f8f9fb;
+  border-top: 1px solid #e5e7eb;
+  border-bottom: 1px solid #e5e7eb;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.mainpage-related h2 {
+  margin-bottom: 40px;
+}
+
+.mainpage-related p {
+  max-width: 800px;
+  line-height: 1.7;
+  color: #4b5563;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.mainpage-related a {
+  color: #0b5ed7;
+  text-decoration: none;
+  font-weight: 500;
+  border-bottom: 1px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.mainpage-related a:hover {
+  color: #37b437;
+  border-bottom: 1px solid #37b347;
+}
+
+.related-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.related-card {
+  display: block;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 24px;
+  text-align: left;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+}
+
+.related-card h3 {
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 20px;
+  color: #111827;
+}
+
+.related-card p {
+  font-size: 15px;
+  color: #333;
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+.related-link {
+  font-size: 14px;
+  font-weight: 500;
+  color: #37b347;
+}
+
+.related-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  border-color: #d1d5db;
+}
+
+.related-card:hover .related-link {
+  color: #37b347;
+}
+
+/* =====================================================

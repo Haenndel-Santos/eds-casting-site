@@ -1,0 +1,123 @@
+   4) PROJECT HIGHLIGHTS (Homepage component)
+===================================================== */
+
+.project-highlights {
+  width: 100%;
+  background-color: #fff;
+  padding: 40px 0;
+}
+
+.project-highlights-intro {
+  max-width: 700px;
+  margin: 0 auto 40px;
+  text-align: center;
+  color: #333;
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+.project-highlights-title {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #333;
+  padding-bottom: 5px;
+}
+
+.project-highlights-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.project-box {
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  min-height: 360px;
+}
+
+.project-box:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+}
+
+.project-icon {
+  display: block;
+  margin: 0 auto 16px;
+  max-width: 100px;
+  height: auto;
+}
+
+.project-box h3 {
+  color: #37b347;
+  font-weight: 700;
+  font-size: 1.3rem;
+  margin-bottom: 12px;
+}
+
+.project-box p {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 20px;
+  line-height: 1.5;
+  flex-grow: 1;
+  text-align: justify;
+}
+
+.project-box a.button.cta {
+  display: inline-block;
+  align-self: center;
+  margin-top: auto;
+  background-color: #f5f5f5;
+  border: 1px solid var(--eds-primary);
+  border-radius: 6px;
+  padding: 10px 18px;
+  font-weight: 600;
+  color: var(--eds-primary);
+  text-decoration: none;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.project-box a.button.cta:hover {
+  background-color: var(--eds-primary);
+  color: #fff;
+  border-color: var(--eds-primary);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.project-highlights-cta {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.cta-button {
+  display: inline-block;
+  background-color: var(--eds-primary);
+  color: #fff;
+  padding: 14px 28px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #2ea43f;
+  transform: translateY(-2px);
+}
+
+/* =====================================================
