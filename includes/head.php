@@ -166,6 +166,7 @@ $assetVer = $assetVer ?? '2026.02.18';
   <link rel="shortcut icon" href="<?= BASE_URL_NORM ?>/assets/img/logo/favicon.png" type="image/png" />
 
   <link rel="stylesheet" href="<?= BASE_URL_NORM ?>/assets/css/style.css?v=<?= $assetVer ?>" />
+  <link rel="stylesheet" href="<?= BASE_URL_NORM ?>/assets/css/components/footer-bottom-bar.css?v=<?= $assetVer ?>" />
 
   <?php if ($foundPageCssUrl) : ?>
     <link rel="stylesheet" href="<?= htmlspecialchars($foundPageCssUrl) ?>?v=<?= $assetVer ?>" />
