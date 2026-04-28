@@ -60,9 +60,15 @@
   color: #ffffff;
 }
 
+.home-hero__eyebrow-section {
+  width: 100%;
+  margin: 0 0 18px;
+  text-align: center;
+}
+
 .home-hero__eyebrow {
   display: inline-block;
-  margin: 0 0 18px;
+  margin: 0;
   color: #37b437;
   font-size: 0.85rem;
   font-weight: 700;
@@ -71,26 +77,30 @@
 }
 
 .home-hero__title {
-  display: grid;
-  grid-template-columns: minmax(300px, 0.9fr) minmax(360px, 1.1fr);
-  align-items: end;
-  gap: 44px;
-  margin: 0 0 24px;
-}
-
-.hero-eds-title {
   display: flex;
-  flex-direction: column;
-  gap: 2px;
-  margin: 0;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin: 0 0 18px;
   color: #ffffff;
-  font-size: clamp(2.6rem, 4.8vw, 4.25rem);
-  line-height: 0.98;
+  font-size: clamp(2.05rem, 4vw, 3.65rem);
+  line-height: 1;
   font-weight: 700;
+  text-align: center;
 }
 
-.hero-eds-title > span {
-  display: block;
+.home-hero__title > span {
+  display: inline-flex;
+  align-items: center;
+}
+
+.home-hero__title-dot {
+  width: 0.24em;
+  height: 0.24em;
+  border-radius: 50%;
+  background: #37b437;
+  transform: translateY(0.06em);
 }
 
 .hero-eds-initial {
@@ -100,17 +110,17 @@
 
 .home-hero__headline {
   display: block;
-  max-width: 22ch;
-  margin: 0;
+  max-width: 28ch;
+  margin: 0 auto 18px;
   color: #ffffff;
-  font-size: clamp(1.55rem, 2.5vw, 2.35rem);
+  font-size: clamp(1.45rem, 2.3vw, 2.15rem);
   font-weight: 800;
-  line-height: 1.12;
-  text-align: right;
+  line-height: 1.16;
+  text-align: center;
 }
 
 .home-hero__summary {
-  max-width: 78ch;
+  max-width: 80ch;
   margin: 0 auto;
   color: rgba(255, 255, 255, 0.92);
   font-size: 1.05rem;
@@ -283,8 +293,7 @@
    ========================================================= */
 @media (max-width: 1100px) {
   .home-hero__title {
-    grid-template-columns: minmax(260px, 0.8fr) minmax(320px, 1.2fr);
-    gap: 32px;
+    gap: 14px;
   }
 }
 
@@ -326,19 +335,12 @@
   }
 
   .home-hero__title {
-    grid-template-columns: 1fr;
-    gap: 16px;
-  }
-
-  .hero-eds-title {
-    font-size: clamp(2rem, 8vw, 2.8rem);
-    line-height: 0.95;
+    font-size: clamp(1.85rem, 8vw, 2.75rem);
   }
 
   .home-hero__headline {
-    max-width: none;
+    max-width: 26ch;
     font-size: clamp(1.45rem, 6vw, 2.15rem);
-    text-align: left;
   }
 
   .home-hero__summary {

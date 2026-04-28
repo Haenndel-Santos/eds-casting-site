@@ -4,16 +4,19 @@
   </div>
 
   <div class="home-hero__content">
-    <p class="home-hero__eyebrow">Engineering-Driven Global Manufacturing Support</p>
+    <div class="home-hero__eyebrow-section">
+      <p class="home-hero__eyebrow">Engineering-Driven Global Manufacturing Support</p>
+    </div>
 
     <h1 id="home-hero-title" class="home-hero__title">
-      <span class="hero-eds-title" aria-label="Engineering Design Supply">
-        <span><span class="hero-eds-initial">E</span>ngineering</span>
-        <span><span class="hero-eds-initial">D</span>esign</span>
-        <span><span class="hero-eds-initial">S</span>upply</span>
-      </span>
-      <span class="home-hero__headline">Engineering-Driven Casting &amp; Forging Solutions for European Industries</span>
+      <span><span class="hero-eds-initial">E</span>ngineering</span>
+      <span class="home-hero__title-dot" aria-hidden="true"></span>
+      <span><span class="hero-eds-initial">D</span>esign</span>
+      <span class="home-hero__title-dot" aria-hidden="true"></span>
+      <span><span class="hero-eds-initial">S</span>upply</span>
     </h1>
+
+    <h2 class="home-hero__headline">Engineering-Driven Casting &amp; Forging Solutions for European Industries</h2>
 
     <p class="home-hero__summary">
       We help OEMs and industrial buyers source complex castings, forgings and machined components through engineering support, supplier management, quality control and logistics coordination.
