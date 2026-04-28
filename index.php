@@ -4,6 +4,7 @@
 $pageCssExtras = [
   '/assets/css/pages-css/home-solutions-overview.css',
   '/assets/css/pages-css/project-highlights.css',
+  '/assets/css/pages-css/expertise.css',
 ];
 ?>
 <?php include 'includes/head.php'; ?>
@@ -17,7 +18,7 @@ $pageCssExtras = [
  <?php include 'includes/hero-double-images.php'; ?> 
  <?php include 'includes/home-solutions-overview.php'; ?> 
  <?php include 'includes/project-highlights.php'; ?> 
- <?php include 'includes/sp-home.php'; ?> 
+
  <?php include 'includes/expertise.php'; ?> 
  <?php include 'includes/home-industries.php'; ?> 
  <?php include 'includes/home-final-cta.php'; ?>
@@ -30,7 +31,6 @@ $pageCssExtras = [
 
 </body>
 </html>
-
 
 
 
