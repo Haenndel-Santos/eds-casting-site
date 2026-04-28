@@ -54,9 +54,9 @@
 .home-hero__content {
   position: relative;
   z-index: 1;
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 64px 40px 58px;
+  width: calc(100% - 60px);
+  margin: 0 30px;
+  padding: 64px 0 58px;
   color: #ffffff;
 }
 
@@ -111,7 +111,7 @@
 
 .home-hero__summary {
   max-width: 78ch;
-  margin: 0;
+  margin: 0 auto;
   color: rgba(255, 255, 255, 0.92);
   font-size: 1.05rem;
   line-height: 1.8;
@@ -127,7 +127,7 @@
   justify-content: center;
   gap: 14px;
   max-width: 78ch;
-  margin-top: 30px;
+  margin: 30px auto 0;
 }
 
 .home-hero__actions .btn {
@@ -282,10 +282,6 @@
    RESPONSIVE
    ========================================================= */
 @media (max-width: 1100px) {
-  .home-hero__content {
-    padding: 64px 48px;
-  }
-
   .home-hero__title {
     grid-template-columns: minmax(260px, 0.8fr) minmax(320px, 1.2fr);
     gap: 32px;
@@ -326,7 +322,7 @@
 
   .home-hero__content {
     align-self: end;
-    padding: 190px 24px 34px;
+    padding: 190px 0 34px;
   }
 
   .home-hero__title {
@@ -388,7 +384,7 @@
   }
 
   .home-hero__content {
-    padding: 170px 18px 28px;
+    padding: 170px 0 28px;
   }
 
   .home-hero__eyebrow {
