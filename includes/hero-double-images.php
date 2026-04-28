@@ -1,4 +1,12 @@
 <section class="hero-double-images" aria-label="EDS visual highlights">
+  <div class="hero-double-intro">
+    <p class="hero-double-eyebrow">Operational Efficiency Through Engineering</p>
+    <h2>Reducing Total Manufacturing Costs Without Compromising Quality</h2>
+    <p>
+      EDS helps industrial companies reduce sourcing complexity, manufacturing inefficiencies and operational risks through engineering review, qualified suppliers, quality control and logistics coordination.
+    </p>
+  </div>
+
   <div class="hero-double-container">
 
     <figure class="hero-image-box hero-image-box--left">
