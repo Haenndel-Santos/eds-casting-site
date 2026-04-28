@@ -3,6 +3,7 @@
 <?php
 $pageCssExtras = [
   '/assets/css/pages-css/home-solutions-overview.css',
+  '/assets/css/pages-css/project-highlights.css',
 ];
 ?>
 <?php include 'includes/head.php'; ?>
@@ -29,7 +30,6 @@ $pageCssExtras = [
 
 </body>
 </html>
-
 
 
 
