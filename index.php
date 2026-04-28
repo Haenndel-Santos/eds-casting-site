@@ -1,5 +1,10 @@
 
 <?php require_once __DIR__ . '/includes/seo.php';?>
+<?php
+$pageCssExtras = [
+  '/assets/css/pages-css/home-solutions-overview.css',
+];
+?>
 <?php include 'includes/head.php'; ?>
 <?php include 'includes/header.php'; ?>
 
@@ -24,7 +29,6 @@
 
 </body>
 </html>
-
 
 
 
