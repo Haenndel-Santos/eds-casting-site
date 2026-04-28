@@ -21,6 +21,12 @@
 .home-industries .section-heading h2,
 .home-industries .section-heading p {
   text-align: center;
+  color: #333333;
+}
+
+.home-industries .section-heading p {
+  max-width: 760px;
+  margin-inline: auto;
 }
 
 .industry-card {
@@ -38,20 +44,21 @@
 .industry-card:hover {
   transform: translateY(-4px);
   box-shadow: 0 16px 34px rgba(0, 0, 0, 0.08);
-  border-color: rgba(55, 180, 55, 0.22);
+  border-color: #37b437;
 }
 
 .industry-card h3 {
   margin: 0 0 12px;
-  color: var(--eds-text);
+  color: #333333;
   font-size: 1.25rem;
   line-height: 1.3;
   text-align: center;
 }
 
 .industry-card p {
-  margin: 0;
-  color: #555;
+  max-width: 30ch;
+  margin: 0 auto;
+  color: #333333;
   line-height: 1.75;
   text-align: center;
 }
@@ -61,32 +68,3 @@
   text-align: center;
 }
 
-/* =========================================================
-   RESPONSIVE
-   ========================================================= */
-@media (max-width: 992px) {
-  .home-industries {
-    padding: 36px 18px 30px;
-  }
-
-  .industries-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-}
-
-@media (max-width: 768px) {
-  .industries-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .industry-card {
-    padding: 24px 22px;
-  }
-}
-
-@media (max-width: 480px) {
-  .home-industries {
-    padding-left: 12px;
-    padding-right: 12px;
-  }
-}
