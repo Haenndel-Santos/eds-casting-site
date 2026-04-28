@@ -16,3 +16,5 @@ GA4 + Google Ads tag (conversões + remarketing)
 Core Web Vitals (LCP/CLS/INP) e performance fina
 
 SEO on-page (titles/H1/H2, links internos, conteúdo, imagens)
+
+ <?php include 'includes/sp-home.php'; ?> 

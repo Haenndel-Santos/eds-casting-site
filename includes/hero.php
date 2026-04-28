@@ -5,7 +5,7 @@
     <div class="hero-slide active" data-index="0" id="slide-1">
       <img src="/assets/img/hero-img/eng.png" alt="Engineering, design and supply solutions for industrial components">
       <div class="hero-textbox">
-        <p class="hero-eyebrow">Engineering • Design • Supply</p>
+        
 
         <h1 class="hero-eds-title">
           <span><span class="hero-eds-initial">E</span>ngineering</span>
@@ -29,7 +29,7 @@
     <div class="hero-slide" data-index="1" id="slide-2">
       <img src="/assets/img/hero-img/des2.png" alt="Design optimization and manufacturability for casting and forging">
       <div class="hero-textbox">
-        <p class="hero-eyebrow">Engineering Support</p>
+        
 
         <h2>Better Components Start with Better Design Decisions</h2>
 
@@ -49,8 +49,7 @@
     <div class="hero-slide" data-index="2" id="slide-3">
       <img src="/assets/img/hero-img/supply3.jpg" alt="Reliable global sourcing and supply chain coordination">
       <div class="hero-textbox">
-        <p class="hero-eyebrow">Supply Chain</p>
-
+        
         <h2>Reliable Supply with Quality and Delivery Control</h2>
 
         <p>
