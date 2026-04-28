@@ -12,7 +12,7 @@
 
       <div class="home-final-cta-actions">
         <a href="/contact" class="cta-button primary">Request a Quote</a>
-        <a href="/what-we-do" class="cta-button secondary">Explore Our Solutions</a>
+        <a href="/eds-differentials" class="cta-button secondary">Explore Our Solutions</a>
       </div>
 
     </div>

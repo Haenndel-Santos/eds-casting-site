@@ -166,10 +166,22 @@ $assetVer = $assetVer ?? '2026.02.18';
   <link rel="shortcut icon" href="<?= BASE_URL_NORM ?>/assets/img/logo/favicon.png" type="image/png" />
 
   <link rel="stylesheet" href="<?= BASE_URL_NORM ?>/assets/css/style.css?v=<?= $assetVer ?>" />
+  <link rel="stylesheet" href="<?= BASE_URL_NORM ?>/assets/css/components/footer-bottom-bar.css?v=<?= $assetVer ?>" />
 
   <?php if ($foundPageCssUrl) : ?>
     <link rel="stylesheet" href="<?= htmlspecialchars($foundPageCssUrl) ?>?v=<?= $assetVer ?>" />
   <?php endif; ?>
+
+  <?php foreach (($pageCssExtras ?? []) as $pageCssExtra) : ?>
+    <?php
+      $pageCssExtra = trim((string) $pageCssExtra);
+      if ($pageCssExtra === '') continue;
+      $pageCssExtraUrl = preg_match('/^https?:\/\//i', $pageCssExtra)
+        ? $pageCssExtra
+        : BASE_URL_NORM . '/' . ltrim($pageCssExtra, '/');
+    ?>
+    <link rel="stylesheet" href="<?= htmlspecialchars($pageCssExtraUrl) ?>?v=<?= $assetVer ?>" />
+  <?php endforeach; ?>
 
   <script src="<?= BASE_URL_NORM ?>/assets/js/header.js?v=<?= $assetVer ?>" defer></script>
   <script src="<?= BASE_URL_NORM ?>/assets/js/global.js?v=<?= $assetVer ?>" defer></script>

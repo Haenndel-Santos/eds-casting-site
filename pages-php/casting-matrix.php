@@ -132,10 +132,10 @@
         <span>Explore page</span>
       </a>
 
-      <a class="matrix-related-card" href="/quality">
-        <h3>Quality Assurance</h3>
-        <p>Understand EDS quality controls, inspection flows, and documentation standards used across casting projects.</p>
-        <span>Explore page</span>
+      <a class="matrix-related-card" href="/contact">
+        <h3>Talk to Our Engineering Team</h3>
+        <p>Share your component requirements and get guidance on the best casting route based on geometry, material, and production volume.</p>
+        <span>Request support</span>
       </a>
     </div>
   </div>

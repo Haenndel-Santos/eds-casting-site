@@ -86,7 +86,7 @@
 
     <a class="mainpage-related-card" href="/gravity-die">
       <h3>Gravity Die Casting</h3>
-      <p>Compare with a lower-pressure route that suits non-ferrous parts requiring stable quality and robust sections.</p>
+      <p>Compare with a lower-pressure permanent mould route for non-ferrous components and different production volumes.</p>
       <span class="related-link">Learn more →</span>
     </a>
 

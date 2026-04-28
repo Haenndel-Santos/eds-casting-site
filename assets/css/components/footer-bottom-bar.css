@@ -1,13 +1,14 @@
-   7) FOOTER + BOTTOM BAR
+/* =====================================================
+   FOOTER + BOTTOM BAR
 ===================================================== */
 
 .main-footer {
+  border-top: 3px solid #37b437;
   background-color: var(--eds-white);
   color: var(--eds-text);
   font-size: 0.95rem;
   font-weight: 400;
   padding: 28px 20px 10px;
-  border-top: 4px solid var(--eds-primary);
 }
 
 .footer-container {

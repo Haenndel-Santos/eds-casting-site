@@ -79,7 +79,7 @@
 
     <a href="/casting-matrix" class="related-card">
       <h3>Casting Matrix</h3>
-      <p>Compare tolerances, surface finish, tooling cost, and process fit across major casting technologies.</p>
+      <p>Compare tolerances, wall thickness, tooling cost, and process fit across major casting technologies.</p>
       <span class="related-link">Learn more →</span>
     </a>
 
