@@ -15,7 +15,7 @@
   position: relative;
   min-height: 560px;
   width: 100%;
-  margin: 0;
+  margin-top: -3px;
   overflow: hidden;
   background: #151a18;
   box-shadow: 0 18px 40px rgba(0, 0, 0, 0.08);
@@ -56,7 +56,7 @@
   z-index: 1;
   max-width: 1280px;
   margin: 0 auto;
-  padding: 64px 64px 58px;
+  padding: 64px 40px 58px;
   color: #ffffff;
 }
 
@@ -111,7 +111,7 @@
 
 .home-hero__summary {
   max-width: 78ch;
-  margin: 0 auto;
+  margin: 0;
   color: rgba(255, 255, 255, 0.92);
   font-size: 1.05rem;
   line-height: 1.8;
@@ -126,6 +126,7 @@
   flex-wrap: wrap;
   justify-content: center;
   gap: 14px;
+  max-width: 78ch;
   margin-top: 30px;
 }
 
