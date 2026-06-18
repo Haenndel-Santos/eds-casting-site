@@ -11,9 +11,24 @@ Thumbs.db
 *.bak
 /tmp/
 /text.txt
+/sitemap.xml
 
 # uploads
 /assets/uploads/
+
+# private/local content and media excluded from public code repository
+/data/
+/lang/
+/assets/files/
+/assets/img/
+*.png
+*.jpg
+*.jpeg
+*.webp
+*.gif
+*.svg
+*.pdf
+*.jfif
 
 # local editor files
 .vscode/settings.json
@@ -24,11 +39,3 @@ Thumbs.db
 google*.html
 /ping.php
 /router.php
-
-# heavy project source files; keep only web images used by the site
-/assets/img/projects/**
-!/assets/img/projects/
-!/assets/img/projects/case-studies/
-!/assets/img/projects/case-studies/*.webp
-!/assets/img/projects/component-examples/
-!/assets/img/projects/component-examples/*.webp
