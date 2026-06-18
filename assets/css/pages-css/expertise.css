@@ -85,7 +85,7 @@
   background: #333333;
   border: 1px solid #333333;
   border-radius: 6px;
-  color: #37b437;
+  color: white;
   padding: 14px 28px;
   font-weight: 700;
   text-decoration: none;
@@ -93,9 +93,8 @@
 }
 
 .expertise-cta .cta-button:hover {
-  background: #37b437;
+  background: white;
   border-color: #333333;
-  color: #333333;
+  color: #37b437;
   transform: translateY(-2px);
 }
-

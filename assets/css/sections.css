@@ -13,7 +13,6 @@
 /* === PAGE HERO (All internal pages) === */
 .page-hero {
   /* margin-top removed: header offset handled by body padding-top */
-.page-hero {
   max-width: 1200px;
   width: 100%;
   margin: -95px auto;
@@ -31,18 +30,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: 220px;
-  border-radius: 8px;
-}
-
-  border-top: 3px solid var(--eds-primary);
-  border-bottom: 3px solid var(--eds-primary);
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
   min-height: 220px;
   border-radius: 8px;
 }

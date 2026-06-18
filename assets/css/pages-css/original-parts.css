@@ -1,0 +1,342 @@
+/* =========================================================
+   ORIGINAL PARTS PAGE — EDS Casting & Forging
+   File: /assets/css/pages-css/original-parts.css
+
+   Works together with main-pages.css through $useMainPagesCss = true
+
+   Goals:
+   - align with the new process-page visual standard
+   - create a strong B2B landing page for original/replacement parts
+   - support SEO with clear categories and internal links
+   - keep layout clean, scalable and conversion-focused
+   ========================================================= */
+
+.original-parts-page {
+  --op-green: #37b437;
+  --op-green-strong: #00bf63;
+  --op-dark: #333333;
+  --op-text: #333333;
+  --op-muted: #5d665f;
+  --op-border: rgba(51, 51, 51, 0.12);
+  --op-soft: #f7faf7;
+  --op-soft-green: #f0fff0;
+}
+
+.original-parts-page .process-hero {
+  margin-top: -3px;
+}
+
+.original-parts-page .process-hero .process-eyebrow {
+  display: none;
+}
+
+.original-parts-page .process-section h2,
+.original-parts-page .process-section__header h2,
+.original-parts-page .process-intro__text h2 {
+  text-align: left;
+}
+
+.original-parts-page .process-card a {
+  align-self: center;
+  text-align: center;
+}
+
+.original-parts-page .process-intro__cards article span {
+  display: none;
+}
+
+.original-parts-page .process-callout--neutral {
+  background: #ffffff;
+}
+
+/* =========================================================
+   INTRO CARDS
+   ========================================================= */
+
+.original-parts-page .process-intro__cards article {
+  min-height: 205px;
+}
+
+.original-parts-page .process-intro__cards h3 {
+  min-height: 2.5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* =========================================================
+   COMPONENT SUPPORT CARDS
+   ========================================================= */
+
+.original-parts-support-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.original-parts-support-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 300px;
+  padding: 24px;
+  border-radius: 20px;
+  background: #ffffff;
+  border: 1px solid var(--op-border);
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.045);
+  overflow: hidden;
+  transition: transform 0.25s ease, background-color 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.original-parts-support-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: var(--op-green);
+}
+
+.original-parts-support-card:hover {
+  transform: translateY(-4px);
+  background: var(--op-dark);
+  border-color: rgba(55, 180, 55, 0.36);
+  box-shadow: 0 18px 38px rgba(0, 0, 0, 0.10);
+}
+
+.original-parts-support-card h3 {
+  min-height: 2.6em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 8px 0 12px;
+  color: var(--op-dark);
+  font-size: 1.12rem;
+  line-height: 1.3;
+  text-align: center;
+  transition: color 0.25s ease;
+}
+
+.original-parts-support-card p {
+  margin: 0 0 18px;
+  color: var(--op-text);
+  font-size: 0.96rem;
+  line-height: 1.68;
+  text-align: center;
+  transition: color 0.25s ease;
+}
+
+.original-parts-support-card a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  margin: auto auto 0;
+  padding: 10px 16px;
+  border: 1px solid var(--op-green);
+  border-radius: 999px;
+  background: var(--op-green);
+  color: #ffffff;
+  font-size: 0.9rem;
+  font-weight: 850;
+  text-align: center;
+  text-decoration: none;
+  transition: transform 0.25s ease, background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+}
+
+.original-parts-support-card a:hover,
+.original-parts-support-card a:focus-visible {
+  transform: translateY(-2px);
+  background: #ffffff;
+  color: var(--op-green);
+  border-color: var(--op-green);
+  text-decoration: none;
+}
+
+.original-parts-support-card:hover h3 {
+  color: var(--op-green);
+}
+
+.original-parts-support-card:hover p {
+  color: #ffffff;
+}
+
+/* =========================================================
+   CATEGORY GRID
+   ========================================================= */
+
+.original-parts-category-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.original-parts-category-card {
+  display: flex;
+  flex-direction: column;
+  min-height: 220px;
+  padding: 24px;
+  border-radius: 20px;
+  background: #ffffff;
+  border: 1px solid var(--op-border);
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.04);
+  transition: transform 0.25s ease, background-color 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.original-parts-category-card:hover {
+  transform: translateY(-4px);
+  background: var(--op-dark);
+  border-color: rgba(55, 180, 55, 0.35);
+  box-shadow: 0 18px 38px rgba(0, 0, 0, 0.10);
+}
+
+.original-parts-category-card h3 {
+  margin: 0 0 12px;
+  color: var(--op-dark);
+  font-size: 1.12rem;
+  line-height: 1.3;
+  text-align: center;
+  transition: color 0.25s ease;
+}
+
+.original-parts-category-card p {
+  margin: 0;
+  color: var(--op-text);
+  font-size: 0.96rem;
+  line-height: 1.68;
+  text-align: center;
+  transition: color 0.25s ease;
+}
+
+.original-parts-category-card:hover h3 {
+  color: var(--op-green);
+}
+
+.original-parts-category-card:hover p {
+  color: #ffffff;
+}
+
+/* =========================================================
+   QUALITY TABLE
+   ========================================================= */
+
+.original-parts-page .original-parts-spec-table th {
+  width: 30%;
+  color: var(--op-green);
+}
+
+/* =========================================================
+   RELATED / CTA
+   ========================================================= */
+
+.original-parts-page .process-related-card h3 {
+  text-align: center;
+}
+
+.original-parts-page .process-final-cta h2 {
+  text-align: left;
+}
+
+/* =========================================================
+   LEGACY / TRANSITION SAFETY
+   Useful if older standard-parts/original-parts markup remains temporarily.
+   ========================================================= */
+
+.original-parts-page .mainpage-section,
+.original-parts-legacy-section {
+  width: min(1200px, calc(100% - 40px));
+  margin: 28px auto;
+  padding: 36px 40px;
+  border-radius: 24px;
+  background: #ffffff;
+  border: 1px solid var(--op-border);
+  box-shadow: 0 12px 34px rgba(0, 0, 0, 0.055);
+}
+
+.original-parts-page .mainpage-section h2,
+.original-parts-legacy-section h2 {
+  margin: 0 0 16px;
+  color: var(--op-dark);
+  font-size: clamp(1.3rem, 2vw, 1.75rem);
+  line-height: 1.2;
+  text-align: left;
+}
+
+.original-parts-page .mainpage-section p,
+.original-parts-legacy-section p {
+  color: var(--op-text);
+  font-size: 1rem;
+  line-height: 1.78;
+  text-align: justify;
+}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 1180px) {
+  .original-parts-support-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 1024px) {
+  .original-parts-category-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .original-parts-support-card {
+    min-height: 280px;
+  }
+}
+
+@media (max-width: 768px) {
+  .original-parts-support-grid,
+  .original-parts-category-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .original-parts-support-card,
+  .original-parts-category-card,
+  .original-parts-page .process-intro__cards article,
+  .original-parts-page .process-intro__cards h3 {
+    min-height: auto;
+  }
+
+  .original-parts-support-card h3 {
+    min-height: auto;
+  }
+
+  .original-parts-page .mainpage-section,
+  .original-parts-legacy-section {
+    width: min(100% - 24px, 1200px);
+    padding: 26px 20px;
+    border-radius: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .original-parts-support-card,
+  .original-parts-category-card {
+    padding: 22px 18px;
+    border-radius: 18px;
+  }
+
+  .original-parts-support-card p,
+  .original-parts-category-card p,
+  .original-parts-page .mainpage-section p,
+  .original-parts-legacy-section p {
+    font-size: 0.95rem;
+  }
+
+  .original-parts-page .process-spec-table th,
+  .original-parts-page .process-spec-table td {
+    display: block;
+    width: 100%;
+  }
+
+  .original-parts-page .process-spec-table th {
+    border-bottom: 0;
+  }
+}

@@ -60,6 +60,46 @@ textarea {
   resize: vertical;
 }
 
+.back-to-top {
+  position: fixed;
+  right: 22px;
+  bottom: calc(22px + env(safe-area-inset-bottom, 0px));
+  z-index: 10002;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  padding: 0;
+  border: 1px solid var(--eds-primary);
+  border-radius: 999px;
+  background: var(--eds-primary);
+  color: #ffffff;
+  font-size: 1.45rem;
+  font-weight: 900;
+  line-height: 1;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.18);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateY(10px);
+  transition: opacity 0.25s ease, visibility 0.25s ease, transform 0.25s ease, background-color 0.25s ease, color 0.25s ease;
+}
+
+.back-to-top.is-visible {
+  display: inline-flex;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.back-to-top:hover,
+.back-to-top:focus-visible {
+  background: #ffffff;
+  color: var(--eds-primary);
+}
+
 @media (max-width: 768px) {
   button,
   .project-box a,
@@ -69,6 +109,14 @@ textarea {
   .cta-button,
   .careers-btn {
     white-space: normal;
+  }
+
+  .back-to-top {
+    right: 16px;
+    bottom: 20px;
+    width: 44px;
+    height: 44px;
+    font-size: 1.3rem;
   }
 }
 

@@ -2,9 +2,47 @@
 // /public_html/app.php
 // Clean URL resolver (local + production friendly)
 
-$path = parse_url($_SERVER['REQUEST_URI'] ?? '/', PHP_URL_PATH) ?: '/';
-$path = rtrim($path, '/');
+$requestUri = $_SERVER['REQUEST_URI'] ?? '/';
+$rawPath = parse_url($requestUri, PHP_URL_PATH) ?: '/';
+$path = rtrim($rawPath, '/');
 if ($path === '') $path = '/';
+
+$canonicalPath = strtolower($path);
+$isSafeMethod = in_array($_SERVER['REQUEST_METHOD'] ?? 'GET', ['GET', 'HEAD'], true);
+$queryString = $_SERVER['QUERY_STRING'] ?? '';
+
+function eds_redirect_clean_path(string $targetPath, string $queryString = ''): void {
+  $location = $targetPath;
+  if ($queryString !== '') {
+    $location .= '?' . $queryString;
+  }
+
+  header('Location: ' . $location, true, 301);
+  exit;
+}
+
+$legacyRedirects = [
+  '/casting' => '/casting-matrix',
+  '/what-we-do' => '/eds-differentials',
+  '/add-value' => '/eds-differentials',
+  '/logistics' => '/eds-differentials',
+  '/terms-conditions' => '/terms',
+  '/terms-and-conditions' => '/terms',
+];
+
+if (isset($legacyRedirects[$canonicalPath]) && $isSafeMethod) {
+  eds_redirect_clean_path($legacyRedirects[$canonicalPath], $queryString);
+}
+
+if (str_starts_with($canonicalPath, '/what-we-do/') && $isSafeMethod) {
+  eds_redirect_clean_path('/eds-differentials', $queryString);
+}
+
+if ($canonicalPath !== $rawPath && $isSafeMethod) {
+  eds_redirect_clean_path($canonicalPath, $queryString);
+}
+
+$path = $canonicalPath;
 
 // HOME stays in /index.php
 if ($path === '/') {

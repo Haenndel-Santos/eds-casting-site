@@ -7,7 +7,7 @@
             <p><strong>EDS Casting & Forging BV</strong><br>
             Amsterdam, Netherlands<br>
             Phone: +31 20 358 5066<br>
-            Email: <a href="mailto:sales@edsinnovation.com">info@edsinnovation.com</a></p>
+            Email: <a href="mailto:info@edsinnovation.com">info@edsinnovation.com</a></p>
         </div>
 		
     <div class="footer-column footer-hide-mobile">

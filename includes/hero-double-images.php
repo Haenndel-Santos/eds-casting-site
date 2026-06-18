@@ -12,12 +12,11 @@
     <figure class="hero-image-box hero-image-box--left">
       <picture>
         <img
-          src="/assets/img/hero-img/ToWeRe.png"
+          src="/assets/img/hero-img/ToWeRe.webp"
           alt="EDS engineering and manufacturing capabilities overview"
           width="1200"
-          height="900"
-          loading="eager"
-          fetchpriority="high"
+          height="1499"
+          loading="lazy"
           decoding="async"
         >
       </picture>
@@ -26,10 +25,10 @@
     <figure class="hero-image-box hero-image-box--right">
       <picture>
         <img
-          src="/assets/img/hero-img/CoreCircle.png"
+          src="/assets/img/hero-img/CoreCircle.webp"
           alt="EDS supply chain and industrial solutions overview"
           width="1200"
-          height="900"
+          height="1132"
           loading="lazy"
           decoding="async"
         >

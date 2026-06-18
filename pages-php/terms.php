@@ -2,14 +2,17 @@
 <?php include(__DIR__ . '/../includes/head.php'); ?>
 <?php include(__DIR__ . '/../includes/header.php'); ?>
 
+<section class="page-hero">
+  <h1>General Terms and Conditions</h1>
+  <p>
+    These General Terms and Conditions apply to EDS Casting &amp; Forging B.V., hereinafter referred to as "EDS".
+  </p>
+</section>
+
 
 <section class="section-content">
   <div class="container">
-    <h1>General Terms and Conditions</h1>
     <p class="terms-date">Effective: 1 February 2021</p>
-    <p class="terms-intro">
-      These General Terms and Conditions apply to EDS Casting &amp; Forging B.V., hereinafter referred to as “EDS”.
-    </p>
 
     <article>
       <section id="pricing">

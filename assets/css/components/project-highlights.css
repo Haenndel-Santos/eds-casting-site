@@ -61,7 +61,7 @@
 }
 
 .project-box h3 {
-  color: #37b347;
+  color: var(--eds-primary);
   font-weight: 700;
   font-size: 1.3rem;
   margin-bottom: 12px;

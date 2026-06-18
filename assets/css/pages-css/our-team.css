@@ -1,159 +1,393 @@
-/* ==========================================
-   OUR TEAM — Cards Only
+/* =========================================================
+   OUR TEAM PAGE — EDS Casting & Forging
    File: /assets/css/pages-css/our-team.css
-   ========================================== */
+
+   Works together with main-pages.css through $useMainPagesCss = true
+
+   Goals:
+   - align with the new process-page visual standard
+   - improve SEO-readable team structure and B2B trust
+   - keep LinkedIn access without using placeholder links
+   - create a clean card hierarchy for leadership, management and support team
+   ========================================================= */
 
 .our-team-page {
-  background: #fff;
+  --team-green: #37b437;
+  --team-green-strong: #00bf63;
+  --team-dark: #333333;
+  --team-text: #333333;
+  --team-muted: #5d665f;
+  --team-border: rgba(51, 51, 51, 0.12);
+  --team-soft: #f7faf7;
+  --team-soft-green: #f0fff0;
 }
 
+.our-team-page .process-hero {
+  margin-top: -3px;
+}
+
+.our-team-page .process-hero .process-eyebrow {
+  display: none;
+}
+
+.our-team-page .process-section h2,
+.our-team-page .process-section__header h2,
+.our-team-page .process-intro__text h2 {
+  text-align: left;
+}
+
+.our-team-page .process-intro__cards article span {
+  display: none;
+}
+
+.our-team-page .process-callout--neutral {
+  background: #ffffff;
+}
+
+.our-team-intro-band {
+  display: block;
+  border: 0;
+  background: #00bf63;
+}
+
+.our-team-intro-copy {
+  max-width: 920px;
+  margin: 0 auto 28px;
+  text-align: center;
+}
+
+.our-team-intro-band .process-eyebrow,
+.our-team-intro-band h2,
+.our-team-intro-band p {
+  color: #ffffff !important;
+  text-align: center;
+}
+
+.our-team-intro-band .process-intro__cards {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.our-team-intro-band .process-intro__cards article {
+  min-height: 0;
+  background: #ffffff;
+  border: 0;
+  transition: background-color 0.25s ease, transform 0.25s ease;
+}
+
+.our-team-intro-band .process-intro__cards article:hover {
+  transform: translateY(-4px);
+  background: #333333;
+}
+
+.our-team-intro-band .process-intro__cards h3 {
+  min-height: 0;
+  color: #333333;
+  transition: color 0.25s ease;
+}
+
+.our-team-intro-band .process-intro__cards p {
+  color: #333333 !important;
+  transition: color 0.25s ease;
+}
+
+.our-team-intro-band .process-intro__cards article:hover h3 {
+  color: #37b437;
+}
+
+.our-team-intro-band .process-intro__cards article:hover p {
+  color: #ffffff !important;
+}
+
+/* =========================================================
+   INTRO CARDS
+   ========================================================= */
+
+.our-team-page .process-intro__cards article {
+  min-height: 200px;
+}
+
+.our-team-page .process-intro__cards h3 {
+  min-height: 2.5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* =========================================================
+   TEAM SECTIONS
+   ========================================================= */
+
+.team-section {
+  border-top: 5px solid var(--team-green);
+}
+
+.team-grid {
+  display: grid;
+  gap: 18px;
+  margin-top: 28px;
+}
+
+.team-grid--leader {
+  grid-template-columns: 1fr;
+}
+
+.team-grid--management {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.team-grid--support {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.team-grid--all {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.team-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 270px;
+  padding: 26px 24px;
+  border-radius: 22px;
+  background: #ffffff;
+  border: 1px solid var(--team-border);
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.045);
+  overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease, background-color 0.25s ease;
+}
+
+.team-grid--all .team-card {
+  align-items: center;
+  justify-content: flex-start;
+  text-align: center;
+}
+
+.team-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: var(--team-green);
+}
+
+.team-card:hover {
+  transform: translateY(-4px);
+  background: var(--team-dark);
+  border-color: rgba(55, 180, 55, 0.36);
+  box-shadow: 0 18px 38px rgba(0, 0, 0, 0.10);
+}
+
+.team-card--leader {
+  min-height: 230px;
+  padding: 30px;
+}
+
+.team-card--leader .team-bio {
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.team-group {
+  width: fit-content;
+  margin: 0 auto 14px;
+  padding: 7px 13px;
+  border-radius: 999px;
+  background: var(--team-soft-green);
+  color: var(--team-green);
+  font-size: 0.76rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  line-height: 1.2;
+  text-align: center;
+  text-transform: uppercase;
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+.team-name {
+  margin: 0 0 8px;
+  color: var(--team-dark);
+  font-size: clamp(1.22rem, 1.7vw, 1.42rem);
+  line-height: 1.22;
+  text-align: center;
+  transition: color 0.25s ease;
+}
+
+.team-card--leader .team-name {
+  font-size: clamp(1.45rem, 2.1vw, 1.75rem);
+}
+
+.team-name a {
+  position: relative;
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.25s ease;
+}
+
+.team-name a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0;
+  height: 2px;
+  border-radius: 999px;
+  background: var(--team-green);
+  transition: width 0.28s ease;
+}
+
+.team-name a:hover,
+.team-name a:focus-visible {
+  color: var(--team-green);
+  outline: none;
+}
+
+.team-name a:hover::after,
+.team-name a:focus-visible::after {
+  width: 100%;
+}
+
+.team-role {
+  margin: 0 0 16px;
+  color: var(--team-green);
+  font-size: 0.96rem;
+  font-weight: 850;
+  line-height: 1.35;
+  text-align: center;
+  transition: color 0.25s ease;
+}
+
+.team-bio {
+  margin: 0;
+  color: var(--team-text);
+  font-size: 0.96rem;
+  line-height: 1.7;
+  text-align: center;
+  transition: color 0.25s ease;
+}
+
+.team-card:hover .team-group {
+  background: #ffffff;
+  color: var(--team-green);
+}
+
+.team-card:hover .team-name {
+  color: var(--team-green);
+}
+
+.team-card:hover .team-role {
+  color: var(--team-green);
+}
+
+.team-card:hover .team-bio {
+  color: #ffffff;
+}
+
+/* =========================================================
+   RELATED / CTA
+   ========================================================= */
+
+.our-team-page .process-related-card h3 {
+  text-align: center;
+}
+
+.our-team-page .process-final-cta h2 {
+  text-align: left;
+}
+
+/* =========================================================
+   LEGACY CLASS SAFETY
+   Keeps older team markup usable if any old block remains temporarily.
+   ========================================================= */
+
 .team-intro {
-  max-width: 1200px;
-  margin: -4px auto;
-  padding: 40px 20px 10px;
+  width: min(1200px, calc(100% - 40px));
+  margin: -3px auto 28px;
+  padding: 46px 34px;
+  border-radius: 24px;
+  background: #ffffff;
+  border: 1px solid var(--team-border);
+  border-top: 5px solid var(--team-green);
+  box-shadow: 0 12px 34px rgba(0, 0, 0, 0.055);
   text-align: center;
 }
 
 .team-title {
-  font-size: 2.6rem;
-  margin: 0 0 10px;
-  color: var(--eds-primary);
+  margin: 0 0 12px;
+  color: var(--team-dark);
+  font-size: clamp(2rem, 3.4vw, 3rem);
+  line-height: 1.08;
+  letter-spacing: -0.04em;
 }
 
 .team-subtitle {
   max-width: 820px;
   margin: 0 auto;
-  color: #333;
-  line-height: 1.6;
-  font-weight: 500;
+  color: var(--team-text);
+  font-size: 1rem;
+  line-height: 1.72;
 }
 
-/* Grid: 1 leader (full), 3 management, 4 team */
-.team-grid {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 30px 20px 70px;
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  gap: 18px;
-}
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
 
-.team-card {
-  background: #fff;
-  border: 1px solid rgba(0,0,0,0.08);
-  border-top: 4px solid var(--eds-primary);
-  border-radius: 12px;
-  padding: 22px 22px 20px;
-  box-shadow: 0 8px 22px rgba(0,0,0,0.06);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  text-align: center; /* titles centered */
-}
-
-.team-card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 14px 34px rgba(0,0,0,0.10);
-}
-
-.team-name {
-  margin: 0 0 6px;
-  font-size: 1.35rem;
-  color: #111;
-  text-align: center;
-}
-
-.team-role {
-  margin: 0 0 12px;
-  color: var(--eds-primary);
-  font-weight: 700;
-  text-align: center;
-}
-
-.team-bio {
-  margin: 0;
-  color: #333;
-  line-height: 1.65;
-  text-align: justify; /* justified text inside card */
-}
-
-/* Layout rules */
-.team-card--leader {
-  grid-column: 1 / -1;
-  text-align: center;
-}
-
-.team-card--leader .team-name {
-  font-size: 1.6rem;
-}
-
-.team-card--leader .team-bio {
-  max-width: 860px;
-  margin: 0 auto;
-}
-
-.team-card--mgmt {
-  grid-column: span 4;
-}
-
-.team-card--team {
-  grid-column: span 3;
-}
-
-/* Responsive */
-@media (max-width: 991px) {
-  .team-title { font-size: 2.2rem; }
-
-  .team-card--mgmt {
-    grid-column: span 6;
-  }
-
-  .team-card--team {
-    grid-column: span 6;
+@media (max-width: 1180px) {
+  .team-grid--support,
+  .team-grid--all {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
-@media (max-width: 600px) {
-  .team-intro { padding: 30px 16px 6px; }
-  .team-title { font-size: 1.9rem; }
+@media (max-width: 1024px) {
+  .team-grid--management {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 
-  .team-grid {
-    padding: 22px 16px 55px;
+  .team-card {
+    min-height: 250px;
+  }
+}
+
+@media (max-width: 768px) {
+  .team-grid--management,
+  .team-grid--support,
+  .team-grid--all,
+  .our-team-intro-band .process-intro__cards {
     grid-template-columns: 1fr;
   }
 
+  .team-card,
   .team-card--leader,
-  .team-card--mgmt,
-  .team-card--team {
-    grid-column: 1 / -1;
+  .our-team-page .process-intro__cards article,
+  .our-team-page .process-intro__cards h3 {
+    min-height: auto;
+  }
+
+  .team-card {
+    padding: 24px 20px;
+    border-radius: 18px;
+  }
+
+  .team-intro {
+    width: min(100% - 24px, 1200px);
+    padding: 34px 22px;
+    border-radius: 18px;
   }
 }
 
+@media (max-width: 480px) {
+  .team-card {
+    padding: 22px 18px;
+  }
 
-/* ==========================
-   Premium LinkedIn Hover
-   ========================== */
-
-.team-name a {
-  text-decoration: none;
-  color: inherit;
-  position: relative;
-  transition: color 0.25s ease;
-}
-
-.team-name a::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -4px;
-  width: 0%;
-  height: 2px;
-  background: blue;
-  transition: width 0.3s ease;
-}
-
-.team-name a:hover {
-  color: blue;
-}
-
-.team-name a:hover::after {
-  width: 100%;
+  .team-bio,
+  .team-subtitle {
+    font-size: 0.95rem;
+  }
 }

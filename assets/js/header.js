@@ -12,20 +12,34 @@ document.addEventListener("DOMContentLoaded", () => {
     return;
   }
 
-  const mobileQuery = window.matchMedia("(max-width: 768px)");
+  const mobileQuery = window.matchMedia("(max-width: 620px)");
+  let closeTimer = null;
 
   const openMenu = () => {
+    window.clearTimeout(closeTimer);
+    resetAccordionState();
     menuOverlay.classList.remove("hidden");
+    menuOverlay.classList.remove("is-closing");
+    window.requestAnimationFrame(() => {
+      menuOverlay.classList.add("is-open");
+    });
     menuOverlay.setAttribute("aria-hidden", "false");
     menuToggle.setAttribute("aria-expanded", "true");
     document.body.style.overflow = "hidden";
   };
 
   const closeMenu = () => {
-    menuOverlay.classList.add("hidden");
+    window.clearTimeout(closeTimer);
+    menuOverlay.classList.remove("is-open");
+    menuOverlay.classList.add("is-closing");
     menuOverlay.setAttribute("aria-hidden", "true");
     menuToggle.setAttribute("aria-expanded", "false");
     document.body.style.overflow = "";
+
+    closeTimer = window.setTimeout(() => {
+      menuOverlay.classList.remove("is-closing");
+      menuOverlay.classList.add("hidden");
+    }, 240);
   };
 
   const resetAccordionState = () => {
@@ -36,11 +50,10 @@ document.addEventListener("DOMContentLoaded", () => {
         toggle?.setAttribute("aria-expanded", "true");
       });
     } else {
-      accordionColumns.forEach((column, index) => {
+      accordionColumns.forEach((column) => {
         const toggle = column.querySelector(".menu-section-toggle");
-        const shouldOpen = index === 0;
-        column.classList.toggle("is-open", shouldOpen);
-        toggle?.setAttribute("aria-expanded", shouldOpen ? "true" : "false");
+        column.classList.remove("is-open");
+        toggle?.setAttribute("aria-expanded", "false");
       });
     }
   };

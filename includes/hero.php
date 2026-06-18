@@ -1,6 +1,14 @@
 <section class="home-hero" aria-labelledby="home-hero-title">
   <div class="home-hero__media">
-    <img src="/assets/img/hero-img/eng.png" alt="Engineering support for industrial casting, forging and machined components">
+    <img
+      src="/assets/img/hero-img/eng.webp"
+      alt="Engineering support for industrial casting, forging and machined components"
+      width="1536"
+      height="1024"
+      loading="eager"
+      fetchpriority="high"
+      decoding="async"
+    >
   </div>
 
   <div class="home-hero__content">
@@ -30,9 +38,9 @@
 </section>
 
 <section class="home-hero-trust" aria-label="EDS project support strengths">
-  <div class="home-hero-trust__item">Global Supplier Network</div>
-  <div class="home-hero-trust__item">Engineering Review</div>
-  <div class="home-hero-trust__item">Quality Documentation</div>
-  <div class="home-hero-trust__item">Logistics Coordination</div>
-  <div class="home-hero-trust__item">European Project Support</div>
+  <a class="home-hero-trust__item" href="/supply-chain">Global Supplier Network</a>
+  <a class="home-hero-trust__item" href="/eds-differentials">Engineering Review</a>
+  <a class="home-hero-trust__item" href="/quality">Quality Documentation</a>
+  <a class="home-hero-trust__item" href="/supply-chain">Logistics Coordination</a>
+  <a class="home-hero-trust__item" href="/eds-differentials">European Project Support</a>
 </section>

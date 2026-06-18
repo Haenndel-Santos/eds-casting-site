@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const links = document.querySelectorAll('.quicknav-item[href^="#"], a[href^="/pages-php/about-us.php#"]');
+  const links = document.querySelectorAll('.quicknav-item[href^="#"], a[href^="/about-us#"]');
+  const backToTop = document.querySelector(".back-to-top");
   const yOffset = -130; // ajuste para altura do header fixo
 
   links.forEach(link => {
@@ -16,6 +17,33 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   });
+
+  if (backToTop) {
+    const getScrollTop = () => Math.max(
+      window.pageYOffset || 0,
+      document.documentElement.scrollTop ||
+      0,
+      document.body.scrollTop || 0
+    );
+
+    const updateBackToTopVisibility = () => {
+      backToTop.classList.toggle("is-visible", getScrollTop() > 220);
+    };
+
+    updateBackToTopVisibility();
+    window.addEventListener("scroll", updateBackToTopVisibility, { passive: true });
+    window.addEventListener("resize", updateBackToTopVisibility);
+    document.addEventListener("scroll", updateBackToTopVisibility, { passive: true });
+    document.documentElement.addEventListener("scroll", updateBackToTopVisibility, { passive: true });
+    document.body.addEventListener("scroll", updateBackToTopVisibility, { passive: true });
+
+    backToTop.addEventListener("click", (event) => {
+      event.preventDefault();
+      document.documentElement.scrollTo({ top: 0, behavior: "smooth" });
+      document.body.scrollTo({ top: 0, behavior: "smooth" });
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  }
 });
 
 

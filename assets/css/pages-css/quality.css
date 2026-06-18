@@ -1,0 +1,339 @@
+/* =========================================================
+   QUALITY PAGE — EDS Casting & Forging
+   File: /assets/css/pages-css/quality.css
+
+   Works together with main-pages.css through $useMainPagesCss = true
+
+   Goals:
+   - align with the new process-page visual standard
+   - improve SEO readability and B2B conversion flow
+   - reinforce supplier qualification, inspection, documentation and non-conformity handling
+   - keep the layout professional, clean and reusable
+   ========================================================= */
+
+.quality-page {
+  --quality-green: #37b437;
+  --quality-green-strong: #00bf63;
+  --quality-dark: #333333;
+  --quality-text: #333333;
+  --quality-muted: #5d665f;
+  --quality-border: rgba(51, 51, 51, 0.12);
+  --quality-soft: #f7faf7;
+  --quality-soft-green: #f0fff0;
+}
+
+.quality-page .process-hero {
+  margin-top: -3px;
+}
+
+.quality-page .process-hero .process-eyebrow {
+  display: none;
+}
+
+.quality-page .process-section h2,
+.quality-page .process-section__header h2,
+.quality-page .process-intro__text h2 {
+  text-align: left;
+}
+
+.quality-page .process-card a {
+  align-self: center;
+  text-align: center;
+}
+
+.quality-page .process-intro__cards article span {
+  display: none;
+}
+
+.quality-page .process-callout--neutral {
+  background: #ffffff;
+}
+
+/* =========================================================
+   INTRO CARDS
+   ========================================================= */
+
+.quality-page .process-intro__cards article {
+  min-height: 200px;
+}
+
+.quality-page .process-intro__cards h3 {
+  min-height: 2.5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* =========================================================
+   QUALITY CARDS
+   ========================================================= */
+
+.quality-card-grid .process-card {
+  min-height: 250px;
+}
+
+.quality-card-grid .process-card h3 {
+  min-height: 2.6em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* =========================================================
+   INSPECTION GRID
+   ========================================================= */
+
+.quality-inspection-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.quality-inspection-grid article {
+  padding: 24px;
+  border-radius: 20px;
+  background: #ffffff;
+  border: 1px solid var(--quality-border);
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.04);
+  transition: transform 0.25s ease, background-color 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.quality-inspection-grid article:hover {
+  transform: translateY(-4px);
+  background: var(--quality-dark);
+  border-color: rgba(55, 180, 55, 0.35);
+  box-shadow: 0 18px 38px rgba(0, 0, 0, 0.10);
+}
+
+.quality-inspection-grid h3 {
+  margin: 0 0 10px;
+  color: var(--quality-dark);
+  font-size: 1.12rem;
+  line-height: 1.3;
+  text-align: center;
+  transition: color 0.25s ease;
+}
+
+.quality-inspection-grid p {
+  margin: 0;
+  color: var(--quality-text);
+  font-size: 0.96rem;
+  line-height: 1.68;
+  text-align: justify;
+  transition: color 0.25s ease;
+}
+
+.quality-inspection-grid article:hover h3 {
+  color: var(--quality-green);
+}
+
+.quality-inspection-grid article:hover p {
+  color: #ffffff;
+}
+
+/* =========================================================
+   QUALITY TABLE
+   ========================================================= */
+
+.quality-page .quality-spec-table th {
+  width: 30%;
+}
+
+.quality-page .process-spec-table th {
+  color: var(--quality-green);
+}
+
+/* =========================================================
+   NON-CONFORMITY FLOW CARD
+   ========================================================= */
+
+.quality-flow-card {
+  padding: 26px;
+  border-radius: 20px;
+  background: #ffffff;
+  border: 1px solid var(--quality-border);
+  border-top: 5px solid var(--quality-green);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.05);
+}
+
+.quality-flow-card h3 {
+  margin: 0 0 18px;
+  color: var(--quality-dark);
+  font-size: 1.2rem;
+  line-height: 1.3;
+  text-align: center;
+}
+
+.quality-flow-card ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: quality-flow;
+}
+
+.quality-flow-card li {
+  position: relative;
+  counter-increment: quality-flow;
+  min-height: 42px;
+  margin-bottom: 14px;
+  padding: 8px 0 8px 54px;
+  color: var(--quality-text);
+  font-size: 0.96rem;
+  line-height: 1.55;
+}
+
+.quality-flow-card li:last-child {
+  margin-bottom: 0;
+}
+
+.quality-flow-card li::before {
+  content: counter(quality-flow);
+  position: absolute;
+  top: 3px;
+  left: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 999px;
+  background: var(--quality-green);
+  color: #ffffff;
+  font-size: 0.92rem;
+  font-weight: 900;
+}
+
+/* =========================================================
+   RELATED / CTA
+   ========================================================= */
+
+.quality-page .process-related-card h3 {
+  text-align: center;
+}
+
+.quality-page .process-final-cta h2 {
+  text-align: left;
+}
+
+/* =========================================================
+   LEGACY CLASS SAFETY
+   Keeps older mainpage markup usable if any old block remains temporarily.
+   ========================================================= */
+
+.quality-page .mainpage-section,
+.mainpage-section {
+  width: min(1200px, calc(100% - 40px));
+  margin: 28px auto;
+  padding: 36px 40px;
+  border-radius: 24px;
+  background: #ffffff;
+  border: 1px solid var(--quality-border, rgba(51, 51, 51, 0.12));
+  box-shadow: 0 12px 34px rgba(0, 0, 0, 0.055);
+}
+
+.quality-page .mainpage-section h2,
+.mainpage-section h2 {
+  margin: 0 0 16px;
+  color: var(--quality-dark, #333333);
+  font-size: clamp(1.3rem, 2vw, 1.75rem);
+  line-height: 1.2;
+  text-align: left;
+}
+
+.quality-page .mainpage-section p,
+.mainpage-section p {
+  color: var(--quality-text, #333333);
+  font-size: 1rem;
+  line-height: 1.78;
+  text-align: justify;
+}
+
+.quality-page .mainpage-list,
+.mainpage-list {
+  margin: 18px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.quality-page .mainpage-list li,
+.mainpage-list li {
+  position: relative;
+  margin-bottom: 10px;
+  padding-left: 26px;
+  color: var(--quality-text, #333333);
+  line-height: 1.65;
+}
+
+.quality-page .mainpage-list li::before,
+.mainpage-list li::before {
+  content: '▸';
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: var(--quality-green, #37b437);
+  font-weight: 900;
+}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 1024px) {
+  .quality-card-grid .process-card {
+    min-height: 230px;
+  }
+}
+
+@media (max-width: 768px) {
+  .quality-inspection-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .quality-page .process-intro__cards article,
+  .quality-page .process-intro__cards h3,
+  .quality-card-grid .process-card h3 {
+    min-height: auto;
+  }
+
+  .quality-flow-card {
+    padding: 22px 20px;
+    border-radius: 18px;
+  }
+
+  .quality-page .mainpage-section,
+  .mainpage-section {
+    width: min(100% - 24px, 1200px);
+    padding: 26px 20px;
+    border-radius: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .quality-inspection-grid article {
+    padding: 22px 18px;
+    border-radius: 18px;
+  }
+
+  .quality-inspection-grid p,
+  .quality-flow-card li,
+  .quality-page .mainpage-section p,
+  .mainpage-section p,
+  .quality-page .mainpage-list li,
+  .mainpage-list li {
+    font-size: 0.95rem;
+  }
+
+  .quality-page .process-spec-table th,
+  .quality-page .process-spec-table td {
+    display: block;
+    width: 100%;
+  }
+
+  .quality-page .process-spec-table th {
+    border-bottom: 0;
+  }
+
+  .quality-flow-card li {
+    padding-left: 48px;
+  }
+}

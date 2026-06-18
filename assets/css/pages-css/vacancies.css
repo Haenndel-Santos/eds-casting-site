@@ -1,274 +1,480 @@
-/* ======================================================
-   EDS VACANCIES PAGE STYLES
-   ====================================================== */
+/* =========================================================
+   VACANCIES PAGE — EDS Casting & Forging
+   Works together with main-pages.css through $useMainPagesCss = true
 
-/* ==== HERO ==== */
-.vacancies-hero.hero-fullimage {
-	margin-top: -4px;
-  position: relative;
-  width: 100%;
-  height: 480px;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+   Goals:
+   - professional vacancy presentation
+   - consistent visual system with careers and process pages
+   - stronger readability and conversion flow
+   - accessible application popup
+   ========================================================= */
+
+.vacancies-page {
+  --vacancies-green: #37b437;
+  --vacancies-dark: #333333;
+  --vacancies-text: #333333;
+  --vacancies-muted: #5d665f;
+  --vacancies-border: rgba(51, 51, 51, 0.12);
+  --vacancies-soft: #f0fff0;
+}
+
+.vacancies-page .process-hero {
+  margin-top: -3px;
+}
+
+.vacancies-page .process-hero .process-eyebrow {
+  display: none;
+}
+
+.vacancies-page .process-section h2 {
+  text-align: left;
+}
+
+.vacancies-page .process-section__header h2 {
+  text-align: left;
+}
+
+.vacancies-page .process-intro__text h2 {
+  text-align: left;
+}
+
+.vacancies-page .process-card a {
+  align-self: center;
   text-align: center;
+}
+
+.vacancies-page .process-intro__cards article span {
+  display: none;
+}
+
+.vacancies-page .process-callout--neutral {
+  background: #ffffff;
+}
+
+body.modal-open {
   overflow: hidden;
 }
 
-.vacancies-hero .hero-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.35));
-  z-index: 1;
+/* =========================================================
+   POSITION SUMMARY
+   ========================================================= */
+
+.vacancies-position {
+  border-top: 5px solid var(--vacancies-green);
 }
 
-.vacancies-hero .hero-text {
-  position: relative;
-  z-index: 2;
-  color: #fff;
-  padding: 100px 20px;
-  max-width: 900px;
+.vacancy-label-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 22px;
 }
 
-.vacancies-hero h1 {
-  font-size: 3.2rem;
+.vacancy-status,
+.vacancy-location {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 36px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  font-size: 0.84rem;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.vacancy-status {
+  background: var(--vacancies-green);
+  color: #ffffff;
+}
+
+.vacancy-location {
+  background: #ffffff;
+  color: var(--vacancies-dark);
+  border: 1px solid var(--vacancies-border);
+}
+
+.vacancy-summary-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 26px;
+}
+
+.vacancy-summary-grid article {
+  padding: 18px;
+  border-radius: 18px;
+  background: #f7faf7;
+  border: 1px solid var(--vacancies-border);
+}
+
+.vacancy-summary-grid strong {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--vacancies-green);
+  font-size: 0.78rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.vacancy-summary-grid span {
+  display: block;
+  color: var(--vacancies-text);
+  font-size: 0.95rem;
   font-weight: 700;
-  color: #eaeaea;
-  margin-bottom: 15px;
-  text-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+  line-height: 1.45;
 }
 
-.vacancies-hero p {
-  font-size: 1.2rem;
-  color: #eaeaea;
-  line-height: 1.6;
-  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+/* =========================================================
+   RESPONSIBILITY / OFFER CARDS
+   ========================================================= */
+
+.vacancies-card-grid .process-card {
+  min-height: 250px;
 }
 
-
-/* ==== PAGE SECTIONS ==== */
-.vacancies-section {
-  max-width: 1200px;
-  margin: 60px auto;
-  padding: 30px 30px;
-  background-color: #fff;
-  border-radius: 8px;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
-  transition: all 0.3s ease;
+.vacancies-card-grid .process-card h3 {
+  min-height: 2.6em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.vacancies-section:nth-of-type(odd) {
-  border-right: 4px solid #37b437;
+/* =========================================================
+   REQUIREMENTS SECTION
+   ========================================================= */
+
+.vacancy-requirements-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
 }
 
-.vacancies-section:nth-of-type(even) {
-  border-left: 4px solid #37b437;
-  background-color: #f9fbf9;
+.vacancy-requirements-grid article {
+  padding: 24px;
+  border-radius: 20px;
+  background: #ffffff;
+  border: 1px solid var(--vacancies-border);
 }
 
-/* Section Titles */
-.vacancies-section h2 {
-  text-align: left;
-  font-size: 1.9rem;
-  font-weight: 600;
-  color: #222;
-  margin-bottom: 20px;
-  position: relative;
+.vacancy-requirements-grid h3 {
+  margin: 0 0 16px;
+  color: var(--vacancies-dark);
+  font-size: 1.15rem;
+  line-height: 1.3;
+  text-align: center;
 }
 
-.vacancies-section h2::after {
-  content: "";
-  position: absolute;
-  bottom: -6px;
-  left: 0;
-  width: 60px;
-  height: 3px;
-  background: #37b437;
-  border-radius: 3px;
-}
-
-/* Texts */
-.vacancies-section p {
-  color: #333;
-  line-height: 1.75;
-  text-align: justify;
-  margin-bottom: 20px;
-}
-
-.vacancies-section .link-highlight {
-  color: #37b437;
-  font-weight: 600;
-  text-decoration: none;
-}
-
-.vacancies-section .link-highlight:hover {
-  text-decoration: underline;
-}
-
-/* Vacancy list */
 .vacancies-list {
   list-style: none;
   padding: 0;
-  margin: 10px 0 0 0;
+  margin: 0;
 }
 
 .vacancies-list li {
-  margin-bottom: 10px;
-  padding-left: 28px;
   position: relative;
-  color: #333;
-  font-size: 1rem;
+  margin-bottom: 12px;
+  padding-left: 26px;
+  color: var(--vacancies-text);
+  font-size: 0.96rem;
+  line-height: 1.65;
+}
+
+.vacancies-list li:last-child {
+  margin-bottom: 0;
 }
 
 .vacancies-list li::before {
   content: "▸";
   position: absolute;
+  top: 0;
   left: 0;
-  color: #37b437;
-  font-size: 1.2rem;
+  color: var(--vacancies-green);
+  font-size: 1.1rem;
+  font-weight: 900;
 }
 
-/* ==== CTA BUTTON ==== */
-.cta-button {
-  background: #37b437;
-  color: #fff;
-  padding: 12px 30px;
-  border-radius: 6px;
-  font-weight: 600;
-  text-decoration: none;
-  transition: all 0.3s ease;
+/* =========================================================
+   APPLY CTA
+   ========================================================= */
+
+.vacancies-apply-cta .process-final-cta__actions button {
   cursor: pointer;
-  border: none;
 }
 
-.cta-button:hover {
-  background: #2ea42f;
-  transform: translateY(-3px);
-  box-shadow: 0 8px 15px rgba(55, 180, 55, 0.25);
+.vacancies-apply-cta .process-final-cta__actions button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
 }
 
-/* ======================================================
+/* =========================================================
    POPUP APPLICATION FORM
-   ====================================================== */
-.popup-overlay {
+   ========================================================= */
+
+.vacancy-popup-overlay {
   position: fixed;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background: rgba(0, 0, 0, 0.6);
+  inset: 0;
+  z-index: 10000;
   display: none;
-  justify-content: center;
   align-items: center;
-  z-index: 999;
+  justify-content: center;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.58);
 }
 
-.popup-box {
-  background: #fff;
-  border-radius: 8px;
-  padding: 30px 40px;
-  width: 90%;
-  max-width: 500px;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.2);
-  text-align: center;
+.vacancy-popup-overlay.is-open {
+  display: flex;
+}
+
+.vacancy-popup-box {
   position: relative;
-  animation: popupIn 0.3s ease-out;
+  width: min(100%, 560px);
+  max-height: min(90vh, 760px);
+  overflow-y: auto;
+  padding: 34px 30px;
+  border-radius: 22px;
+  background: #ffffff;
+  border-top: 5px solid var(--vacancies-green);
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.22);
+  animation: vacancyPopupIn 0.28s ease;
 }
 
-@keyframes popupIn {
-  from { transform: scale(0.8); opacity: 0; }
-  to { transform: scale(1); opacity: 1; }
+.vacancy-popup-box--small {
+  max-width: 460px;
+  text-align: center;
 }
 
-.popup-box h2 {
-  color: #222;
-  margin-bottom: 15px;
+.vacancy-popup-box h2 {
+  margin: 0 0 12px;
+  color: var(--vacancies-dark);
+  font-size: clamp(1.45rem, 2.3vw, 1.9rem);
+  line-height: 1.2;
+  text-align: center;
 }
 
-.popup-box label {
-  display: block;
-  text-align: left;
-  font-weight: 500;
-  margin-top: 12px;
-  color: #333;
+.vacancy-popup-box p {
+  margin: 0 0 20px;
+  color: var(--vacancies-text);
+  font-size: 0.98rem;
+  line-height: 1.65;
+  text-align: center;
 }
 
-.popup-box input[type="text"],
-.popup-box input[type="email"],
-.popup-box input[type="file"] {
-  width: 100%;
-  padding: 10px 12px;
-  margin-top: 5px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 1rem;
-}
-
-.popup-box .cta-button {
-  margin-top: 20px;
-  background: #37b437;
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  font-weight: 600;
+.vacancy-popup-box button {
+ display: flex;
+  width: fit-content;
+  margin: 22px auto 0;
   cursor: pointer;
-  transition: background 0.3s ease;
+	color: #37b437;
 }
 
-.popup-box .cta-button:hover {
-  background: #2ea42f;
+.vacancy-popup-intro {
+  max-width: 440px;
+  margin-left: auto !important;
+  margin-right: auto !important;
 }
 
 .close-popup {
   position: absolute;
-  top: 12px;
+  top: 14px;
   right: 18px;
-  font-size: 1.6rem;
-  color: #666;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border: 0;
+  border-radius: 999px;
+  background: #f3f5f3;
+  color: var(--vacancies-dark);
+  font-size: 1.7rem;
+  line-height: 1;
   cursor: pointer;
-  transition: color 0.3s ease;
+  transition: background-color 0.25s ease, color 0.25s ease, transform 0.25s ease;
 }
 
-.close-popup:hover {
-  color: #000;
+.close-popup:hover,
+.close-popup:focus-visible {
+  background: var(--vacancies-dark);
+  color: var(--vacancies-green);
+  transform: rotate(90deg);
 }
 
-/* Thank you popup */
-#thankyouPopup .popup-box {
-  max-width: 400px;
+.vacancy-form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 16px;
 }
 
-#thankyouPopup p {
+.vacancy-form-field label {
+  color: var(--vacancies-dark);
+  font-size: 0.92rem;
+  font-weight: 800;
+  line-height: 1.35;
+}
+
+.vacancy-form-field label span {
+  color: var(--vacancies-muted);
+  font-weight: 700;
+}
+
+.vacancy-form-field input[type="text"],
+.vacancy-form-field input[type="email"],
+.vacancy-form-field input[type="file"] {
+  width: 100%;
+  min-height: 48px;
+  padding: 12px 14px;
+  border: 1px solid rgba(51, 51, 51, 0.18);
+  border-radius: 14px;
+  background: #ffffff;
+  color: var(--vacancies-text);
+  font: inherit;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease;
+}
+
+.vacancy-form-field input[type="file"] {
+  padding: 11px 14px;
+  cursor: pointer;
+}
+
+.vacancy-form-field input:focus {
+  outline: none;
+  border-color: var(--vacancies-green);
+  box-shadow: 0 0 0 4px rgba(55, 180, 55, 0.16);
+}
+
+.honeypot-field {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.g-recaptcha {
+  display: flex;
+  justify-content: center;
+  margin: 22px 0 0;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.vacancy-submit-btn {
+  display: flex;
+  width: fit-content;
+  margin: 22px auto 0;
+  cursor: pointer;
+	color: #37b437;
+}
+
+.vacancy-submit-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+@keyframes vacancyPopupIn {
+  from {
+    transform: translateY(24px) scale(0.98);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+}
+
+/* =========================================================
+   RELATED
+   ========================================================= */
+
+.vacancies-page .process-related-card h3 {
   text-align: center;
-  font-size: 1.05rem;
-  color: #333;
-  line-height: 1.6;
 }
 
-/* ======================================================
-   RESPONSIVE DESIGN
-   ====================================================== */
-@media (max-width: 992px) {
-  .vacancies-hero h1 { font-size: 2.6rem; }
-  .vacancies-hero p { font-size: 1.1rem; }
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 1024px) {
+  .vacancy-summary-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .vacancies-card-grid .process-card {
+    min-height: 230px;
+  }
 }
 
 @media (max-width: 768px) {
-  .vacancies-section {
-    padding: 25px 20px;
-    margin: 40px auto;
+  .vacancy-label-row {
+    align-items: flex-start;
+    flex-direction: column;
   }
 
-  .vacancies-section:nth-of-type(odd),
-  .vacancies-section:nth-of-type(even) {
-    border-left: none;
-    border-right: none;
-    border-top: 3px solid #37b437;
+  .vacancy-summary-grid,
+  .vacancy-requirements-grid {
+    grid-template-columns: 1fr;
   }
 
-  .popup-box {
+  .vacancy-popup-box {
+    padding: 30px 22px;
+    border-radius: 18px;
+  }
+
+  .vacancy-submit-btn {
+    width: 100%;
+  }
+
+  .vacancies-card-grid .process-card h3 {
+    min-height: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .vacancy-summary-grid article,
+  .vacancy-requirements-grid article {
     padding: 20px;
+  }
+
+  .vacancy-popup-box {
+    padding: 28px 18px;
+  }
+
+  .close-popup {
+    top: 10px;
+    right: 12px;
+  }
+
+  .vacancies-page .g-recaptcha {
+    justify-content: flex-start;
+    width: 100%;
+    transform: none;
+    transform-origin: top left;
+  }
+
+  .vacancies-page .g-recaptcha > div {
+    transform: scale(0.8);
+    transform-origin: top left;
+  }
+
+  .vacancy-submit-btn {
+    position: relative;
+    z-index: 1;
+    margin-top: 10px;
+  }
+}
+
+@media (min-width: 380px) and (max-width: 480px) {
+  .vacancies-page .g-recaptcha > div {
+    transform: scale(0.9);
+  }
+
+  .vacancy-submit-btn {
+    margin-top: 16px;
   }
 }

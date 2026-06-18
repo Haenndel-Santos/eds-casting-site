@@ -7,6 +7,8 @@ use PHPMailer\PHPMailer\Exception;
 
 error_log('CONTACT: start');
 
+require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/bootstrap.php';
+
 require_once $_SERVER['DOCUMENT_ROOT'] . '/../private_vendor/autoload.php';
 error_log('CONTACT: autoload ok');
 
@@ -38,6 +40,11 @@ function raw_clean(?string $value): string
     return trim((string) $value);
 }
 
+function mail_header_clean(string $value): string
+{
+    return trim(preg_replace('/[\r\n]+/', ' ', $value));
+}
+
 $name = clean($_POST['name'] ?? '');
 $email = clean($_POST['email'] ?? '');
 $company = clean($_POST['company'] ?? '');
@@ -45,6 +52,7 @@ $service = clean($_POST['service'] ?? '');
 $message = clean($_POST['message'] ?? '');
 
 $requestType = clean($_POST['request_type'] ?? '');
+$challengeCategory = clean($_POST['challenge_category'] ?? '');
 $phone = clean($_POST['phone'] ?? '');
 $country = clean($_POST['country'] ?? '');
 $material = clean($_POST['material'] ?? '');
@@ -82,6 +90,13 @@ if (!in_array(raw_clean($_POST['request_type'] ?? ''), $allowedRequestTypes, tru
     error_log('CONTACT: invalid request type');
     http_response_code(400);
     exit('Invalid request type.');
+}
+
+$allowedChallengeCategories = ['new-project', 'second-sourcing', 'supplier-quality', 'cost-reduction', 'drawing-review', 'rfq', 'general', ''];
+if (!in_array(raw_clean($_POST['challenge_category'] ?? ''), $allowedChallengeCategories, true)) {
+    error_log('CONTACT: invalid challenge category');
+    http_response_code(400);
+    exit('Invalid challenge category.');
 }
 
 $isQuotation = raw_clean($_POST['request_type'] ?? '') === 'quotation';
@@ -185,6 +200,47 @@ $requestTypeLabelMap = [
 ];
 
 $requestTypeLabel = $requestTypeLabelMap[raw_clean($_POST['request_type'] ?? '')] ?? raw_clean($_POST['request_type'] ?? '');
+$challengeCategoryLabelMap = [
+    'new-project' => 'New casting or forging project',
+    'second-sourcing' => 'Second sourcing',
+    'supplier-quality' => 'Supplier quality issue',
+    'cost-reduction' => 'Cost reduction project',
+    'drawing-review' => 'Technical drawing review',
+    'rfq' => 'RFQ / quotation request',
+    'general' => 'General inquiry',
+    '' => '-',
+];
+$challengeCategoryLabel = $challengeCategoryLabelMap[raw_clean($_POST['challenge_category'] ?? '')] ?? raw_clean($_POST['challenge_category'] ?? '');
+$leadPriorityMap = [
+    'rfq' => 'High',
+    'second-sourcing' => 'High',
+    'supplier-quality' => 'High',
+    'drawing-review' => 'High',
+    'new-project' => 'Medium',
+    'cost-reduction' => 'Medium',
+    'general' => 'General',
+    '' => 'General',
+];
+$leadPriority = $leadPriorityMap[raw_clean($_POST['challenge_category'] ?? '')] ?? 'General';
+
+$senderDisplay = mail_header_clean($company !== '' ? $company : $name);
+$subjectMap = [
+    'rfq' => '[EDS RFQ] New quotation request from ',
+    'second-sourcing' => '[EDS Second Sourcing] New sourcing challenge from ',
+    'supplier-quality' => '[EDS Quality Issue] Supplier quality inquiry from ',
+    'drawing-review' => '[EDS RFQ] New technical drawing review request from ',
+    'new-project' => '[EDS Contact] New casting or forging project from ',
+    'cost-reduction' => '[EDS Contact] New cost reduction inquiry from ',
+    'general' => '[EDS Contact] New website inquiry from ',
+    '' => '[EDS Contact] New website inquiry from ',
+];
+$subjectPrefix = $subjectMap[raw_clean($_POST['challenge_category'] ?? '')] ?? '[EDS Contact] New website inquiry from ';
+
+if ($isQuotation && raw_clean($_POST['challenge_category'] ?? '') === '') {
+    $leadPriority = 'High';
+    $subjectPrefix = '[EDS RFQ] New quotation request from ';
+}
+
 $mail = new PHPMailer(true);
 
 try {
@@ -209,11 +265,10 @@ try {
         }
     }
 
-    $mail->addReplyTo($email, $name);
+    $mail->addReplyTo($email, mail_header_clean($name));
     $mail->isHTML(true);
 
-    $subjectPrefix = $isQuotation ? '[RFQ]' : '[CONTACT]';
-    $mail->Subject = $subjectPrefix . ' New Submission from ' . ($company !== '' ? $company : $name);
+    $mail->Subject = $subjectPrefix . $senderDisplay;
 
     foreach ($attachments as $file) {
         $mail->addAttachment($file['tmp_name'], $file['name']);
@@ -257,6 +312,8 @@ try {
         <p><strong>Phone:</strong> ' . ($phone !== '' ? $phone : '-') . '</p>
         <p><strong>Country:</strong> ' . ($country !== '' ? $country : '-') . '</p>
         <p><strong>Request Type:</strong> ' . $requestTypeLabel . '</p>
+        <p><strong>Sourcing Challenge Category:</strong> ' . $challengeCategoryLabel . '</p>
+        <p><strong>Internal Priority:</strong> ' . clean($leadPriority) . '</p>
         ' . $rfqHtml . '
         <p><strong>Message:</strong><br>' . nl2br($message) . '</p>
         ' . $attachmentHtml . '
@@ -270,7 +327,9 @@ try {
         "Company: " . ($company !== '' ? $company : '-') . "\n" .
         "Phone: " . ($phone !== '' ? $phone : '-') . "\n" .
         "Country: " . ($country !== '' ? $country : '-') . "\n" .
-        "Request Type: {$requestTypeLabel}\n";
+        "Request Type: {$requestTypeLabel}\n" .
+        "Sourcing Challenge Category: {$challengeCategoryLabel}\n" .
+        "Internal Priority: {$leadPriority}\n";
 
     if ($isQuotation) {
         $altBody .=
@@ -312,8 +371,12 @@ try {
     $mail->send();
     error_log('CONTACT: mail sent');
 
-    error_log('CONTACT: redirect /contact?sent=1');
-    header('Location: /contact?sent=1');
+    $successRedirect = (defined('EDS_LOCAL_PREVIEW') && EDS_LOCAL_PREVIEW === true)
+        ? '/thank-you'
+        : '/contact?sent=1';
+
+    error_log('CONTACT: redirect ' . $successRedirect);
+    header('Location: ' . $successRedirect);
     exit;
 
 } catch (Exception $e) {
