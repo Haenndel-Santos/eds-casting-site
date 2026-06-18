@@ -1,48 +1,56 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const banner = document.getElementById("cookie-banner");
-    const acceptBtn = document.getElementById("accept-cookies");
-    const declineBtn = document.getElementById("decline-cookies");
+  const banner = document.getElementById("cookie-banner");
+  const acceptAllBtn = document.getElementById("accept-all-cookies");
+  const limitedBtn = document.getElementById("limited-cookies");
+  const declineBtn = document.getElementById("decline-cookies");
+  const storageKey = "edsCookieConsent";
 
-    const consent = localStorage.getItem("cookieConsent");
+  if (!banner) return;
 
-    // Se ainda não foi dado consentimento, mostra o banner
-    if (!consent && banner) {
-        banner.style.display = "block";
+  let consent = "";
+
+  try {
+    consent = window.localStorage.getItem(storageKey) || window.localStorage.getItem("cookieConsent") || "";
+  } catch (error) {
+    consent = "";
+  }
+
+  function hideBanner() {
+    banner.classList.remove("open");
+    banner.setAttribute("aria-hidden", "true");
+  }
+
+  function showBanner() {
+    banner.classList.add("open");
+    banner.setAttribute("aria-hidden", "false");
+  }
+
+  function saveConsent(value) {
+    try {
+      window.localStorage.setItem(storageKey, value);
+      window.localStorage.setItem("cookieConsent", value);
+    } catch (error) {
+      /* Consent storage may be unavailable; keep the UI functional. */
     }
 
-    // Ao aceitar cookies
-    if (acceptBtn) {
-        acceptBtn.addEventListener("click", function () {
-            localStorage.setItem("cookieConsent", "accepted");
-            banner.style.display = "none";
-            enableAnalytics(); // aqui você ativa scripts externos
-        });
-    }
+    hideBanner();
+  }
 
-    // Ao recusar cookies
-    if (declineBtn) {
-        declineBtn.addEventListener("click", function () {
-            localStorage.setItem("cookieConsent", "declined");
-            banner.style.display = "none";
-        });
-    }
+  if (["all", "limited", "none", "accepted", "declined"].includes(consent)) {
+    hideBanner();
+  } else {
+    showBanner();
+  }
 
-    // Ativa GA se já foi aceito anteriormente
-    if (consent === "accepted") {
-        enableAnalytics();
-    }
+  acceptAllBtn?.addEventListener("click", function () {
+    saveConsent("all");
+  });
 
-    // Função que ativa scripts permitidos (como Google Analytics)
-    function enableAnalytics() {
-        // Exemplo: inserir o script do Google Analytics dinamicamente
-        const script = document.createElement("script");
-        script.src = "https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX";
-        script.async = true;
-        document.head.appendChild(script);
+  limitedBtn?.addEventListener("click", function () {
+    saveConsent("limited");
+  });
 
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag("js", new Date());
-        gtag("config", "G-XXXXXXXXXX");
-    }
+  declineBtn?.addEventListener("click", function () {
+    saveConsent("none");
+  });
 });

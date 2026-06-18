@@ -5,6 +5,37 @@
 RewriteEngine On
 
 # --------------------------------------------------
+# Legacy public routes with clear modern equivalents
+# --------------------------------------------------
+RewriteRule ^casting/?$ /casting-matrix [R=301,L]
+RewriteRule ^what-we-do(/.*)?$ /eds-differentials [R=301,L]
+RewriteRule ^add-value/?$ /eds-differentials [R=301,L]
+RewriteRule ^logistics/?$ /eds-differentials [R=301,L]
+RewriteRule ^terms-conditions/?$ /terms [R=301,L]
+RewriteRule ^terms-and-conditions/?$ /terms [R=301,L]
+
+# Redirect old direct access before blocking implementation folders.
+RewriteCond %{REQUEST_METHOD} POST
+RewriteRule ^pages-php/new-leads\.php$ /new-leads [R=307,L]
+
+RewriteCond %{REQUEST_METHOD} !POST
+RewriteCond %{THE_REQUEST} \s/+pages-php/(add-value|logistics)\.php(?:\?|\s) [NC]
+RewriteRule ^pages-php/(add-value|logistics)\.php$ /eds-differentials [R=301,L]
+
+RewriteCond %{REQUEST_METHOD} !POST
+RewriteCond %{THE_REQUEST} \s/+pages-php/([^\s?]+)\.php(?:\?|\s) [NC]
+RewriteRule ^pages-php/(.+)\.php$ /$1 [R=301,L]
+
+# --------------------------------------------------
+# Internal folders must not be browser-accessible
+# --------------------------------------------------
+RewriteRule ^(data|docs|includes|config)(/|$) - [F,L]
+
+# Block direct requests to implementation files while allowing clean URL rewrites.
+RewriteCond %{THE_REQUEST} \s/+pages-php/ [NC]
+RewriteRule ^pages-php/ - [F,L]
+
+# --------------------------------------------------
 # A) Force HTTPS
 # --------------------------------------------------
 RewriteCond %{HTTPS} !=on
@@ -18,11 +49,6 @@ RewriteRule ^index\.php$ / [R=301,L]
 RewriteCond %{THE_REQUEST} \s/+index\.php(?:[?\s/]|$) [NC]
 RewriteRule ^index\.php/?(.*)$ /$1 [R=301,L]
 
-# C) Redirect old direct access: /pages-php/x.php -> /x
-RewriteCond %{REQUEST_METHOD} !POST
-RewriteCond %{THE_REQUEST} \s/+pages-php/([^\s?]+)\.php(?:\?|\s) [NC]
-RewriteRule ^pages-php/(.+)\.php$ /$1 [R=301,L]
-
 # --------------------------------------------------
 # D) Do not rewrite real files or directories
 # --------------------------------------------------
@@ -31,17 +57,8 @@ RewriteCond %{REQUEST_FILENAME} -d
 RewriteRule ^ - [L]
 
 # --------------------------------------------------
-# E) Route clean URLs -> pages-php/*.php
+# E) Route clean URLs through the canonical resolver
 # --------------------------------------------------
 
-# /slug -> /pages-php/slug.php
-RewriteCond %{DOCUMENT_ROOT}/pages-php/$1.php -f
-RewriteRule ^([a-zA-Z0-9-]+)/?$ /pages-php/$1.php [L]
-
-# /folder/slug -> /pages-php/folder/slug.php
-RewriteCond %{DOCUMENT_ROOT}/pages-php/$1/$2.php -f
-RewriteRule ^([a-zA-Z0-9-]+)/([a-zA-Z0-9-]+)/?$ /pages-php/$1/$2.php [L]
-
-# /folder/sub/slug -> /pages-php/folder/sub/slug.php
-RewriteCond %{DOCUMENT_ROOT}/pages-php/$1/$2/$3.php -f
-RewriteRule ^([a-zA-Z0-9-]+)/([a-zA-Z0-9-]+)/([a-zA-Z0-9-]+)/?$ /pages-php/$1/$2/$3.php [L]
+# app.php normalizes trailing slashes and URL case, then resolves pages-php.
+RewriteRule ^ app.php [L]

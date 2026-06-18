@@ -221,7 +221,7 @@ table {
 /* =========================
    MENU OVERLAY MOBILE ONLY
    ========================= */
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .menu-overlay {
     align-items: flex-start;
     padding: 72px 0 0;
@@ -263,7 +263,7 @@ table {
 /* =========================
    MOBILE ACCORDION ONLY
    ========================= */
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .menu-column--accordion {
     border-bottom: 1px solid rgba(0, 0, 0, 0.08);
     padding-bottom: 10px;
@@ -319,7 +319,7 @@ table {
   }
 }
 
-@media (min-width: 769px) {
+@media (min-width: 901px) {
   .menu-section-toggle {
     display: block;
     width: 100%;
@@ -364,97 +364,68 @@ table {
 }
 
 /* =========================
-   HERO DOTS — PREMIUM STYLE
-========================= */
-
-/* =========================
-   HERO DOTS — MOBILE CORREÇÃO REAL
-========================= */
-
+   FOOTER + LEGAL BAR MOBILE
+   ========================= */
 @media (max-width: 768px) {
-  .hero-dots,
-  .hero-nav {
-    display: none !important;
+  .main-footer {
+    padding: 24px 16px 14px !important;
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 24px 18px !important;
+  }
+
+  .footer-logo {
+    max-width: 170px !important;
+    height: auto !important;
+  }
+
+  .bottom-bar {
+    position: static !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 10px !important;
+    min-height: 0 !important;
+    padding: 14px 16px !important;
+    text-align: center !important;
+  }
+
+  .bottom-bar-text {
+    position: static !important;
+    left: auto !important;
+    transform: none !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    white-space: normal !important;
+    overflow-wrap: anywhere !important;
+  }
+
+  .bottom-links {
+    width: 100% !important;
+    justify-content: center !important;
+    flex-wrap: wrap !important;
+    gap: 8px 14px !important;
   }
 }
 
-@media (max-width: 768px) {
-
-  .hero-dots {
-    position: static;          /* REMOVE absolute */
-    transform: none;
-    margin: 16px auto 0;       /* espaço abaixo do hero */
-    gap: 6px;
+@media (max-width: 560px) {
+  .footer-container {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+    text-align: center !important;
   }
 
-  .hero-dot {
-    width: 6px;
-    height: 6px;
-    background: rgba(0, 0, 0, 0.25);
+  .footer-logo {
+    margin-left: auto !important;
+    margin-right: auto !important;
   }
 
-  .hero-dot.active,
-  .hero-dot[aria-selected="true"] {
-    width: 14px;
-    background: var(--eds-primary);
-  }
-
-}
-
-/* =========================================================
-   RESPONSIVE
-   ========================================================= */
-
-@media (max-width: 768px) {
-  main.page-under-construction.page-under-construction--standalone {
-    min-height: calc(100vh - 160px);
-    padding: 48px 16px !important;
-  }
-
-  main.page-under-construction.page-under-construction--standalone .uc-layout {
-    min-height: calc(100vh - 260px);
-  }
-
-  main.page-under-construction.page-under-construction--standalone .uc-card {
-    padding: 36px 22px;
-    border-radius: 16px;
-  }
-
-  main.page-under-construction.page-under-construction--standalone .uc-text {
-    font-size: 1rem !important;
-  }
-}
-
-@media (max-width: 480px) {
-  main.page-under-construction.page-under-construction--standalone {
-    padding: 40px 12px !important;
-  }
-
-  main.page-under-construction.page-under-construction--standalone .uc-card {
-    padding: 30px 18px;
-  }
-
-  main.page-under-construction.page-under-construction--standalone .uc-title {
-    font-size: 1.9rem !important;
-  }
-
-  main.page-under-construction.page-under-construction--standalone .uc-text {
-    font-size: 0.96rem !important;
-  }
-}
-
-@media (max-width: 768px) {
-  .hero-double-container {
-    grid-template-columns: 1fr;
-    gap: 16px;
-  }
-
-  .hero-image-box {
-    min-height: 240px;
-  }
-
-  .hero-logo-overlay {
-    width: 80px;
-    height: 80px;
+  .bottom-links {
+    flex-direction: column !important;
+    gap: 6px !important;
   }
 }

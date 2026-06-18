@@ -1,110 +1,316 @@
-<?php require_once __DIR__ . '/../includes/seo.php';?>
-<?php include '../includes/head.php'; ?> 
-<?php include '../includes/header.php'; ?>
+<?php require_once __DIR__ . '/../includes/seo.php'; ?>
+<?php include __DIR__ . '/../includes/head.php'; ?>
+<?php include __DIR__ . '/../includes/header.php'; ?>
 
-<main class="mainpage-content">
+<main class="process-page process-page--sintering">
 
-  <!-- HERO SECTION -->
-  <section class="mainpage-hero hero-fullimage"
-           style="background-image: url('/assets/img/hero/sintering.webp');">
-    <div class="hero-overlay"></div>
-    <div class="hero-text">
-      <h1>Sintering</h1>
-      <p>Powder metallurgy process delivering precise, dense, and repeatable components for critical applications.</p>
+  <!-- HERO -->
+  <section
+    class="process-hero"
+    aria-labelledby="process-hero-title"
+    style="background-image: url('/assets/img/hero/sintering-optimized.webp');"
+  >
+    <div class="process-hero__overlay" aria-hidden="true"></div>
+
+    <div class="process-hero__content">
+      <h1 id="process-hero-title">Sintering Solutions for Precise Powder Metal Components</h1>
+
+      <p class="process-hero__summary">
+        EDS supports sintering and powder metallurgy projects for industrial components where material efficiency,
+        repeatable geometry, controlled properties and reliable supplier coordination are important.
+      </p>
+
+      <div class="process-hero__actions" aria-label="Sintering page actions">
+        <a class="process-btn process-btn--primary" href="/contact">Request a Sintering Quote</a>
+        <a class="process-btn process-btn--secondary" href="#technical-factors">Review Technical Factors</a>
+      </div>
     </div>
   </section>
 
-  <!-- OVERVIEW -->
-  <section class="mainpage-section mainpage-overview">
-    <h2>Overview</h2>
-    <p>
-      Sintering is a precision manufacturing process based on the compaction and thermal bonding of metallic powders.
-      Under controlled temperature and pressure, the powder particles fuse together to form solid components
-      with high dimensional accuracy and excellent material uniformity.
-    </p>
-    <p>
-      This technology enables the production of complex shapes with minimal machining, reduced material waste,
-      and tailored mechanical properties. Sintering is especially suited for medium-to-high volume production of
-      ferrous and non-ferrous parts requiring consistent strength and surface finish.
-    </p>
-  </section>
+  <!-- ANCHOR NAVIGATION -->
+  <nav class="process-anchor-nav" aria-label="Sintering page navigation">
+    <a href="#overview">Overview</a>
+    <a href="#advantages">Advantages</a>
+    <a href="#applications">Applications</a>
+    <a href="#technical-factors">Technical Factors</a>
+    <a href="#quality">Quality</a>
+    <a href="#related">Related</a>
+  </nav>
 
-  <!-- PROCESS CHARACTERISTICS -->
-  <section class="mainpage-section alt">
-    <h2>Process Characteristics</h2>
-    <ul class="mainpage-list">
-      <li><strong>Raw material:</strong> Atomized or pre-alloyed metallic powders (iron, stainless steel, bronze, etc.).</li>
-      <li><strong>Compaction:</strong> Pressing powders into shape using hardened steel dies under high pressure (up to 800 MPa).</li>
-      <li><strong>Sintering:</strong> Heat treatment in a controlled atmosphere (typically 1100–1300°C) to bond the particles.</li>
-      <li><strong>Density:</strong> Typically 85–98% of wrought material, depending on powder grade and compaction pressure.</li>
-      <li><strong>Tolerances:</strong> Achievable precision around ISO 2768 fine to medium (depending on geometry).</li>
-      <li><strong>Surface finish:</strong> Ra 1.6–6.3 μm; additional machining or impregnation optional.</li>
-      <li><strong>Post-processing:</strong> Sizing, infiltration, heat treatment, or machining for final precision.</li>
-    </ul>
-  </section>
+  <div class="process-content">
 
-  <!-- MAIN APPLICATIONS -->
-  <section class="mainpage-section">
-    <h2>Main Applications</h2>
-    <p>
-      Sintered components are used where uniformity, weight reduction, and dimensional control are key. 
-      Typical applications include:
-    </p>
-    <ul class="mainpage-list">
-      <li>Automotive transmission and engine components (gears, bushings, pulleys, connecting elements)</li>
-      <li>Industrial machinery components requiring consistent wear resistance</li>
-      <li>Hydraulic and pneumatic systems (valve seats, filters, and sleeves)</li>
-      <li>Electrical and magnetic components (soft magnetic alloys, contacts)</li>
-      <li>Precision mechanical assemblies and consumer goods</li>
-    </ul>
-  </section>
+    <!-- INTRODUCTION -->
+    <section class="process-section process-intro" id="overview" aria-labelledby="overview-title">
+      <div class="process-intro__text">
+        <p class="process-eyebrow">Process Overview</p>
+        <h2 id="overview-title">A powder metallurgy route for repeatable shapes and efficient material use</h2>
+        <p>
+          Sintering is a manufacturing process in which metal powder is compacted into a desired shape and
+          then heated below the melting point of the main material. During heating, the powder particles bond
+          together, creating a solid component with controlled geometry and material properties.
+        </p>
+        <p>
+          The process can be especially useful for small to medium-sized components requiring repeatability,
+          material efficiency and good dimensional consistency. It is often used when the component geometry
+          can be produced economically from powder with limited machining after forming.
+        </p>
+        <p>
+          EDS helps customers evaluate sintering feasibility by reviewing material selection, powder composition,
+          part geometry, density requirements, mechanical performance, tolerances, tooling investment, inspection
+          needs and supplier capability.
+        </p>
+      </div>
 
-  <!-- KEY ADVANTAGES -->
-  <section class="mainpage-section alt">
-    <h2>Key Advantages</h2>
-    <ul class="mainpage-list">
-      <li>Near-net-shape manufacturing with minimal waste and high repeatability</li>
-      <li>Capability to produce complex geometries not feasible through conventional machining</li>
-      <li>Consistent material structure and mechanical strength</li>
-      <li>Excellent cost efficiency for medium and large production volumes</li>
-      <li>Material flexibility and compatibility with post-processing methods</li>
-    </ul>
-  </section>
+      <div class="process-intro__cards" aria-label="Sintering key benefits">
+        <article>
+          <h3>Material Efficiency</h3>
+          <p>Powder metallurgy can reduce material waste compared with machining parts from solid stock.</p>
+        </article>
 
-<!-- INTERNAL LINKING SECTION --> 
-<section class="mainpage-section mainpage-related">
-  <h2>Related Processes and Services</h2>
+        <article>
+          <h3>Repeatable Geometry</h3>
+          <p>Tool-based compaction supports stable dimensions across production batches.</p>
+        </article>
 
-  <div class="related-grid">
+        <article>
+          <h3>Controlled Properties</h3>
+          <p>Density, porosity and material composition can be selected according to application needs.</p>
+        </article>
+      </div>
+    </section>
 
-    <a class="mainpage-related-card" href="/casting-matrix">
-      <h3>Casting Matrix</h3>
-      <p>Compare dimensional accuracy, surface finish, tooling cost, and process suitability across major manufacturing routes.</p>
-      <span class="related-link">Learn more →</span>
-    </a>
+    <!-- ADVANTAGES -->
+    <section class="process-section" id="advantages" aria-labelledby="advantages-title">
+      <div class="process-section__header">
+        <p class="process-eyebrow">Process Advantages</p>
+        <h2 id="advantages-title">Why sintering is selected for repeatable technical components</h2>
+        <p>
+          Sintering can be a strong option when a component requires repeatable dimensions, efficient material
+          usage and predictable production at scale. The process can also support specific functional properties
+          through powder selection, controlled porosity and post-sintering operations.
+        </p>
+      </div>
 
-    <a class="mainpage-related-card" href="/machining">
-      <h3>Machining</h3>
-      <p>See how machining supports final tolerances, critical features, and post-processing requirements for precision components.</p>
-      <span class="related-link">Learn more →</span>
-    </a>
+      <div class="process-grid-3">
+        <article class="process-card">
+          <h3>Reduced material waste</h3>
+          <p>
+            Since the part is formed close to its final shape, sintering can reduce scrap and machining volume
+            compared with subtractive manufacturing routes.
+          </p>
+        </article>
 
-    <a class="mainpage-related-card" href="/surface-finishing">
-      <h3>Surface Finishing</h3>
-      <p>Explore finishing options that improve wear resistance, corrosion protection, and overall component performance.</p>
-      <span class="related-link">Learn more →</span>
-    </a>
+        <article class="process-card">
+          <h3>High repeatability</h3>
+          <p>
+            Once tooling and process parameters are defined, sintered components can be produced with stable
+            geometry and consistent production conditions.
+          </p>
+        </article>
+
+        <article class="process-card">
+          <h3>Functional material control</h3>
+          <p>
+            Powder selection and processing conditions can influence density, porosity, wear behavior and other
+            functional characteristics of the finished component.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- APPLICATIONS -->
+    <section class="process-section process-split" id="applications" aria-labelledby="applications-title">
+      <div>
+        <p class="process-eyebrow">Industrial Applications</p>
+        <h2 id="applications-title">Sintered components for technical assemblies and repeat production environments</h2>
+        <p>
+          Sintering is commonly used for components where repeatability, compact geometry and efficient production
+          are important. Typical applications may include gears, bushings, bearings, filters, structural parts,
+          locking components, small mechanical parts, automotive components and precision industrial elements.
+        </p>
+        <p>
+          Depending on the application, sintered parts can be combined with sizing, calibration, impregnation,
+          heat treatment, machining, coating or other finishing operations to achieve the required performance
+          and final specification.
+        </p>
+      </div>
+
+      <aside class="process-callout process-callout--neutral" aria-label="Sintering application fit">
+        <h3>Good application fit</h3>
+        <ul>
+          <li>Small to medium-sized repeatable components</li>
+          <li>Parts where material efficiency is important</li>
+          <li>Components requiring controlled porosity or density</li>
+          <li>Medium to high production volumes</li>
+          <li>Parts requiring limited machining after forming</li>
+        </ul>
+      </aside>
+    </section>
+
+    <!-- TECHNICAL FACTORS -->
+    <section class="process-section" id="technical-factors" aria-labelledby="technical-factors-title">
+      <div class="process-section__header">
+        <p class="process-eyebrow">Technical Review</p>
+        <h2 id="technical-factors-title">Key decisions before starting a sintering project</h2>
+        <p>
+          Sintering requires careful review of powder material, tooling, compaction behavior, shrinkage,
+          density targets and post-processing requirements. EDS supports this evaluation before supplier
+          selection, quotation and production follow-up.
+        </p>
+      </div>
+
+      <table class="process-spec-table" aria-label="Sintering technical review factors">
+        <tbody>
+          <tr>
+            <th scope="row">Material and powder composition</th>
+            <td>Review of powder metal grade, alloying elements, material behavior and final performance requirements.</td>
+          </tr>
+          <tr>
+            <th scope="row">Part geometry</th>
+            <td>Assessment of wall thickness, compactability, part height, undercuts, holes and geometry limitations for powder compaction.</td>
+          </tr>
+          <tr>
+            <th scope="row">Density and porosity</th>
+            <td>Evaluation of density targets, porosity requirements, strength expectations and functional performance needs.</td>
+          </tr>
+          <tr>
+            <th scope="row">Tooling and production volume</th>
+            <td>Evaluation of compaction tooling, tooling cost, expected production volume and repeatability requirements.</td>
+          </tr>
+          <tr>
+            <th scope="row">Post-processing requirements</th>
+            <td>Coordination of sizing, machining, heat treatment, impregnation, coating or inspection requirements when needed.</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- QUALITY -->
+    <section class="process-section process-section--soft" id="quality" aria-labelledby="quality-title">
+      <div class="process-section__header">
+        <p class="process-eyebrow">Quality & Documentation</p>
+        <h2 id="quality-title">Quality coordination for sintered powder metal components</h2>
+        <p>
+          EDS supports sintering projects by coordinating technical requirements, supplier communication,
+          inspection expectations and quality documentation. This helps customers maintain control over material,
+          dimensional, density and performance requirements throughout the sourcing process.
+        </p>
+      </div>
+
+      <div class="process-grid-3">
+        <article class="process-card">
+          <h3>Material documentation</h3>
+          <p>
+            Coordination of material data, certificates and relevant documentation according to the agreed project scope.
+          </p>
+        </article>
+
+        <article class="process-card">
+          <h3>Dimensional control</h3>
+          <p>
+            Support for dimensional reports, critical features, calibration requirements and post-processing follow-up.
+          </p>
+        </article>
+
+        <article class="process-card">
+          <h3>Performance validation</h3>
+          <p>
+            Coordination around density, hardness, strength, porosity or other testing requirements when applicable.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- PROCESS COMPARISON -->
+    <section class="process-section" aria-labelledby="comparison-title">
+      <div class="process-section__header">
+        <p class="process-eyebrow">Process Comparison</p>
+        <h2 id="comparison-title">When sintering may be preferred over casting, forging or machining</h2>
+        <p>
+          Sintering is most attractive when the component geometry, material requirements and production volume
+          match the strengths of powder metallurgy. It should be selected based on total cost, dimensional needs,
+          tooling investment and performance requirements.
+        </p>
+      </div>
+
+      <div class="process-grid-3">
+        <article class="process-card">
+          <h3>Compared with machining</h3>
+          <p>
+            Sintering can reduce material waste and machining time for repeatable shapes that can be compacted
+            efficiently from powder.
+          </p>
+        </article>
+
+        <article class="process-card">
+          <h3>Compared with casting</h3>
+          <p>
+            Sintering can offer better repeatability for small technical parts, while casting may be more suitable
+            for larger or more complex free-form components.
+          </p>
+        </article>
+
+        <article class="process-card">
+          <h3>Compared with forging</h3>
+          <p>
+            Forging is typically stronger for highly loaded structural parts, while sintering can be more efficient
+            for compact, repeatable and function-specific components.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- RELATED -->
+    <section class="process-section process-section--dark" id="related" aria-labelledby="related-title">
+      <div class="process-section__header">
+        <p class="process-eyebrow">Related Capabilities</p>
+        <h2 id="related-title">Explore related manufacturing and value-added support</h2>
+        <p>
+          Sintered components may require machining, surface treatment, heat treatment, assembly, inspection and
+          logistics coordination depending on the final application.
+        </p>
+      </div>
+
+      <div class="process-related-grid">
+        <a class="process-related-card" href="/casting-matrix">
+          <h3>Casting Matrix</h3>
+          <p>Compare casting and manufacturing routes to identify the best fit for geometry, material and volume.</p>
+          <span>Learn more</span>
+        </a>
+
+        <a class="process-related-card" href="/machining">
+          <h3>Machining Support</h3>
+          <p>Machining support for final dimensions, surfaces, interfaces and precision finishing requirements.</p>
+          <span>Learn more</span>
+        </a>
+
+        <a class="process-related-card" href="/surface-finishing">
+          <h3>Surface Treatment</h3>
+          <p>Surface finishing and protection support according to wear, corrosion and application requirements.</p>
+          <span>Learn more</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="process-section process-final-cta" aria-labelledby="sintering-cta-title">
+      <div>
+        <p class="process-eyebrow">Start a Sintering Project</p>
+        <h2 id="sintering-cta-title">Need support sourcing sintered powder metal components?</h2>
+        <p>
+          Send us your drawing, material specification, target quantity or application requirements.
+          EDS can help review process feasibility, supplier options, quality requirements and production follow-up.
+        </p>
+      </div>
+
+      <div class="process-final-cta__actions">
+        <a class="process-btn process-btn--primary" href="/contact">Request a Quote</a>
+        <a class="process-btn process-btn--secondary" href="/casting-matrix">Back to Casting Matrix</a>
+      </div>
+    </section>
 
   </div>
-</section>
-
-<!-- CTA -->
-<section class="mainpage-cta">
-  <p>Looking for dimensionally accurate and durable powder metallurgy components? Discover our sintering capabilities.</p>
-  <a href="/contact" class="cta-button">Get in Touch</a>
-</section>
-
 </main>
 
-<?php include '../includes/footer.php'; ?>
-<?php include '../includes/bottombar.php'; ?>
+<?php include __DIR__ . '/../includes/footer.php'; ?>
+<?php include __DIR__ . '/../includes/bottombar.php'; ?>

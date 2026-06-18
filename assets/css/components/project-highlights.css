@@ -61,7 +61,7 @@
 }
 
 .project-box h3 {
-  color: #37b347;
+  color: var(--eds-primary);
   font-weight: 700;
   font-size: 1.3rem;
   margin-bottom: 12px;
@@ -103,7 +103,7 @@
   margin-top: 20px;
 }
 
-.cta-button {
+.project-highlights .cta-button {
   display: inline-block;
   background-color: var(--eds-primary);
   color: #fff;
@@ -115,7 +115,7 @@
   transition: all 0.3s ease;
 }
 
-.cta-button:hover {
+.project-highlights .cta-button:hover {
   background-color: #2ea43f;
   transform: translateY(-2px);
 }

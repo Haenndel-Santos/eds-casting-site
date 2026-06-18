@@ -1,0 +1,1046 @@
+/* =========================================================
+   EDS MAIN PROCESS PAGES — Shared CSS
+   Pages: Casting, Forging, Add Value, Logistics and subpages
+
+   Purpose:
+   - stronger technical content structure
+   - better SEO readability
+   - stronger CTR and conversion flow
+   - reusable layout across all manufacturing/service pages
+   ========================================================= */
+
+.process-page {
+  --process-bg: #f5f7f5;
+  --process-surface: #ffffff;
+  --process-soft: #f0fff0;
+  --process-green: #37b437;
+  --process-green-strong: #00bf63;
+  --process-dark: #333333;
+  --process-text: #333333;
+  --process-muted: #5d665f;
+  --process-border: rgba(51, 51, 51, 0.12);
+  --process-shadow: 0 12px 34px rgba(0, 0, 0, 0.055);
+
+  background: var(--process-bg);
+  color: var(--process-text);
+}
+
+.process-page :target {
+  scroll-margin-top: 145px;
+}
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.process-hero {
+  position: relative;
+  width: min(1200px, calc(100% - 40px));
+  min-height: 470px;
+  margin: -3px auto 28px;
+  margin-top: -3px;
+  border-radius: 22px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-top: 5px solid var(--process-green);
+  box-shadow: 0 18px 44px rgba(0, 0, 0, 0.14);
+}
+
+.process-hero__overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgba(7, 12, 9, 0.80) 0%, rgba(7, 12, 9, 0.62) 48%, rgba(7, 12, 9, 0.36) 100%),
+    rgba(0, 0, 0, 0.18);
+}
+
+.process-hero__content {
+  position: relative;
+  z-index: 2;
+  width: min(880px, calc(100% - 40px));
+  text-align: center;
+  padding: 70px 20px;
+  color: #ffffff;
+}
+
+.process-eyebrow {
+  margin: 0 0 12px;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  color: var(--process-green) !important;
+}
+
+.process-hero h1 {
+  margin: 0 auto 18px;
+  max-width: 940px;
+  color: #ffffff;
+  font-size: clamp(2rem, 4vw, 4rem);
+  line-height: 1.06;
+  letter-spacing: -0.04em;
+}
+
+.process-hero__summary {
+  max-width: 790px;
+  margin: 0 auto;
+  color: rgba(255, 255, 255, 0.92);
+  font-size: clamp(1rem, 1.7vw, 1.18rem);
+  line-height: 1.7;
+}
+
+.process-hero__actions {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+/* =========================================================
+   BUTTONS
+   ========================================================= */
+
+.process-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 46px;
+  padding: 12px 22px;
+  border-radius: 999px;
+  font-size: 0.95rem;
+  font-weight: 800;
+  text-decoration: none;
+  border: 1px solid transparent;
+  transition: transform 0.25s ease, background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+}
+
+.process-btn:hover {
+  transform: translateY(-2px);
+  text-decoration: none;
+}
+
+.process-btn:focus-visible {
+  transform: translateY(-2px);
+  text-decoration: none;
+}
+
+.process-btn--primary {
+  background: var(--process-green);
+  color: #ffffff;
+  border-color: var(--process-green);
+}
+
+.process-btn--primary:hover {
+  background: #ffffff;
+  color: var(--process-green);
+  border-color: var(--process-green);
+}
+
+.process-btn--primary:focus-visible {
+  background: #ffffff;
+  color: var(--process-green);
+  border-color: var(--process-green);
+}
+
+.process-btn--secondary {
+  background: #ffffff;
+  color: var(--process-dark);
+  border-color: #ffffff;
+}
+
+.process-btn--secondary:hover {
+  background: var(--process-dark);
+  color: #ffffff;
+  border-color: var(--process-dark);
+}
+
+.process-btn--secondary:focus-visible {
+  background: var(--process-dark);
+  color: #ffffff;
+  border-color: var(--process-dark);
+}
+
+/* =========================================================
+   ANCHOR NAVIGATION
+   ========================================================= */
+
+.process-anchor-nav {
+  width: min(1200px, calc(100% - 40px));
+  margin: 0 auto 28px;
+  padding: 12px;
+  border: 1px solid var(--process-border);
+  border-radius: 999px;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.05);
+}
+
+.process-anchor-nav a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 9px 14px;
+  border-radius: 999px;
+  color: var(--process-dark);
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+.process-anchor-nav a:hover {
+  background: var(--process-dark);
+  color: var(--process-green);
+  text-decoration: none;
+}
+
+.process-anchor-nav a:focus-visible {
+  background: var(--process-dark);
+  color: var(--process-green);
+  text-decoration: none;
+}
+
+/* =========================================================
+   CONTENT WRAPPER + SECTION BASICS
+   ========================================================= */
+
+.process-content {
+  width: min(1200px, calc(100% - 40px));
+  margin: 0 auto;
+  padding: 0 0 80px;
+}
+
+.process-section {
+  margin-bottom: 28px;
+  padding: 38px;
+  border-radius: 24px;
+  background: var(--process-surface);
+  border: 1px solid var(--process-border);
+  box-shadow: var(--process-shadow);
+  color: var(--process-text);
+}
+
+.process-section h2 {
+  margin: 0 0 16px;
+  color: var(--process-dark);
+  font-size: clamp(1.55rem, 2.4vw, 2.2rem);
+  line-height: 1.16;
+  letter-spacing: -0.035em;
+  text-align: left;
+}
+
+.process-section h3 {
+  margin: 0 0 10px;
+  color: var(--process-dark);
+  font-size: 1.12rem;
+  line-height: 1.25;
+}
+
+.process-section p {
+  margin: 0 0 16px;
+  color: var(--process-text);
+  font-size: 1rem;
+  line-height: 1.75;
+  text-align: justify;
+}
+
+.process-section p:last-child {
+  margin-bottom: 0;
+}
+
+.process-section__header {
+  width: 100%;
+  max-width: none;
+  margin-bottom: 28px;
+}
+
+.process-section__header p {
+  width: 100%;
+  max-width: none;
+}
+
+.process-section--light {
+  background: #ffffff;
+}
+
+.process-section--soft {
+  background: var(--process-soft);
+}
+
+.process-section--dark {
+  background: var(--process-dark);
+  color: #ffffff;
+}
+
+.process-section--dark h2 {
+  color: #ffffff;
+}
+
+.process-section--dark h3 {
+  color: #ffffff;
+}
+
+.process-section--dark p {
+  color: rgba(255, 255, 255, 0.82);
+}
+
+/* =========================================================
+   INTRO / SUMMARY BLOCK
+   ========================================================= */
+
+.process-intro {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(320px, 0.85fr);
+  gap: 28px;
+  align-items: stretch;
+}
+
+.process-intro__text h2 {
+  margin: 0 0 16px;
+  color: var(--process-dark);
+  font-size: clamp(1.55rem, 2.4vw, 2.2rem);
+  line-height: 1.16;
+  letter-spacing: -0.035em;
+  text-align: left;
+}
+
+.process-intro__text p {
+  margin: 0 0 16px;
+  color: var(--process-text);
+  font-size: 1rem;
+  line-height: 1.75;
+  text-align: justify;
+}
+
+.process-intro__text p:last-child {
+  margin-bottom: 0;
+}
+
+.process-intro__cards {
+  display: grid;
+  gap: 14px;
+}
+
+.process-intro__cards article {
+  padding: 20px;
+  border-radius: 18px;
+  background: var(--process-green-strong);
+  border: 1px solid rgba(51, 51, 51, 0.14);
+}
+
+.process-intro__cards span {
+  display: inline-flex;
+  margin-bottom: 10px;
+  color: var(--process-dark);
+  font-size: 0.8rem;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+}
+
+.process-intro__cards h3 {
+  margin: 0 0 8px;
+  color: #ffffff;
+  font-size: 1.25rem;
+  line-height: 1.25;
+  text-align: center;
+}
+
+.process-intro__cards p {
+  margin: 0;
+  color: var(--process-dark);
+  font-size: 0.96rem;
+  line-height: 1.65;
+  text-align: justify;
+}
+
+/* =========================================================
+   TWO COLUMN SPLIT + CALLOUT
+   ========================================================= */
+
+.process-split {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(300px, 0.42fr);
+  gap: 30px;
+  align-items: stretch;
+}
+
+.process-callout {
+  border-radius: 20px;
+  border: 1px solid rgba(51, 51, 51, 0.14);
+  background: var(--process-green-strong);
+  padding: 24px;
+}
+
+.process-callout h3 {
+  margin: 0 0 18px;
+  color: #ffffff;
+  font-size: 1.35rem;
+  line-height: 1.25;
+  text-align: center;
+}
+
+.process-callout p {
+  color: var(--process-dark);
+  text-align: justify;
+}
+
+.process-callout ul {
+  margin: 0;
+  padding-left: 18px;
+}
+
+.process-callout li {
+  margin-bottom: 10px;
+  color: var(--process-dark);
+  font-size: 0.96rem;
+  line-height: 1.65;
+}
+
+.process-callout li:last-child {
+  margin-bottom: 0;
+}
+
+/* =========================================================
+   TECHNICAL GRIDS / CARD GROUPS
+   ========================================================= */
+
+.process-grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.process-grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.process-card {
+  min-height: 230px;
+  padding: 22px;
+  border-radius: 18px;
+  background: #ffffff;
+  border: 1px solid var(--process-green);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease, background-color 0.25s ease, color 0.25s ease;
+}
+
+.process-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 34px rgba(0, 0, 0, 0.075);
+  border-color: rgba(52, 180, 55, 0.28);
+  background: var(--process-dark);
+  color: #ffffff;
+}
+
+.process-card:focus-within {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 34px rgba(0, 0, 0, 0.075);
+  border-color: rgba(52, 180, 55, 0.28);
+  background: var(--process-dark);
+  color: #ffffff;
+}
+
+.process-card h3 {
+  text-align: center;
+  color: var(--process-dark);
+  transition: color 0.25s ease;
+}
+
+.process-card p {
+  color: var(--process-dark);
+  font-size: 0.96rem;
+  line-height: 1.65;
+  text-align: justify;
+  transition: color 0.25s ease;
+}
+
+.process-card:hover h3 {
+  color: var(--process-green) !important;
+}
+
+.process-card:focus-within h3 {
+  color: var(--process-green) !important;
+}
+
+.process-card:hover p {
+  color: #ffffff !important;
+}
+
+.process-card:focus-within p {
+  color: #ffffff !important;
+}
+
+.process-card a {
+  display: inline-flex;
+  width: 100%;
+  align-self: center;
+  justify-content: center;
+  margin-top: auto;
+  padding-top: 18px;
+  color: var(--process-green);
+  font-size: 0.92rem;
+  font-weight: 900;
+  text-align: center;
+  text-decoration: none;
+}
+
+.process-card a:hover {
+  text-decoration: underline;
+}
+
+.process-card a:focus-visible {
+  text-decoration: underline;
+}
+
+/* =========================================================
+   TECHNICAL LISTS
+   ========================================================= */
+
+.process-list {
+  list-style: none;
+  padding: 0;
+  margin: 18px 0 0;
+}
+
+.process-list li {
+  position: relative;
+  margin-bottom: 12px;
+  padding-left: 28px;
+  color: var(--process-text);
+  font-size: 1rem;
+  line-height: 1.65;
+}
+
+.process-list li::before {
+  content: "▸";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--process-green);
+  font-size: 1.2rem;
+  line-height: 1.45;
+}
+
+.process-list li:last-child {
+  margin-bottom: 0;
+}
+
+.process-list strong {
+  color: var(--process-dark);
+  font-weight: 800;
+}
+
+/* =========================================================
+   TECHNICAL TABLE / SPEC LIST
+   ========================================================= */
+
+.process-spec-table {
+  width: 100%;
+  border-collapse: collapse;
+  overflow: hidden;
+  border-radius: 18px;
+  background: #ffffff;
+  border: 1px solid var(--process-border);
+}
+
+.process-spec-table th {
+  width: 34%;
+  padding: 16px 18px;
+  background: var(--process-dark);
+  color: var(--process-green);
+  font-size: 0.95rem;
+  text-align: left;
+  vertical-align: top;
+}
+
+.process-spec-table td {
+  padding: 16px 18px;
+  color: var(--process-text);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  border-bottom: 1px solid var(--process-border);
+}
+
+.process-spec-table tr:last-child td {
+  border-bottom: 0;
+}
+
+.process-spec-table tr:last-child th {
+  border-bottom: 0;
+}
+
+/* =========================================================
+   RELATED LINKS SECTION
+   ========================================================= */
+
+.process-related-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.process-related-card {
+  display: flex;
+  flex-direction: column;
+  min-height: 210px;
+  padding: 22px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  color: #ffffff;
+  text-decoration: none;
+  transition: transform 0.25s ease, background-color 0.25s ease, border-color 0.25s ease, color 0.25s ease;
+}
+
+.process-related-card:hover {
+  transform: translateY(-4px);
+  background: #ffffff;
+  border-color: #ffffff;
+  color: var(--process-green);
+  text-decoration: none;
+}
+
+.process-related-card:focus-visible {
+  transform: translateY(-4px);
+  background: #ffffff;
+  border-color: #ffffff;
+  color: var(--process-green);
+  text-decoration: none;
+}
+
+.process-related-card h3 {
+  margin: 0 0 10px;
+  color: #333;
+  font-size: 1.12rem;
+  line-height: 1.25;
+  text-align: center;
+  transition: color 0.25s ease;
+}
+
+.process-related-card p {
+  margin: 0;
+  color: #333;
+  font-size: 0.95rem;
+  line-height: 1.65;
+  text-align: justify;
+  transition: color 0.25s ease;
+}
+
+.process-related-card span {
+  display: inline-flex;
+  width: 100%;
+  justify-content: center;
+  margin-top: auto;
+  padding-top: 18px;
+  color: var(--process-green);
+  font-size: 0.92rem;
+  font-weight: 900;
+  text-align: center;
+}
+
+.process-related-card:hover h3 {
+  color: var(--process-green);
+}
+
+.process-related-card:focus-visible h3 {
+  color: var(--process-green);
+}
+
+.process-related-card:hover p {
+  color: var(--process-dark);
+}
+
+.process-related-card:focus-visible p {
+  color: var(--process-dark);
+}
+
+/* =========================================================
+   FINAL CTA
+   ========================================================= */
+
+.process-final-cta {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 28px;
+  padding: 38px;
+  margin-bottom: 0;
+  background: #ffffff;
+}
+
+.process-final-cta h2 {
+  margin: 0 0 14px;
+  color: var(--process-dark);
+  font-size: clamp(1.55rem, 2.4vw, 2.2rem);
+  line-height: 1.16;
+  letter-spacing: -0.035em;
+  text-align: left;
+}
+
+.process-final-cta p {
+  margin: 0;
+  color: var(--process-text);
+  font-size: 1rem;
+  line-height: 1.75;
+  text-align: justify;
+}
+
+.process-final-cta__actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 1024px) {
+  .process-intro {
+    grid-template-columns: 1fr;
+  }
+
+  .process-split {
+    grid-template-columns: 1fr;
+  }
+
+  .process-final-cta {
+    grid-template-columns: 1fr;
+  }
+
+  .process-grid-3 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .process-related-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .process-final-cta__actions {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 768px) {
+  .process-hero {
+    width: min(100% - 24px, 1200px);
+    min-height: 430px;
+    border-radius: 18px;
+  }
+
+  .process-anchor-nav {
+    width: min(100% - 24px, 1200px);
+    border-radius: 18px;
+    justify-content: flex-start;
+  }
+
+  .process-content {
+    width: min(100% - 24px, 1200px);
+  }
+
+  .process-hero__content {
+    width: 100%;
+    padding: 56px 18px;
+  }
+
+  .process-hero__actions {
+    flex-direction: column;
+  }
+
+  .process-btn {
+    width: 100%;
+  }
+
+  .process-anchor-nav a {
+    flex: 1 1 calc(50% - 8px);
+  }
+
+  .process-section {
+    padding: 26px 20px;
+    border-radius: 18px;
+  }
+
+  .process-grid-2 {
+    grid-template-columns: 1fr;
+  }
+
+  .process-grid-3 {
+    grid-template-columns: 1fr;
+  }
+
+  .process-related-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .process-final-cta {
+    padding: 26px 20px;
+    border-radius: 18px;
+  }
+
+  .process-final-cta__actions {
+    flex-direction: column;
+  }
+
+  .process-final-cta h2 {
+    text-align: center;
+  }
+
+  .process-spec-table {
+    display: block;
+    overflow-x: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .process-hero h1 {
+    font-size: 2rem;
+  }
+
+  .process-hero__summary {
+    font-size: 0.95rem;
+  }
+
+  .process-section p {
+    font-size: 0.95rem;
+  }
+
+  .process-intro__text p {
+    font-size: 0.95rem;
+  }
+
+  .process-final-cta p {
+    font-size: 0.95rem;
+  }
+
+  .process-anchor-nav a {
+    flex: 1 1 100%;
+  }
+}
+
+/* =========================================================
+   ABOUT-ALIGNED PROCESS STANDARD
+   Applies the institutional intro/card pattern to process pages.
+   ========================================================= */
+
+.process-page .process-section--soft,
+.process-page .eds-commercial-section--soft {
+  background: #ffffff;
+}
+
+.process-page .process-intro {
+  display: block;
+  padding: 38px 38px 48px;
+  background: var(--process-green-strong, #00bf63);
+}
+
+.process-page .process-intro__text {
+  max-width: 920px;
+  margin: 0 auto;
+}
+
+.process-page .process-intro .process-eyebrow {
+  color: #ffffff !important;
+  text-align: center;
+}
+
+.process-page .process-intro__text h2 {
+  text-align: left;
+}
+
+.process-page .process-intro__text p {
+  text-align: center;
+}
+
+.process-page .process-intro__cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 28px;
+}
+
+.process-page .process-intro__cards article {
+  min-width: 0;
+  min-height: 0;
+  padding: 18px;
+  border-radius: 8px;
+  background: #ffffff;
+  border: 1px solid var(--process-border);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.045);
+  transition: background-color 0.25s ease, border-color 0.25s ease, transform 0.25s ease;
+}
+
+.process-page .process-intro__cards article:hover,
+.process-page .process-intro__cards article:focus-within {
+  background: var(--process-dark);
+  border-color: var(--process-dark);
+  transform: translateY(-2px);
+}
+
+.process-page .process-intro__cards h3 {
+  margin: 0 0 8px;
+  color: var(--process-green);
+  font-size: 1rem;
+  line-height: 1.25;
+  text-align: center;
+}
+
+.process-page .process-intro__cards p {
+  margin: 0;
+  color: var(--process-dark);
+  font-size: 0.93rem;
+  line-height: 1.55;
+  text-align: center;
+}
+
+.process-page .process-intro__cards article:hover p,
+.process-page .process-intro__cards article:focus-within p {
+  color: #ffffff;
+}
+
+.process-page .process-callout,
+.process-page .process-callout--neutral {
+  background: #ffffff;
+  border-color: var(--process-green);
+}
+
+.process-page .process-callout h3 {
+  color: var(--process-dark);
+}
+
+.process-page .process-callout p,
+.process-page .process-callout li {
+  color: var(--process-dark);
+}
+
+.process-page .process-card,
+.process-page .process-related-card,
+.process-page .quality-inspection-grid article,
+.process-page .vacancy-summary-grid article,
+.process-page .vacancy-requirements-grid article {
+  background: #ffffff;
+  border: 1px solid var(--process-green);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease, border-color 0.25s ease, color 0.25s ease;
+}
+
+.process-page .process-card:hover,
+.process-page .process-card:focus-within,
+.process-page .quality-inspection-grid article:hover,
+.process-page .quality-inspection-grid article:focus-within,
+.process-page .vacancy-summary-grid article:hover,
+.process-page .vacancy-summary-grid article:focus-within,
+.process-page .vacancy-requirements-grid article:hover,
+.process-page .vacancy-requirements-grid article:focus-within {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 34px rgba(0, 0, 0, 0.075);
+  background: var(--process-dark);
+  border-color: var(--process-green);
+  color: #ffffff;
+}
+
+.process-page .process-card:hover h3,
+.process-page .process-card:focus-within h3,
+.process-page .quality-inspection-grid article:hover h3,
+.process-page .quality-inspection-grid article:focus-within h3,
+.process-page .vacancy-summary-grid article:hover strong,
+.process-page .vacancy-summary-grid article:focus-within strong,
+.process-page .vacancy-requirements-grid article:hover h3,
+.process-page .vacancy-requirements-grid article:focus-within h3 {
+  color: var(--process-green) !important;
+}
+
+.process-page .process-card:hover p,
+.process-page .process-card:focus-within p,
+.process-page .quality-inspection-grid article:hover p,
+.process-page .quality-inspection-grid article:focus-within p,
+.process-page .vacancy-summary-grid article:hover span,
+.process-page .vacancy-summary-grid article:focus-within span,
+.process-page .vacancy-requirements-grid article:hover li,
+.process-page .vacancy-requirements-grid article:focus-within li {
+  color: #ffffff !important;
+}
+
+.process-page #applications {
+  background: #00bf63;
+}
+
+.process-page #applications .process-eyebrow {
+  color: #ffffff !important;
+}
+
+.process-page #applications h2,
+.process-page #applications h3,
+.process-page #applications p,
+.process-page #applications li {
+  color: #333333;
+}
+
+.process-page .process-section--dark .process-related-card {
+  align-items: center;
+  gap: 8px;
+  min-height: 120px;
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.14);
+  color: #ffffff;
+}
+
+.process-page .process-section--dark .process-related-card h3 {
+  color: #ffffff;
+}
+
+.process-page .process-section--dark .process-related-card p {
+  color: rgba(255, 255, 255, 0.78);
+  text-align: center;
+}
+
+.process-page .process-section--dark .process-related-card span {
+  color: rgba(255, 255, 255, 0.68);
+}
+
+.process-page .process-section--dark .process-related-card:hover,
+.process-page .process-section--dark .process-related-card:focus-visible {
+  background: #ffffff;
+  border-color: #ffffff;
+  color: var(--process-green);
+}
+
+.process-page .process-section--dark .process-related-card:hover h3,
+.process-page .process-section--dark .process-related-card:focus-visible h3,
+.process-page .process-section--dark .process-related-card:hover span,
+.process-page .process-section--dark .process-related-card:focus-visible span {
+  color: var(--process-green);
+}
+
+.process-page .process-section--dark .process-related-card:hover p,
+.process-page .process-section--dark .process-related-card:focus-visible p {
+  color: var(--process-dark);
+}
+
+@media (max-width: 1024px) {
+  .process-page .process-intro__cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .process-page .process-intro {
+    padding: 26px 20px;
+  }
+
+  .process-page .process-intro__cards {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,80 +1,46 @@
-<section class="hero-carousel" aria-label="EDS core capabilities" tabindex="0">
-  <div class="hero-slides" aria-live="polite">
-
-    <!-- Slide 1: EDS Core -->
-    <div class="hero-slide active" data-index="0" id="slide-1">
-      <img src="/assets/img/hero-img/eng.png" alt="Engineering, design and supply solutions for industrial components">
-      <div class="hero-textbox">
-        
-
-        <h1 class="hero-eds-title">
-          <span><span class="hero-eds-initial">E</span>ngineering</span>
-          <span><span class="hero-eds-initial">D</span>esign</span>
-          <span><span class="hero-eds-initial">S</span>upply</span>
-        </h1>
-
-        <p>
-          Engineering-driven casting, forging and machining solutions supported by
-          global sourcing, quality control and coordinated supply chains.
-        </p>
-
-        <div class="hero-cta">
-          <a class="btn btn-primary" href="/contact">Request a Quote</a>
-          <a class="btn btn-outline" href="/what-we-do">Explore Capabilities</a>
-        </div>
-      </div>
-    </div>
-
-    <!-- Slide 2: Design & Engineering -->
-    <div class="hero-slide" data-index="1" id="slide-2">
-      <img src="/assets/img/hero-img/des2.png" alt="Design optimization and manufacturability for casting and forging">
-      <div class="hero-textbox">
-        
-
-        <h2>Better Components Start with Better Design Decisions</h2>
-
-        <p>
-          We improve manufacturability, optimize geometry and select the right processes
-          to reduce cost, risk and production complexity.
-        </p>
-
-        <div class="hero-cta">
-          <a class="btn btn-primary" href="/eds-differentials">Why Work with EDS</a>
-          <a class="btn btn-outline" href="/projects">View Projects</a>
-        </div>
-      </div>
-    </div>
-
-    <!-- Slide 3: Supply -->
-    <div class="hero-slide" data-index="2" id="slide-3">
-      <img src="/assets/img/hero-img/supply3.jpg" alt="Reliable global sourcing and supply chain coordination">
-      <div class="hero-textbox">
-        
-        <h2>Reliable Supply with Quality and Delivery Control</h2>
-
-        <p>
-          Through qualified suppliers and production follow-up, we ensure consistent
-          quality, controlled lead times and dependable component supply.
-        </p>
-
-        <div class="hero-cta">
-          <a class="btn btn-primary" href="/workflow">See How We Work</a>
-          <a class="btn btn-outline" href="/contact">Talk to Our Team</a>
-        </div>
-      </div>
-    </div>
-
+<section class="home-hero" aria-labelledby="home-hero-title">
+  <div class="home-hero__media">
+    <img
+      src="/assets/img/hero-img/eng.webp"
+      alt="Engineering support for industrial casting, forging and machined components"
+      width="1536"
+      height="1024"
+      loading="eager"
+      fetchpriority="high"
+      decoding="async"
+    >
   </div>
 
-  <!-- Navigation -->
-  <button class="hero-nav prev" aria-label="Previous slide" type="button" data-action="prev">&#10094;</button>
-  <button class="hero-nav next" aria-label="Next slide" type="button" data-action="next">&#10095;</button>
+  <div class="home-hero__content">
+    <div class="home-hero__eyebrow-section">
+      <p class="home-hero__eyebrow">Engineering-Driven Global Manufacturing Support</p>
+    </div>
 
-  <div class="hero-dots" role="tablist" aria-label="Select slide">
-    <button class="hero-dot active" role="tab" aria-selected="true" aria-controls="slide-1" data-index="0"></button>
-    <button class="hero-dot" role="tab" aria-selected="false" aria-controls="slide-2" data-index="1"></button>
-    <button class="hero-dot" role="tab" aria-selected="false" aria-controls="slide-3" data-index="2"></button>
+    <h1 id="home-hero-title" class="home-hero__title">
+      <span><span class="hero-eds-initial">E</span>ngineering</span>
+      <span class="home-hero__title-dot" aria-hidden="true"></span>
+      <span><span class="hero-eds-initial">D</span>esign</span>
+      <span class="home-hero__title-dot" aria-hidden="true"></span>
+      <span><span class="hero-eds-initial">S</span>upply</span>
+    </h1>
+
+    <h2 class="home-hero__headline">Engineering-Driven Casting &amp; Forging Solutions for European Industries</h2>
+
+    <p class="home-hero__summary">
+      We help OEMs and industrial buyers source complex castings, forgings and machined components through engineering support, supplier management, quality control and logistics coordination.
+    </p>
+
+    <div class="home-hero__actions">
+      <a class="btn btn-primary" href="/contact">Request a Quotation</a>
+      <a class="btn btn-outline" href="/eds-differentials">Explore Capabilities</a>
+    </div>
   </div>
 </section>
 
-<script src="/assets/js/slider.js" defer></script>
+<section class="home-hero-trust" aria-label="EDS project support strengths">
+  <a class="home-hero-trust__item" href="/supply-chain">Global Supplier Network</a>
+  <a class="home-hero-trust__item" href="/eds-differentials">Engineering Review</a>
+  <a class="home-hero-trust__item" href="/quality">Quality Documentation</a>
+  <a class="home-hero-trust__item" href="/supply-chain">Logistics Coordination</a>
+  <a class="home-hero-trust__item" href="/eds-differentials">European Project Support</a>
+</section>

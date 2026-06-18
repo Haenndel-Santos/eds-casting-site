@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
   const requestType = document.getElementById('request_type');
-  const rfqTriggerRow = document.getElementById('rfqTriggerRow');
+  const rfqTriggerRow = document.getElementById('rfqTriggerRow') || document.querySelector('.rfq-trigger-row');
   const rfqStatus = document.getElementById('rfqStatus');
   const rfqModal = document.getElementById('rfqModal');
   const openRfqModal = document.getElementById('openRfqModal');

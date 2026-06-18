@@ -10,4 +10,3 @@
     <a href="/terms">Terms & Conditions</a>
   </div>
 </div>
-

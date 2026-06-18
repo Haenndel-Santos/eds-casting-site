@@ -1,0 +1,660 @@
+/* Shared commercial SEO/GEO sections for EDS pages. */
+
+.eds-breadcrumbs {
+  width: min(1200px, calc(100% - 40px));
+  margin: 0 auto 18px;
+  color: var(--eds-text);
+}
+
+.eds-breadcrumbs ol {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 0.88rem;
+}
+
+.eds-breadcrumbs li {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.eds-breadcrumbs li + li::before {
+  content: "/";
+  color: var(--eds-gray-mid);
+  font-weight: 700;
+}
+
+.eds-breadcrumbs a {
+  color: var(--eds-text);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.eds-breadcrumbs a:hover,
+.eds-breadcrumbs a:focus-visible {
+  color: var(--eds-primary);
+  text-decoration: underline;
+}
+
+.eds-breadcrumbs span {
+  color: var(--eds-primary);
+  font-weight: 800;
+}
+
+.eds-commercial-section {
+  width: min(1200px, calc(100% - 40px));
+  margin: 28px auto;
+  padding: 38px;
+  border-radius: 24px;
+  background: var(--eds-white);
+  border: 1px solid rgba(31, 31, 31, 0.12);
+  box-shadow: 0 12px 34px rgba(0, 0, 0, 0.055);
+  color: var(--eds-text);
+}
+
+.process-content .eds-commercial-section {
+  width: 100%;
+  margin: 0 0 28px;
+}
+
+.eds-commercial-section--soft {
+  background: var(--eds-green-pale);
+}
+
+.eds-commercial-header {
+  max-width: 900px;
+  margin: 0 0 28px;
+}
+
+.eds-commercial-eyebrow {
+  margin: 0 0 12px;
+  color: var(--eds-primary);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+.eds-commercial-header h2,
+.eds-commercial-section h2 {
+  margin: 0 0 14px;
+  color: var(--eds-text);
+  font-size: clamp(1.55rem, 2.4vw, 2.2rem);
+  line-height: 1.16;
+  letter-spacing: -0.02em;
+}
+
+.eds-commercial-header p,
+.eds-commercial-section p {
+  margin: 0 0 16px;
+  color: var(--eds-text);
+  font-size: 1rem;
+  line-height: 1.72;
+}
+
+.eds-solution-grid,
+.eds-insight-grid,
+.eds-industry-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.eds-solution-grid--compact {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.eds-solution-card,
+.eds-insight-card,
+.eds-industry-card {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  padding: 22px;
+  border-radius: 18px;
+  background: var(--eds-white);
+  border: 1px solid rgba(55, 180, 55, 0.24);
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.04);
+}
+
+.eds-solution-card h3,
+.eds-insight-card h3,
+.eds-industry-card h3 {
+  margin: 0 0 10px;
+  color: var(--eds-text);
+  font-size: 1.12rem;
+  line-height: 1.28;
+}
+
+.eds-solution-card p,
+.eds-insight-card p,
+.eds-industry-card p {
+  margin: 0 0 14px;
+  font-size: 0.96rem;
+  line-height: 1.65;
+}
+
+.eds-card-meta {
+  display: grid;
+  gap: 8px;
+  margin: 0 0 16px;
+  padding: 0;
+  list-style: none;
+}
+
+.eds-card-meta li {
+  color: var(--eds-text);
+  font-size: 0.94rem;
+  line-height: 1.55;
+}
+
+.eds-card-meta strong {
+  color: var(--eds-primary);
+}
+
+.eds-card-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: auto;
+}
+
+.eds-local-preview-section {
+  border: 2px dashed rgba(31, 31, 31, 0.3);
+}
+
+.eds-local-preview-banner,
+.eds-draft-badge,
+.eds-preview-note {
+  border-radius: 999px;
+  font-weight: 850;
+}
+
+.eds-local-preview-banner {
+  display: inline-flex;
+  max-width: 100%;
+  margin: 0 0 22px;
+  padding: 10px 14px;
+  background: var(--eds-gray-soft);
+  color: var(--eds-text);
+  font-size: 0.88rem;
+  line-height: 1.4;
+}
+
+.eds-project-case-grid,
+.eds-product-preview-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.eds-project-case-card,
+.eds-product-preview-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  min-height: 100%;
+  padding: 22px;
+  border-radius: 18px;
+  background: var(--eds-white);
+  border: 1px solid rgba(55, 180, 55, 0.24);
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.04);
+  color: var(--eds-text);
+}
+
+.eds-project-case-card__image {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  margin: 0 0 18px;
+  border-radius: 12px;
+  background: var(--eds-gray-soft);
+}
+
+.eds-project-case-card__body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.eds-project-case-card__kicker {
+  margin: 0 0 8px;
+  color: var(--eds-primary);
+  font-size: 0.78rem;
+  font-weight: 850;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.eds-project-case-card h3,
+.eds-product-preview-card h3 {
+  margin: 0 0 12px;
+  color: var(--eds-text);
+  font-size: 1.18rem;
+  line-height: 1.28;
+}
+
+.eds-project-case-card p,
+.eds-product-preview-card p {
+  margin: 0 0 14px;
+  line-height: 1.62;
+}
+
+.eds-draft-badge {
+  align-self: flex-start;
+  margin: 0 0 14px;
+  padding: 7px 10px;
+  background: var(--eds-gray-soft);
+  color: var(--eds-text);
+  font-size: 0.78rem;
+  line-height: 1.35;
+}
+
+.eds-preview-note {
+  display: inline-flex;
+  align-self: flex-start;
+  margin: 0 0 14px;
+  padding: 7px 10px;
+  background: var(--eds-green-pale);
+  color: var(--eds-text);
+  font-size: 0.82rem;
+  line-height: 1.35;
+}
+
+.eds-outcome-badges,
+.eds-metric-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0 0 16px;
+}
+
+.eds-outcome-badges span,
+.eds-metric-chips span {
+  max-width: 100%;
+  padding: 7px 10px;
+  border-radius: 999px;
+  background: var(--eds-green-pale);
+  color: var(--eds-text);
+  font-size: 0.82rem;
+  font-weight: 800;
+  line-height: 1.35;
+}
+
+.eds-before-after {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin: 0 0 16px;
+}
+
+.eds-before-after > div {
+  min-width: 0;
+  padding: 14px;
+  border-radius: 14px;
+  background: var(--eds-gray-soft);
+}
+
+.eds-before-after strong,
+.eds-metric-group__label {
+  display: block;
+  margin: 0 0 6px;
+  color: var(--eds-primary);
+  font-size: 0.86rem;
+  font-weight: 850;
+}
+
+.eds-before-after p {
+  margin: 0;
+  font-size: 0.94rem;
+}
+
+.eds-metric-group {
+  margin: 0 0 16px;
+}
+
+.eds-metric-group__label {
+  margin-bottom: 10px;
+}
+
+.eds-project-highlights {
+  display: grid;
+  gap: 8px;
+  margin: 0 0 18px;
+  padding-left: 18px;
+}
+
+.eds-project-highlights li {
+  line-height: 1.5;
+}
+
+.eds-approval-note {
+  padding: 12px 14px;
+  border-radius: 14px;
+  background: var(--eds-gray-soft);
+  font-size: 0.9rem;
+}
+
+.eds-anchor-target {
+  display: block;
+  position: relative;
+  top: -145px;
+  height: 0;
+  overflow: hidden;
+}
+
+.eds-commercial-support {
+  margin-top: 24px;
+  padding-top: 22px;
+  border-top: 1px solid rgba(31, 31, 31, 0.12);
+  text-align: center;
+}
+
+.eds-commercial-support p {
+  max-width: 820px;
+  margin: 0 auto 14px;
+  text-align: center;
+}
+
+.eds-commercial-support .eds-card-actions {
+  justify-content: center;
+}
+
+.eds-text-link,
+.eds-card-actions a,
+.eds-card-actions button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 40px;
+  padding: 9px 14px;
+  border-radius: 999px;
+  border: 1px solid var(--eds-primary);
+  background: var(--eds-primary);
+  color: var(--eds-white);
+  font: inherit;
+  font-size: 0.9rem;
+  font-weight: 800;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.eds-card-actions button {
+  background: var(--eds-white);
+  color: var(--eds-primary);
+}
+
+.eds-text-link:hover,
+.eds-text-link:focus-visible,
+.eds-card-actions a:hover,
+.eds-card-actions a:focus-visible,
+.eds-card-actions button:hover,
+.eds-card-actions button:focus-visible {
+  background: var(--eds-text);
+  border-color: var(--eds-text);
+  color: var(--eds-white);
+  text-decoration: none;
+}
+
+.eds-steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 16px;
+  counter-reset: eds-step;
+}
+
+.eds-step {
+  position: relative;
+  min-height: 220px;
+  padding: 58px 20px 22px;
+  border-radius: 18px;
+  background: var(--eds-white);
+  border: 1px solid rgba(55, 180, 55, 0.24);
+}
+
+.eds-step::before {
+  counter-increment: eds-step;
+  content: counter(eds-step);
+  position: absolute;
+  top: 18px;
+  left: 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 999px;
+  background: var(--eds-primary);
+  color: var(--eds-white);
+  font-weight: 900;
+}
+
+.eds-step h3 {
+  margin: 0 0 10px;
+  font-size: 1.05rem;
+}
+
+.eds-challenge-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.eds-challenge-list li {
+  padding: 14px 16px;
+  border-radius: 14px;
+  background: var(--eds-white);
+  border: 1px solid rgba(55, 180, 55, 0.2);
+  font-weight: 700;
+  line-height: 1.45;
+}
+
+.eds-challenge-list li p {
+  margin: 6px 0 0;
+  font-weight: 400;
+  line-height: 1.55;
+}
+
+.eds-faq {
+  display: grid;
+  gap: 12px;
+}
+
+.eds-faq details {
+  border-radius: 16px;
+  background: var(--eds-white);
+  border: 1px solid rgba(55, 180, 55, 0.22);
+  overflow: hidden;
+}
+
+.eds-faq summary {
+  padding: 18px 20px;
+  color: var(--eds-text);
+  font-weight: 850;
+  cursor: pointer;
+}
+
+.eds-faq details[open] summary {
+  color: var(--eds-primary);
+}
+
+.eds-faq details p {
+  padding: 0 20px 18px;
+}
+
+.eds-info-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 10020;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: rgba(10, 14, 16, 0.58);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.24s ease, visibility 0.24s ease;
+}
+
+.eds-info-overlay.is-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.eds-info-modal {
+  position: relative;
+  width: min(720px, 100%);
+  max-height: calc(100vh - 48px);
+  overflow: auto;
+  padding: 30px;
+  border-radius: 22px;
+  background: var(--eds-white);
+  border-top: 5px solid var(--eds-primary);
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.24);
+}
+
+.eds-info-modal h2 {
+  margin: 0 44px 14px 0;
+  color: var(--eds-text);
+  font-size: 1.55rem;
+}
+
+.eds-info-modal-close {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: 0;
+  border-radius: 999px;
+  background: var(--eds-gray-soft);
+  color: var(--eds-text);
+  font-size: 1.7rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.eds-info-modal-close:hover,
+.eds-info-modal-close:focus-visible {
+  background: var(--eds-primary);
+  color: var(--eds-white);
+}
+
+body.eds-info-modal-open {
+  overflow: hidden;
+}
+
+@media (max-width: 1024px) {
+  .eds-solution-grid,
+  .eds-solution-grid--compact,
+  .eds-insight-grid,
+  .eds-industry-grid,
+  .eds-steps,
+  .eds-project-case-grid,
+  .eds-product-preview-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+}
+
+@media (max-width: 1200px) {
+  .eds-commercial-section {
+    padding: 34px;
+  }
+}
+
+@media (max-width: 991px) {
+  .eds-commercial-header {
+    max-width: 100%;
+  }
+
+  .eds-card-actions {
+    align-items: stretch;
+  }
+}
+
+@media (max-width: 768px) {
+  .eds-breadcrumbs,
+  .eds-commercial-section {
+    width: min(100% - 24px, 1200px);
+  }
+
+  .process-content .eds-commercial-section {
+    width: 100%;
+  }
+
+  .eds-commercial-section {
+    padding: 26px 20px;
+    border-radius: 18px;
+  }
+
+  .eds-solution-grid,
+  .eds-solution-grid--compact,
+  .eds-insight-grid,
+  .eds-industry-grid,
+  .eds-steps,
+  .eds-challenge-list,
+  .eds-project-case-grid,
+  .eds-product-preview-grid,
+  .eds-before-after {
+    grid-template-columns: 1fr;
+  }
+
+  .eds-info-overlay {
+    padding: 12px;
+  }
+
+  .eds-info-modal {
+    max-height: calc(100vh - 24px);
+    padding: 26px 20px;
+    border-radius: 18px;
+  }
+
+}
+
+@media (max-width: 480px) {
+  .eds-breadcrumbs,
+  .eds-commercial-section {
+    width: min(100% - 20px, 1200px);
+  }
+
+  .eds-commercial-section {
+    padding: 22px 16px;
+  }
+
+  .eds-commercial-header h2,
+  .eds-commercial-section h2 {
+    font-size: 1.42rem;
+  }
+
+  .eds-solution-card,
+  .eds-insight-card,
+  .eds-industry-card,
+  .eds-project-case-card,
+  .eds-product-preview-card {
+    padding: 18px;
+  }
+
+  .eds-text-link,
+  .eds-card-actions a,
+  .eds-card-actions button {
+    width: 100%;
+    min-height: 44px;
+    white-space: normal;
+    text-align: center;
+  }
+
+}

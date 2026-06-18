@@ -43,22 +43,32 @@ $excludeUrlPrefixes = [
 
 // Exclude specific public paths
 $excludeExactPaths = [
-    $excludeExactPaths = 
+    '/add-value',
+    '/logistics',
     '/privacy',
     '/terms',
     '/disclaimer',
     '/terms-conditions',
+    '/thank-you',
+];
 
+// Pages that are declared as noindex in includes/seo.php must not be listed here.
+// Keep this list aligned with SEO robots rules for future noindex public routes.
+$noindexExactPaths = [
+    '/add-value',
+    '/logistics',
+    '/privacy',
+    '/terms',
+    '/disclaimer',
+    '/terms-conditions',
+    '/thank-you',
 ];
 
 // Strategic pages (higher priority)
 $priorityTopLevel = [
     '/about-us',
     '/eds-differentials',
-    '/casting',
     '/forging',
-    '/add-value',
-    '/logistics',
     '/workflow',
     '/industries-partners',
     '/quality',
@@ -88,6 +98,55 @@ function inferChangefreq(string $path): string {
     if (strpos($path, '/project/') === 0) return 'yearly';
     if (in_array($path, ['/privacy', '/terms', '/disclaimer'], true)) return 'yearly';
     return 'monthly';
+}
+
+function isNoindexPath(string $path, array $noindexExactPaths): bool {
+    return in_array($path, $noindexExactPaths, true);
+}
+
+function warnUnsupportedProjectCaseUrls(): void {
+    $caseFile = 'data/project-cases.php';
+
+    if (!is_file($caseFile)) {
+        return;
+    }
+
+    $cases = require $caseFile;
+    if (!is_array($cases)) {
+        return;
+    }
+
+    foreach ($cases as $case) {
+        if (!is_array($case)) {
+            continue;
+        }
+
+        if (($case['approval_status'] ?? '') !== 'public_approved') {
+            continue;
+        }
+
+        if (($case['can_publish'] ?? false) !== true) {
+            continue;
+        }
+
+        $publicUrl = trim((string) ($case['public_url'] ?? ''));
+        if ($publicUrl === '') {
+            continue;
+        }
+
+        $publicUrl = '/' . ltrim($publicUrl, '/');
+        $publicUrl = preg_replace('#/+#', '/', $publicUrl);
+
+        if (strpos($publicUrl, '/projects/') !== 0) {
+            continue;
+        }
+
+        $caseId = (string) ($case['id'] ?? 'unknown-case');
+        fwrite(
+            STDERR,
+            "Warning: skipped project case public_url {$publicUrl} for {$caseId}; nested project URLs are not routable yet. Use /projects#{$caseId} or create a real route before adding it to the sitemap.\n"
+        );
+    }
 }
 
 $entries = [];
@@ -141,6 +200,7 @@ foreach ($iterator as $file) {
     // Apply exclusions
     if (startsWithAny($urlPath, $excludeUrlPrefixes)) continue;
     if (in_array($urlPath, $excludeExactPaths, true)) continue;
+    if (isNoindexPath($urlPath, $noindexExactPaths)) continue;
 
     $mtime = @filemtime($fullPath);
     if ($mtime === false) $mtime = time();
@@ -150,6 +210,8 @@ foreach ($iterator as $file) {
         $entries[$urlPath] = [ 'lastmod' => isoDateFromMtime((int) $mtime) ];
     }
 }
+
+warnUnsupportedProjectCaseUrls();
 
 $paths = array_keys($entries);
 sort($paths);

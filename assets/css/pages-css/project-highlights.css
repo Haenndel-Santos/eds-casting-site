@@ -96,7 +96,7 @@
   text-align: center;
 }
 
-.cta-button {
+.project-highlights .cta-button {
   display: inline-block;
   background-color: #333;
   color: #fff;
@@ -108,7 +108,7 @@
   transition: all 0.3s ease;
 }
 
-.cta-button:hover {
+.project-highlights .cta-button:hover {
   
   background-color: white;
   color: #333;

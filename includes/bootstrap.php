@@ -18,11 +18,30 @@ if (!defined('BASE_URL')) {
   define('BASE_URL', '');
 }
 
+// Public canonical origin. Keep fixed so local/dev hosts never leak into SEO tags.
+if (!defined('SITE_URL')) {
+  define('SITE_URL', 'https://www.edscasting.com');
+}
+
 // Normalized BASE_URL for safe concatenation (no trailing slash, never '/')
 if (!defined('BASE_URL_NORM')) {
   $norm = rtrim((string) BASE_URL, '/');
   if ($norm === '/') $norm = '';
   define('BASE_URL_NORM', $norm);
+}
+
+/*
+ * Local-only preview switch.
+ * Enables draft/project preview sections while developing on localhost,
+ * without changing publication flags in /data or exposing drafts on production.
+ */
+if (!defined('EDS_LOCAL_PREVIEW')) {
+  $previewEnv = strtolower((string) getenv('EDS_LOCAL_PREVIEW'));
+  $host = strtolower((string) ($_SERVER['HTTP_HOST'] ?? ''));
+  $host = preg_replace('/:\d+$/', '', $host);
+  $isLocalHost = in_array($host, ['localhost', '127.0.0.1', '::1'], true);
+
+  define('EDS_LOCAL_PREVIEW', $isLocalHost || in_array($previewEnv, ['1', 'true', 'yes', 'on'], true));
 }
 
 ini_set('display_errors', '0');

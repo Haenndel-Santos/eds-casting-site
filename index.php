@@ -3,9 +3,8 @@
 <?php
 $pageCssExtras = [
   '/assets/css/pages-css/home-solutions-overview.css',
-  '/assets/css/pages-css/project-highlights.css',
-  '/assets/css/pages-css/expertise.css',
-  '/assets/css/pages-css/home-industries.css',
+  '/assets/css/pages-css/home-commercial-sourcing.css',
+  '/assets/css/pages-css/home-project-results.css',
   '/assets/css/pages-css/home-final-cta.css',
 ];
 ?>
@@ -16,13 +15,18 @@ $pageCssExtras = [
 
 <main>
 
- <?php include 'includes/hero.php'; ?> 
- <?php include 'includes/hero-double-images.php'; ?> 
- <?php include 'includes/home-solutions-overview.php'; ?> 
- <?php include 'includes/project-highlights.php'; ?> 
+ <?php include 'includes/hero.php'; ?>
+ <?php include 'includes/home-solutions-overview.php'; ?>
 
- <?php include 'includes/expertise.php'; ?> 
- <?php include 'includes/home-industries.php'; ?> 
+<?php include 'includes/home-project-results.php'; ?>
+
+<?php include 'includes/home-commercial-sourcing.php'; ?>
+
+
+
+<?php include 'includes/hero-double-images.php'; ?>
+
+
  <?php include 'includes/home-final-cta.php'; ?>
 
 </main>
@@ -33,9 +37,3 @@ $pageCssExtras = [
 
 </body>
 </html>
-
-
-
-
-
-

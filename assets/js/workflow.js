@@ -3,17 +3,18 @@
    ===================================== */
 
 document.addEventListener('DOMContentLoaded', () => {
-    const dots = document.querySelectorAll('.wf-dot');
+    const triggers = document.querySelectorAll('.wf-dot, .btn-workflow');
     const popups = document.querySelectorAll('.popup-overlay');
     const closes = document.querySelectorAll('.close-popup');
 
     // === Abrir pop-up correto ao clicar ===
-    dots.forEach(dot => {
-        dot.addEventListener('click', () => {
-            const step = dot.dataset.target || dot.dataset.step;
+    triggers.forEach(trigger => {
+        trigger.addEventListener('click', () => {
+            const step = trigger.dataset.target || trigger.dataset.step;
             const popup = document.getElementById(step);
             if (popup) {
                 popup.classList.add('active');
+                popup.setAttribute('aria-hidden', 'false');
                 document.body.style.overflow = 'hidden'; // Evita scroll ao fundo
             }
         });
@@ -24,6 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
         close.addEventListener('click', () => {
             const popup = close.closest('.popup-overlay');
             popup.classList.remove('active');
+            popup.setAttribute('aria-hidden', 'true');
             document.body.style.overflow = '';
         });
     });
@@ -33,6 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
         popup.addEventListener('click', e => {
             if (e.target === popup) {
                 popup.classList.remove('active');
+                popup.setAttribute('aria-hidden', 'true');
                 document.body.style.overflow = '';
             }
         });
@@ -41,7 +44,10 @@ document.addEventListener('DOMContentLoaded', () => {
     // === Fechar com tecla ESC ===
     document.addEventListener('keydown', e => {
         if (e.key === 'Escape' || e.key === 'Esc') {
-            popups.forEach(p => p.classList.remove('active'));
+            popups.forEach(p => {
+                p.classList.remove('active');
+                p.setAttribute('aria-hidden', 'true');
+            });
             document.body.style.overflow = '';
         }
     });

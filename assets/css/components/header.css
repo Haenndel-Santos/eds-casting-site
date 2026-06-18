@@ -63,7 +63,7 @@
 .eds-quicknav {
   display: flex;
   align-items: center;
-  gap: 85px;
+  gap: 50px;
   margin-left: auto;
 }
 

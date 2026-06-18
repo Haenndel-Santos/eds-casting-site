@@ -35,7 +35,7 @@ include(__DIR__ . '/../includes/header.php');
 
 
 
-    <form class="form-lead form-lead-smart" action="/pages-php/new-leads.php" method="POST" enctype="multipart/form-data">
+    <form class="form-lead form-lead-smart" action="/new-leads" method="POST" enctype="multipart/form-data">
 
        <div class="form-grid form-grid-2">
         <div class="name-row">
