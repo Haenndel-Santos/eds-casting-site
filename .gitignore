@@ -5,19 +5,27 @@ node_modules/
 .DS_Store
 Thumbs.db
 
-# arquivos temporários
+# temporary/local files
 *.log
 *.tmp
 *.bak
 /tmp/
+/text.txt
 
 # uploads
 /assets/uploads/
 
-# arquivos locais do sistema
+# local editor files
 .vscode/settings.json
 
-# arquivos fonte pesados de projetos; manter apenas imagens web usadas pelo site
+# files not needed for the GitHub demo
+/docs/
+/languages/
+google*.html
+/ping.php
+/router.php
+
+# heavy project source files; keep only web images used by the site
 /assets/img/projects/**
 !/assets/img/projects/
 !/assets/img/projects/case-studies/
