@@ -13,6 +13,7 @@
  */
 
 require_once __DIR__ . '/bootstrap.php';
+require_once __DIR__ . '/cms.php';
 
 // -------------------------------------------------------------------------
 // Polyfills (for PHP < 8)
@@ -443,6 +444,21 @@ if (!$__seo && $__patternSeo) {
 }
 if (!$__seo) {
   $__seo = $__seoDefault;
+}
+
+$__cmsPageSeo = eds_get_page_content($__slug, []);
+if (is_array($__cmsPageSeo) && $__cmsPageSeo) {
+  if (!empty($__cmsPageSeo['meta_title'])) {
+    $__seo['title'] = (string) $__cmsPageSeo['meta_title'];
+  } elseif (!empty($__cmsPageSeo['title'])) {
+    $__seo['title'] = (string) $__cmsPageSeo['title'] . $__suffix;
+  }
+  if (!empty($__cmsPageSeo['meta_description'])) {
+    $__seo['desc'] = (string) $__cmsPageSeo['meta_description'];
+  }
+  if (!empty($__cmsPageSeo['hero_image'])) {
+    $__seo['og'] = (string) $__cmsPageSeo['hero_image'];
+  }
 }
 
 // -------------------------------------------------------------------------

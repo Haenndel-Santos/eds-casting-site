@@ -15,6 +15,7 @@ Thumbs.db
 
 # uploads
 /assets/uploads/
+/uploads/
 
 # private/local content and media excluded from public code repository
 /data/
