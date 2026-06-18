@@ -18,6 +18,7 @@
  */
 
 require_once __DIR__ . '/bootstrap.php';
+require_once __DIR__ . '/cms.php';
 
 if (!defined('SITE_URL')) {
   define('SITE_URL', 'https://www.edscasting.com');
@@ -338,6 +339,16 @@ $pageDescription = $pageDescription ?? 'Leading experts in precision casting & f
 $robots = $robots ?? 'index,follow';
 $twitterSite = $twitterSite ?? '';
 
+$headCmsContent = eds_cms_current_page_content();
+if (!$headCmsContent) {
+  $headCmsContent = eds_get_page_content($pageSlug, []);
+  eds_cms_set_current_page_content($headCmsContent);
+}
+eds_cms_apply_page_meta_overrides();
+
+$pageTitle = $GLOBALS['pageTitle'] ?? $pageTitle;
+$pageDescription = $GLOBALS['pageDescription'] ?? $pageDescription;
+
 $ogImage = $ogImage ?? (BASE_URL_NORM . '/assets/img/hero-img/eng-hero.webp');
 $ogImage = eds_resolve_og_image((string) $ogImage);
 $ogImageAbs = eds_abs_url($ogImage);
@@ -429,6 +440,7 @@ $globalCssFiles = [
   '/assets/css/components/menu-overlay.css',
   '/assets/css/components/cookies-banner.css',
   '/assets/css/components/footer-bottom-bar.css',
+  '/assets/css/components/cms-content.css',
   '/assets/css/darkmode.css',
   '/assets/css/responsive.css',
 ];

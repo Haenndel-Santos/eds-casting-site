@@ -447,6 +447,7 @@ if (!$__seo) {
 }
 
 $__cmsPageSeo = eds_get_page_content($__slug, []);
+eds_cms_set_current_page_content(is_array($__cmsPageSeo) ? $__cmsPageSeo : []);
 if (is_array($__cmsPageSeo) && $__cmsPageSeo) {
   if (!empty($__cmsPageSeo['meta_title'])) {
     $__seo['title'] = (string) $__cmsPageSeo['meta_title'];
@@ -460,6 +461,7 @@ if (is_array($__cmsPageSeo) && $__cmsPageSeo) {
     $__seo['og'] = (string) $__cmsPageSeo['hero_image'];
   }
 }
+eds_cms_start_public_page_filter(is_array($__cmsPageSeo) ? $__cmsPageSeo : []);
 
 // -------------------------------------------------------------------------
 // Derived SEO variables for current page

@@ -19,12 +19,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
       }
       $message = 'Use a username and a password with at least 10 characters.';
     } else {
-      $user = eds_cms_verify_login($username, $password);
-      if ($user) {
-        eds_cms_login($user);
-        eds_cms_redirect('/admin/dashboard.php');
+      if (eds_cms_login_is_limited($username)) {
+        $message = 'Too many login attempts. Please wait before trying again.';
+      } else {
+        $user = eds_cms_verify_login($username, $password);
+        eds_cms_record_login_attempt($username, (bool) $user);
+        if ($user) {
+          eds_cms_login($user);
+          eds_cms_redirect('/admin/dashboard.php');
+        }
+        $message = 'Invalid username or password.';
       }
-      $message = 'Invalid username or password.';
     }
   }
 }
